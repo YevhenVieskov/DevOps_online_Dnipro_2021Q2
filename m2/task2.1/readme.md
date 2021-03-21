@@ -1,5 +1,5 @@
-#TASK 2.1
-##PART 1. HYPERVISORS
+# TASK 2.1
+## PART 1. HYPERVISORS
 1. What are the most popular hypervisors for infrastructure virtualization?
    The most popular hypervisors for infrastructure virtualization is a Citrix XenServer, 
    VMware ESX Server, VMWare Workstation, Microsort Hyper-V, Oracle Virtual Box
@@ -10,7 +10,7 @@
    type 3 - the monolithic hypervisor includes hardware device drivers;
    type 4 - the microkernel, device drivers are located inside the host operating system
    
-##PART 2. WORK WITH VIRTUALBOX
+## PART 2. WORK WITH VIRTUALBOX
 1. First run VirtualBox and Virtual Machine (VM).
 1.1 Get acquainted with the structure of the user manual VirtualBox [1] (see list of
 references in the end of the document)
@@ -51,7 +51,7 @@ the host [1, ch.4.3].
 between VM1, VM2, Host, Internet for different network modes. You can use the ping
 command to do this. Make a table of possible connections.
 
-###Connection table
+**Connection table**
 
 Network type VM1    | localhost |internet |	VM2 NAT | VM2 netbridge | VM2 Etternet |	VM2 Host-only Ethernet 
 --------------------|-----------|---------|---------|---------------|--------------|--------------------------
@@ -66,7 +66,7 @@ Host-only Ethernet	|     T	    |    F	  |    F	|     F	        |       F	   |   
 3.2 Examine the purpose and execute the basic commands of VBoxManage list,
 showvminfo, createvm, startvm, modifyvm, clonevm, snapshot, controlvm [1, ch.8].
     ![alt vbox3](vbox3.jpg)
-##PART 3. WORK WITH VAGRANT
+## PART 3. WORK WITH VAGRANT
 1. Download the required version of Vagrant according to the instructions [5] and
 according to the host operating system (OS) installed on the student's workplace. For
 Windows, the file may be called, for example, vagrant_2.2.0_x86_64.msi. Install Vagrant.
@@ -96,7 +96,7 @@ and password are also vagrant
 are chosen independently by the student.
 
 
-##REFERENCES
+## REFERENCES
 1. Oracle VM VirtualBox.User Manual [title] (https://www.virtualbox.org/manual/)
 2. Official page VirtualBox [title] (https://www.virtualbox.org/)
 3. Download page Ubuntu [title] (https://ubuntu.com/download)
