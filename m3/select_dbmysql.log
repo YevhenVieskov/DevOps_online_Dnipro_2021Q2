@@ -1,0 +1,150 @@
+Enter password: *******
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 169
+Server version: 8.0.23 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> source C:\Users\admin\DevOps_online_Dnipro_2021Q2\m3\select_dbmysql.sql
+Database changed
++------------------------------------------------------+
+| Tables_in_mysql                                      |
++------------------------------------------------------+
+| columns_priv                                         |
+| component                                            |
+| db                                                   |
+| default_roles                                        |
+| engine_cost                                          |
+| func                                                 |
+| general_log                                          |
+| global_grants                                        |
+| gtid_executed                                        |
+| help_category                                        |
+| help_keyword                                         |
+| help_relation                                        |
+| help_topic                                           |
+| innodb_index_stats                                   |
+| innodb_table_stats                                   |
+| password_history                                     |
+| plugin                                               |
+| procs_priv                                           |
+| proxies_priv                                         |
+| replication_asynchronous_connection_failover         |
+| replication_asynchronous_connection_failover_managed |
+| role_edges                                           |
+| server_cost                                          |
+| servers                                              |
+| slave_master_info                                    |
+| slave_relay_log_info                                 |
+| slave_worker_info                                    |
+| slow_log                                             |
+| tables_priv                                          |
+| time_zone                                            |
+| time_zone_leap_second                                |
+| time_zone_name                                       |
+| time_zone_transition                                 |
+| time_zone_transition_type                            |
+| user                                                 |
++------------------------------------------------------+
+35 rows in set (0.01 sec)
+
++-----------------------+---------------+------+-----+---------+-------+
+| Field                 | Type          | Null | Key | Default | Extra |
++-----------------------+---------------+------+-----+---------+-------+
+| Host                  | char(255)     | NO   | PRI |         |       |
+| Db                    | char(64)      | NO   | PRI |         |       |
+| User                  | char(32)      | NO   | PRI |         |       |
+| Select_priv           | enum('N','Y') | NO   |     | N       |       |
+| Insert_priv           | enum('N','Y') | NO   |     | N       |       |
+| Update_priv           | enum('N','Y') | NO   |     | N       |       |
+| Delete_priv           | enum('N','Y') | NO   |     | N       |       |
+| Create_priv           | enum('N','Y') | NO   |     | N       |       |
+| Drop_priv             | enum('N','Y') | NO   |     | N       |       |
+| Grant_priv            | enum('N','Y') | NO   |     | N       |       |
+| References_priv       | enum('N','Y') | NO   |     | N       |       |
+| Index_priv            | enum('N','Y') | NO   |     | N       |       |
+| Alter_priv            | enum('N','Y') | NO   |     | N       |       |
+| Create_tmp_table_priv | enum('N','Y') | NO   |     | N       |       |
+| Lock_tables_priv      | enum('N','Y') | NO   |     | N       |       |
+| Create_view_priv      | enum('N','Y') | NO   |     | N       |       |
+| Show_view_priv        | enum('N','Y') | NO   |     | N       |       |
+| Create_routine_priv   | enum('N','Y') | NO   |     | N       |       |
+| Alter_routine_priv    | enum('N','Y') | NO   |     | N       |       |
+| Execute_priv          | enum('N','Y') | NO   |     | N       |       |
+| Event_priv            | enum('N','Y') | NO   |     | N       |       |
+| Trigger_priv          | enum('N','Y') | NO   |     | N       |       |
++-----------------------+---------------+------+-----+---------+-------+
+22 rows in set (0.02 sec)
+
++--------------------+
+| Db                 |
++--------------------+
+| book_sc            |
+| performance_schema |
+| sys                |
++--------------------+
+3 rows in set (0.00 sec)
+
++---------------+
+| User          |
++---------------+
+| book_admin    |
+| mysql.session |
+| mysql.sys     |
++---------------+
+3 rows in set (0.00 sec)
+
+Empty set (0.00 sec)
+
++-----------+--------------------+---------------+-------------+-------------+-------------+-------------+-------------+-----------+------------+-----------------+------------+------------+-----------------------+------------------+------------------+----------------+---------------------+--------------------+--------------+------------+--------------+
+| Host      | Db                 | User          | Select_priv | Insert_priv | Update_priv | Delete_priv | Create_priv | Drop_priv | Grant_priv | References_priv | Index_priv | Alter_priv | Create_tmp_table_priv | Lock_tables_priv | Create_view_priv | Show_view_priv | Create_routine_priv | Alter_routine_priv | Execute_priv | Event_priv | Trigger_priv |
++-----------+--------------------+---------------+-------------+-------------+-------------+-------------+-------------+-----------+------------+-----------------+------------+------------+-----------------------+------------------+------------------+----------------+---------------------+--------------------+--------------+------------+--------------+
+| localhost | book_sc            | book_admin    | Y           | Y           | Y           | Y           | N           | N         | N          | N               | N          | N          | N                     | N                | N                | N              | N                   | N                  | N            | N          | N            |
+| localhost | performance_schema | mysql.session | Y           | N           | N           | N           | N           | N         | N          | N               | N          | N          | N                     | N                | N                | N              | N                   | N                  | N            | N          | N            |
+| localhost | sys                | mysql.sys     | N           | N           | N           | N           | N           | N         | N          | N               | N          | N          | N                     | N                | N                | N              | N                   | N                  | N            | N          | Y            |
++-----------+--------------------+---------------+-------------+-------------+-------------+-------------+-------------+-----------+------------+-----------------+------------+------------+-----------------------+------------------+------------------+----------------+---------------------+--------------------+--------------+------------+--------------+
+3 rows in set (0.00 sec)
+
++------------+
+| Grant_priv |
++------------+
+| N          |
+| N          |
+| N          |
++------------+
+3 rows in set (0.00 sec)
+
++-----------+--------------------+---------------+
+| Host      | Db                 | User          |
++-----------+--------------------+---------------+
+| localhost | book_sc            | book_admin    |
+| localhost | performance_schema | mysql.session |
+| localhost | sys                | mysql.sys     |
++-----------+--------------------+---------------+
+3 rows in set (0.00 sec)
+
++-----------+--------------------+---------------+------------+
+| Host      | Db                 | User          | Alter_priv |
++-----------+--------------------+---------------+------------+
+| localhost | book_sc            | book_admin    | N          |
+| localhost | performance_schema | mysql.session | N          |
+| localhost | sys                | mysql.sys     | N          |
++-----------+--------------------+---------------+------------+
+3 rows in set (0.00 sec)
+
++-----------+--------------------+------------+
+| Host      | Db                 | Alter_priv |
++-----------+--------------------+------------+
+| localhost | book_sc            | N          |
+| localhost | performance_schema | N          |
+| localhost | sys                | N          |
++-----------+--------------------+------------+
+3 rows in set (0.00 sec)
+
+mysql>

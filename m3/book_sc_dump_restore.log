@@ -1,0 +1,38 @@
+C:\Users\admin>cd /d C:\Program Files\MySQL\MySQL Server 8.0\bin\
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysqldump -u root -p book_sc > C:\Users\admin\DevOps_online_Dnipro_2021Q2\m3\book_sc_dump.sql
+Enter password: *******
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p book_sc -e  "drop table customers"
+Enter password: *******
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p book_sc -e  "show tables"
+Enter password: *******
++-------------------+
+| Tables_in_book_sc |
++-------------------+
+| admin             |
+| books             |
+| categories        |
+| order_items       |
+| orders            |
++-------------------+
+
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p book_sc < C:\Users\admin\DevOps_online_Dnipro_2021Q2\m3\book_sc_dump.sql
+Enter password: *******
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p book_sc -e  "show tables"
+Enter password: *******
++-------------------+
+| Tables_in_book_sc |
++-------------------+
+| admin             |
+| books             |
+| categories        |
+| customers         |
+| order_items       |
+| orders            |
++-------------------+
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin>

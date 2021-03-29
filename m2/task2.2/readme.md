@@ -44,6 +44,7 @@ educational program (EPAM DevOps online Spring 2021), the list of AWS services
 with which the student worked within the educational program or earlier and the full
 list with links of completed labs (based on tutorials or qwiklabs). Provide the link to
 the website in your report
-[title](http://vieskov.com.s3-website.us-east-2.amazonaws.com)
-[title](https://www.vieskov.com) - not working yet.
+
+[http://vieskov.com.s3-website.us-east-2.amazonaws.com](http://vieskov.com.s3-website.us-east-2.amazonaws.com)
+[https://www.vieskov.com](https://www.vieskov.com) - 
 

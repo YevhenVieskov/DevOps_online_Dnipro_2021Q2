@@ -1,0 +1,240 @@
+Enter password: *******
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 164
+Server version: 8.0.23 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> source C:\Users\admin\DevOps_online_Dnipro_2021Q2\m3\new_users.sql
+Database changed
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| book_admin       | localhost |
+| bookadmin        | localhost |
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
+| test_user        | localhost |
+| ves              | localhost |
++------------------+-----------+
+8 rows in set (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.04 sec)
+
+Query OK, 0 rows affected, 1 warning (0.02 sec)
+
+Query OK, 0 rows affected, 1 warning (0.04 sec)
+
+Query OK, 0 rows affected, 1 warning (0.02 sec)
+
+Query OK, 0 rows affected (0.02 sec)
+
+Query OK, 1 row affected (0.08 sec)
+
+Database changed
+Query OK, 0 rows affected (0.13 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.08 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.11 sec)
+
+Query OK, 0 rows affected (0.14 sec)
+
+Query OK, 0 rows affected (0.13 sec)
+
+Query OK, 0 rows affected (0.14 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> system mysql -u admin -p
+Enter password: *********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 165
+Server version: 8.0.23 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> source C:\Users\admin\DevOps_online_Dnipro_2021Q2\m3\new_users_queries.sql
+Database changed
++-----------------+
+| user()          |
++-----------------+
+| admin@localhost |
++-----------------+
+1 row in set (0.01 sec)
+
+Query OK, 0 rows affected, 1 warning (0.80 sec)
+
+Query OK, 0 rows affected, 1 warning (0.32 sec)
+
+Query OK, 5 rows affected (0.09 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+Query OK, 5 rows affected (0.06 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+Query OK, 5 rows affected (0.08 sec)
+Rows matched: 5  Changed: 5  Warnings: 0
+
+Query OK, 0 rows affected, 1 warning (1.09 sec)
+Records: 0  Duplicates: 0  Warnings: 1
+
+Query OK, 0 rows affected (0.78 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.27 sec)
+
+Query OK, 0 rows affected (0.04 sec)
+
+Query OK, 0 rows affected (0.04 sec)
+
+Query OK, 0 rows affected (0.07 sec)
+
+ERROR 1045 (28000): Access denied for user 'admin'@'localhost' (using password: YES)
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> system mysql -u petrov -p
+Enter password: *********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 166
+Server version: 8.0.23 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> source C:\Users\admin\DevOps_online_Dnipro_2021Q2\m3\new_users_queries.sql
+Database changed
++------------------+
+| user()           |
++------------------+
+| petrov@localhost |
++------------------+
+1 row in set (0.00 sec)
+
+ERROR 1142 (42000): CREATE command denied to user 'petrov'@'localhost' for table 'orders'
+ERROR 1142 (42000): CREATE command denied to user 'petrov'@'localhost' for table 'books'
+ERROR 1146 (42S02): Table 'new_users.books' doesn't exist
+Query OK, 5 rows affected (0.07 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+ERROR 1146 (42S02): Table 'new_users.books' doesn't exist
+ERROR 1142 (42000): ALTER command denied to user 'petrov'@'localhost' for table 'orders'
+ERROR 1142 (42000): ALTER command denied to user 'petrov'@'localhost' for table 'orders'
+ERROR 1142 (42000): DROP command denied to user 'petrov'@'localhost' for table 'books'
+ERROR 1227 (42000): Access denied; you need (at least one of) the CREATE USER privilege(s) for this operation
+ERROR 1227 (42000): Access denied; you need (at least one of) the RELOAD privilege(s) for this operation
+ERROR 1396 (HY000): Operation CREATE USER failed for 'test_user'@'localhost'
+ERROR 1045 (28000): Access denied for user 'petrov'@'localhost' (using password: YES)
+ERROR 1227 (42000): Access denied; you need (at least one of) the RELOAD privilege(s) for this operation
+mysql> system mysql -u ivanov -p
+Enter password: *********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 167
+Server version: 8.0.23 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> source C:\Users\admin\DevOps_online_Dnipro_2021Q2\m3\new_users_queries.sql
+Database changed
++------------------+
+| user()           |
++------------------+
+| ivanov@localhost |
++------------------+
+1 row in set (0.00 sec)
+
+ERROR 1050 (42S01): Table 'orders' already exists
+Query OK, 0 rows affected, 1 warning (0.33 sec)
+
+Query OK, 5 rows affected (0.11 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+Query OK, 5 rows affected (0.06 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+Query OK, 5 rows affected (0.06 sec)
+Rows matched: 5  Changed: 5  Warnings: 0
+
+Query OK, 0 rows affected, 1 warning (1.77 sec)
+Records: 0  Duplicates: 0  Warnings: 1
+
+Query OK, 0 rows affected (0.99 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.19 sec)
+
+Query OK, 0 rows affected (0.12 sec)
+
+ERROR 1227 (42000): Access denied; you need (at least one of) the RELOAD privilege(s) for this operation
+Query OK, 0 rows affected (0.09 sec)
+
+ERROR 1045 (28000): Access denied for user 'ivanov'@'localhost' (using password: YES)
+ERROR 1227 (42000): Access denied; you need (at least one of) the RELOAD privilege(s) for this operation
+mysql> system mysql -u sidorov -p
+Enter password: *********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 168
+Server version: 8.0.23 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> source C:\Users\admin\DevOps_online_Dnipro_2021Q2\m3\new_users_queries.sql
+Database changed
++-------------------+
+| user()            |
++-------------------+
+| sidorov@localhost |
++-------------------+
+1 row in set (0.00 sec)
+
+ERROR 1142 (42000): CREATE command denied to user 'sidorov'@'localhost' for table 'orders'
+ERROR 1142 (42000): CREATE command denied to user 'sidorov'@'localhost' for table 'books'
+ERROR 1142 (42000): INSERT command denied to user 'sidorov'@'localhost' for table 'books'
+ERROR 1142 (42000): INSERT command denied to user 'sidorov'@'localhost' for table 'orders'
+ERROR 1142 (42000): UPDATE command denied to user 'sidorov'@'localhost' for table 'books'
+ERROR 1142 (42000): ALTER command denied to user 'sidorov'@'localhost' for table 'orders'
+ERROR 1142 (42000): ALTER command denied to user 'sidorov'@'localhost' for table 'orders'
+ERROR 1142 (42000): DROP command denied to user 'sidorov'@'localhost' for table 'books'
+ERROR 1227 (42000): Access denied; you need (at least one of) the CREATE USER privilege(s) for this operation
+ERROR 1227 (42000): Access denied; you need (at least one of) the RELOAD privilege(s) for this operation
+ERROR 1227 (42000): Access denied; you need (at least one of) the CREATE USER privilege(s) for this operation
+ERROR 1045 (28000): Access denied for user 'sidorov'@'localhost' (using password: YES)
+ERROR 1227 (42000): Access denied; you need (at least one of) the RELOAD privilege(s) for this operation
+mysql>
+
+
