@@ -14,7 +14,7 @@ all network objects.
 1. Place the necessary nodes on the work area, using
 browser at the bottom of the window (Fig. 1). Connect the nodes according to
 task with a twisted pair.
-![alt pic.4.3.1.jpg][pic.4.3.1.jpg]
+![alt pic.4.3.1.jpg](pic.4.3.1.jpg)
 Fig. 1. Workspace
 2. Set the ip-addresses of the nodes of the segment in the range 192.168.0.x, and the server,
 connected to the router - 192.168.1.1. Subnet Mask -
@@ -30,8 +30,8 @@ We will set there the addresses of all subnets that are allowed to communicate.
 We check the availability of workstations. To do this, in the right column
 select the Add simple PDU tool and select the sending station and
 receiving station. We make sure that the transfer is completed successfully. 
-Cisko PacketTracer Project: [task4.3.pkt][./task4.3.pkt]
-Network video:  [task4.3.mp4][./task4.3.mp4]
+Cisko PacketTracer Project: [task4.3.pkt](./task4.3.pkt)
+Network video:  [task4.3.mp4](./task4.3.mp4)
 
 
 
