@@ -5,7 +5,9 @@
 1. Assemble the following project (Fig. 1), which contains: 4 PC type PC-
 PT, Hub-PT. Every computer must be connected to
 concentrator with twisted pair (Copper Straight-through).
-![alt pic.4.1.1.jpg](pic.4.1.1.jpg)
+
+![alt pic4.1.1.jpg](pic4.1.1.jpg)
+
 Figure 1 - Topology 1
 2. Save the project and its screenshot.
 3. Assign a unique IP address to each PC. For its purpose
@@ -14,6 +16,7 @@ left-click it and select the Config / Interface tab. In the field ip
 address you must enter the appropriate address, and in the Subnet Mask field - accordingly
 this address mask 
 The values ​​of the IP address for each machine are given in the table:
+| Name| IP-address  |
 |:---:|:-----------:|
 | PC0 | 192.168.0.1 |
 | PC1 | 192.168.0.2 |
@@ -39,7 +42,9 @@ Save the results as a screenshot.
 Network is worked.
 
 Cisko PacketTracer Project: [task4.1.1.pkt](./task4.1.1.pkt).
+
 Network video:  [task4.1.1.mp4](./task4.1.1.mp4)).
+
 A layer 1 network device such as a hub transfers data but does not manage 
 any of the traffic coming through it. Any packet entering a port is repeated 
 to the output of every other port except for the port of entry. Specifically, 
@@ -50,17 +55,23 @@ packet collisions affect the entire network, limiting its overall capacity.
 
 8. Delete the IP address from each local machine PC0 - PC3.
 Repeat steps 5 - 10. Analyze the differences in the network.
-Еhe network is inoperative without ip addresses 
+Еhe network is inoperative without ip addresses
+ 
 Cisko PacketTracer Project: [task4.1.8.pkt](./task4.1.8.pkt).
+
 Network video:  [task4.1.8.mp4](./task4.1.8.mp4).
+
 
 9. Assemble the next project. It includes: PC0-PC5, Server,
     2 Hubs. Devices of the same name are connected by a crossover cable
 (Copper Cross-over).
-![alt pic.4.1.9.jpg](pic.4.1.9.jpg)
+
+![alt pic.4.1.9.jpg](pic4.1.9.jpg)
+
 Figure 2 - Topology 2
 10. Assign an IP address to each network component from the following
-tables:
+table:
+| Name| IP-address  |
 |:---: |:--------------:|
 | PC0  |   192.168.0.1 |
 | PC1  |   192.168.0.2 |
@@ -72,15 +83,19 @@ tables:
 The value of the mask for the address: 255.255.255.0.
 11. Check the network performance.
 The network is operational 
+
 Cisko PacketTracer Project: [task4.1.9.pkt](./task4.1.9.pkt).
+
 Network video:  [task4.1.9.mp4](./task4.1.9.mp4).
+
 
 12. Create a new project, which includes: 4 PCs such as PC-PT,
 Switch. Every computer must be connected to
 concentrator with twisted pair (Copper Straight-through) (Fig.
 6).
 
-![alt pic.4.1.12.jpg](pic.4.1.12.jpg)
+![alt pic4.1.12.jpg](pic4.1.12.jpg)
+
 Figure 3 - Topology 3
 13. For this topology, repeat steps 3-9. Analyze
 differences in the operation of the network Topology 1 and Topology 3.
@@ -88,7 +103,9 @@ Unlike repeater hubs, which broadcast the same data out of each port and
 let the devices pick out the data addressed to them, a network switch learns 
 the identities of connected devices and then only forwards data to the port 
 connected to the device to which it is addressed
+
 Cisko PacketTracer Project: [task4.1.12.pkt](./task4.1.12.pkt)
+
 Network video:  [task4.1.12.mp4](./task4.1.12.mp4)
 
 
@@ -105,11 +122,13 @@ the Ethernet port is available in the empty slot by first turning off the switch
 using the power button.
 
 
-![alt pic.4.1.14.jpg](pic.4.1.14.jpg)
+![alt pic.4.1.14.jpg](pic4.1.14.jpg)
+
 Figure 4 - Topology 4
 
 16. Assign an IP address to each network component from the following
 tables:
+| Name| IP-address  |
 |:---:|:-----------:|
 | PC0 | 192.168.0.1 |
 | PC1 | 192.168.0.2 |
@@ -122,18 +141,23 @@ tables:
 The value of the mask for the address: 255.255.255.0.
 17. Check the network performance.
 The network is operational 
+
 Cisko PacketTracer Project: [task4.1.14.pkt](./task4.1.14.pkt)
+
 Network video:  [task4.1.14.mp4](./task4.1.14.mp4)
+
 
 18. Divide the existing network into two subnet levels. And connect them by
 using a Router-PT router with multiple ports (Fig. 5).
 Connect the router and switches together using fiber optics
 (Fiber).
 
-![alt pic.4.1.18.jpg](pic.4.1.18.jpg)
+![alt pic.4.1.18.jpg](pic4.1.18.jpg)
+
 Figure 5 - Topology 5
 19. Assign IP addresses to PC4 - PC7 computers from the following
 tables:
+| Name| IP-address  |
 |:---:|:------------:|
 | PC4 |  192.168.1.1 |
 | PC5 |  192.168.1.2 |
@@ -149,8 +173,11 @@ it connects the subnet that includes this PC.
 22. Check the network.
 23. Analyze the differences in the network Topology 4 and Topology
      5. Evaluate the opportunities provided by the use of the router. 
+	 
 Cisko PacketTracer Project: [task4.1.18.pkt](./task4.1.18.pkt).
+
 Network video:  [task4.1.18.mp4](./task4.1.18.mp4).
+
 A router is connected to two or more data lines from different IP networks.
 When a data packet comes in on one of the lines, the router reads the network 
 address information in the packet header to determine the ultimate destination. 
