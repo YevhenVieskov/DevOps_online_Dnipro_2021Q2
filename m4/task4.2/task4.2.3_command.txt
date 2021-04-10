@@ -1,0 +1,30 @@
+Router>enable
+Router#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface FastEthernet 0/0.2
+Router(config-subif)#encapsulation dot1Q 2
+Router(config-subif)#ip address 192.168.0.254 255.255.255.0
+Router(config-subif)#exit
+Router(config)#interface FastEthernet 0/0.3
+Router(config-subif)#encapsulation dot1Q 3
+Router(config-subif)#ip address 192.168.1.254 255.255.255.0
+Router(config-subif)#exit
+Router(config)#interface FastEthernet 0/0.4
+Router(config-subif)#encapsulation dot1Q 4
+Router(config-subif)#ip address 192.168.2.254 255.255.255.0
+Router(config-subif)#exit
+Router(config)#interface FastEthernet 0/0.5	
+Router(config-subif)#encapsulation dot1Q 5
+Router(config-subif)#ip address 192.168.3.254
+% Incomplete command.
+Router(config-subif)#ip address 192.168.3.254 255.255.255.0
+Router(config-subif)#exit
+Router(config)#interface FastEthernet 0/0.6	
+Router(config-subif)#encapsulation dot1Q 6
+Router(config-subif)#ip address 192.168.4.254 255.255.255.0
+Router(config-subif)#exit
+Router#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+Router#
