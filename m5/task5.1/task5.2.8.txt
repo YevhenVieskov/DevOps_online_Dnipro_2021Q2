@@ -1,0 +1,10 @@
+Filesystem              Type     1K-blocks    Used Available Use% Mounted on
+devtmpfs                devtmpfs   2060180       0   2060180   0% /dev
+tmpfs                   tmpfs      2077072   56356   2020716   3% /dev/shm
+tmpfs                   tmpfs      2077072   12920   2064152   1% /run
+tmpfs                   tmpfs      2077072       0   2077072   0% /sys/fs/cgroup
+/dev/mapper/centos-root xfs       52403200 6616920  45786280  13% /
+/dev/mapper/centos-home xfs       47023684 6864136  40159548  15% /home
+/dev/sda1               xfs        1038336  243840    794496  24% /boot
+tmpfs                   tmpfs       415416      44    415372   1% /run/user/1000
+/dev/sdb1               vfat       4042736  702828   3339908  18% /run/media/bes/1496-2CFB

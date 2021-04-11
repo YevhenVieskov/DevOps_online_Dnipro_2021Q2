@@ -1,0 +1,2009 @@
+/etc
+├── abrt
+│   ├── abrt-action-save-package-data.conf
+│   ├── abrt.conf
+│   ├── gpg_keys.conf
+│   └── plugins
+│       ├── CCpp.conf
+│       ├── oops.conf
+│       ├── python.conf
+│       ├── vmcore.conf
+│       └── xorg.conf
+├── adjtime
+├── aliases
+├── aliases.db
+├── alsa
+│   ├── alsactl.conf
+│   ├── conf.d
+│   │   ├── 50-pulseaudio.conf -> /usr/share/alsa/alsa.conf.d/50-pulseaudio.conf
+│   │   └── 99-pulseaudio-default.conf
+│   └── state-daemon.conf
+├── alternatives
+│   ├── alt-java -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64/jre/bin/alt-java
+│   ├── alt-java.1.gz -> /usr/share/man/man1/alt-java-java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64.1.gz
+│   ├── cdda2wav -> /usr/bin/icedax
+│   ├── cdda2wav-cdda2wavman -> /usr/share/man/man1/icedax.1.gz
+│   ├── cdrecord -> /usr/bin/wodim
+│   ├── cdrecord-cdrecordman -> /usr/share/man/man1/wodim.1.gz
+│   ├── cdrecord-dvdrecord -> /usr/bin/wodim
+│   ├── cdrecord-dvdrecordman -> /usr/share/man/man1/wodim.1.gz
+│   ├── cdrecord-readcd -> /usr/bin/readom
+│   ├── cdrecord-readcdman -> /usr/share/man/man1/readom.1.gz
+│   ├── cifs-idmap-plugin -> /usr/lib64/cifs-utils/cifs_idmap_sss.so
+│   ├── ControlPanel -> /usr/bin/itweb-settings.itweb
+│   ├── ControlPanel.1.gz -> /usr/share/man/man1/itweb-settings.1.gz
+│   ├── cups_backend_smb -> /usr/bin/smbspool
+│   ├── itweb-settings -> /usr/bin/itweb-settings.itweb
+│   ├── java -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64/jre/bin/java
+│   ├── java.1.gz -> /usr/share/man/man1/java-java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64.1.gz
+│   ├── javaws -> /usr/bin/javaws.itweb
+│   ├── javaws.1.gz -> /usr/share/man/man1/javaws.itweb.1.gz
+│   ├── jjs -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64/jre/bin/jjs
+│   ├── jjs.1.gz -> /usr/share/man/man1/jjs-java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64.1.gz
+│   ├── jre -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64/jre
+│   ├── jre_1.7.0 -> /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.261-2.6.22.2.el7_8.x86_64/jre
+│   ├── jre_1.7.0_exports -> /usr/lib/jvm-exports/java-1.7.0-openjdk-1.7.0.261-2.6.22.2.el7_8.x86_64
+│   ├── jre_1.7.0_openjdk -> /usr/lib/jvm/jre-1.7.0-openjdk-1.7.0.261-2.6.22.2.el7_8.x86_64
+│   ├── jre_1.7.0_openjdk_exports -> /usr/lib/jvm-exports/java-1.7.0-openjdk-1.7.0.261-2.6.22.2.el7_8.x86_64
+│   ├── jre_1.8.0 -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64/jre
+│   ├── jre_1.8.0_exports -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64/jre
+│   ├── jre_1.8.0_openjdk -> /usr/lib/jvm/jre-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64
+│   ├── jre_1.8.0_openjdk_exports -> /usr/lib/jvm-exports/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64
+│   ├── jre_exports -> /usr/lib/jvm-exports/jre-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64
+│   ├── jre_openjdk -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64/jre
+│   ├── jre_openjdk_exports -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64/jre
+│   ├── keytool -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64/jre/bin/keytool
+│   ├── keytool.1.gz -> /usr/share/man/man1/keytool-java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64.1.gz
+│   ├── ld -> /usr/bin/ld.bfd
+│   ├── libjavaplugin.so.x86_64 -> /usr/lib64/IcedTeaPlugin.so
+│   ├── libnssckbi.so.x86_64 -> /usr/lib64/pkcs11/p11-kit-trust.so
+│   ├── libwbclient.so.0.15-64 -> /usr/lib64/samba/wbclient/libwbclient.so.0.15
+│   ├── mkisofs -> /usr/bin/genisoimage
+│   ├── mkisofs-mkhybrid -> /usr/bin/genisoimage
+│   ├── mkisofs-mkhybridman -> /usr/share/man/man1/genisoimage.1.gz
+│   ├── mkisofs-mkisofsman -> /usr/share/man/man1/genisoimage.1.gz
+│   ├── mta -> /usr/sbin/sendmail.postfix
+│   ├── mta-aliasesman -> /usr/share/man/man5/aliases.postfix.5.gz
+│   ├── mta-mailq -> /usr/bin/mailq.postfix
+│   ├── mta-mailqman -> /usr/share/man/man1/mailq.postfix.1.gz
+│   ├── mta-newaliases -> /usr/bin/newaliases.postfix
+│   ├── mta-newaliasesman -> /usr/share/man/man1/newaliases.postfix.1.gz
+│   ├── mta-pam -> /etc/pam.d/smtp.postfix
+│   ├── mta-rmail -> /usr/bin/rmail.postfix
+│   ├── mta-sendmail -> /usr/lib/sendmail.postfix
+│   ├── mta-sendmailman -> /usr/share/man/man1/sendmail.postfix.1.gz
+│   ├── ncman -> /usr/share/man/man1/ncat.1.gz
+│   ├── nmap -> /usr/bin/ncat
+│   ├── orbd -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64/jre/bin/orbd
+│   ├── orbd.1.gz -> /usr/share/man/man1/orbd-java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64.1.gz
+│   ├── pack200 -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64/jre/bin/pack200
+│   ├── pack200.1.gz -> /usr/share/man/man1/pack200-java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64.1.gz
+│   ├── policyeditor -> /usr/bin/policyeditor.itweb
+│   ├── policytool -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64/jre/bin/policytool
+│   ├── policytool.1.gz -> /usr/share/man/man1/policytool-java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64.1.gz
+│   ├── print -> /usr/bin/lpr.cups
+│   ├── print-cancel -> /usr/bin/cancel.cups
+│   ├── print-cancelman -> /usr/share/man/man1/cancel-cups.1.gz
+│   ├── print-lp -> /usr/bin/lp.cups
+│   ├── print-lpc -> /usr/sbin/lpc.cups
+│   ├── print-lpcman -> /usr/share/man/man8/lpc-cups.8.gz
+│   ├── print-lpman -> /usr/share/man/man1/lp-cups.1.gz
+│   ├── print-lpq -> /usr/bin/lpq.cups
+│   ├── print-lpqman -> /usr/share/man/man1/lpq-cups.1.gz
+│   ├── print-lprm -> /usr/bin/lprm.cups
+│   ├── print-lprman -> /usr/share/man/man1/lpr-cups.1.gz
+│   ├── print-lprmman -> /usr/share/man/man1/lprm-cups.1.gz
+│   ├── print-lpstat -> /usr/bin/lpstat.cups
+│   ├── print-lpstatman -> /usr/share/man/man1/lpstat-cups.1.gz
+│   ├── rmid -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64/jre/bin/rmid
+│   ├── rmid.1.gz -> /usr/share/man/man1/rmid-java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64.1.gz
+│   ├── rmiregistry -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64/jre/bin/rmiregistry
+│   ├── rmiregistry.1.gz -> /usr/share/man/man1/rmiregistry-java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64.1.gz
+│   ├── servertool -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64/jre/bin/servertool
+│   ├── servertool.1.gz -> /usr/share/man/man1/servertool-java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64.1.gz
+│   ├── tnameserv -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64/jre/bin/tnameserv
+│   ├── tnameserv.1.gz -> /usr/share/man/man1/tnameserv-java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64.1.gz
+│   ├── unpack200 -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64/jre/bin/unpack200
+│   ├── unpack200.1.gz -> /usr/share/man/man1/unpack200-java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64.1.gz
+│   └── xinputrc -> /etc/X11/xinit/xinput.d/ibus.conf
+├── anacrontab
+├── asound.conf
+├── at.deny
+├── audisp [error opening dir]
+├── audit [error opening dir]
+├── autofs.conf
+├── autofs_ldap_auth.conf
+├── auto.master
+├── auto.master.d
+├── auto.misc
+├── auto.net
+├── auto.smb
+├── avahi
+│   ├── avahi-daemon.conf
+│   ├── etc
+│   │   └── localtime
+│   ├── hosts
+│   └── services
+├── bash_completion.d
+│   ├── bpftool
+│   ├── createrepo
+│   ├── fcoeadm
+│   ├── fcoemon
+│   ├── genpkgmetadata.py -> createrepo
+│   ├── git
+│   ├── gluster
+│   ├── ipa
+│   ├── iprutils
+│   ├── itweb-settings.bash
+│   ├── javaws.bash
+│   ├── lldpad
+│   ├── lldptool
+│   ├── mergerepo -> createrepo
+│   ├── mergerepo.py -> createrepo
+│   ├── modifyrepo -> createrepo
+│   ├── modifyrepo.py -> createrepo
+│   ├── policyeditor.bash
+│   ├── redefine_filedir
+│   ├── scl.bash
+│   └── yum-utils.bash
+├── bashrc
+├── binfmt.d
+├── bluetooth
+│   └── main.conf
+├── brltty
+│   ├── af.ctb
+│   ├── am.ctb
+│   ├── ar.ttb
+│   ├── ascii-basic.tti
+│   ├── as.ttb
+│   ├── attrib.atb
+│   ├── attributes.atb
+│   ├── awa.ttb
+│   ├── bengali.tti
+│   ├── bg.ttb
+│   ├── bh.ttb
+│   ├── blocks.tti
+│   ├── bn.ttb
+│   ├── bo.ttb
+│   ├── boxes.tti
+│   ├── bra.ttb
+│   ├── brf.ttb
+│   ├── brl-al-abt_basic.kti
+│   ├── brl-al-abt_extra.kti
+│   ├── brl-al-abt_large.ktb
+│   ├── brl-al-abt_small.ktb
+│   ├── brl-al-bc.ktb
+│   ├── brl-al-sat_basic.kti
+│   ├── brl-al-sat_extra.kti
+│   ├── brl-al-sat_large.ktb
+│   ├── brl-al-sat_small.ktb
+│   ├── brl-at-all.ktb
+│   ├── brl-ba-all.txt
+│   ├── brl-bd-all.txt
+│   ├── brl-bl-18.txt
+│   ├── brl-bl-40_m20_m40.txt
+│   ├── brl-bm-command.kti
+│   ├── brl-bm-default.ktb
+│   ├── brl-bm-display6.kti
+│   ├── brl-bm-display7.kti
+│   ├── brl-bm-dm80p.ktb
+│   ├── brl-bm-front10.kti
+│   ├── brl-bm-front6.kti
+│   ├── brl-bm-horizontal.kti
+│   ├── brl-bm-inka.ktb
+│   ├── brl-bm-joystick.kti
+│   ├── brl-bm-keyboard.kti
+│   ├── brl-bm-pro.ktb
+│   ├── brl-bm-routing6.kti
+│   ├── brl-bm-routing7.kti
+│   ├── brl-bm-status.kti
+│   ├── brl-bm-vario80.ktb
+│   ├── brl-bm-vario.ktb
+│   ├── brl-bm-vertical.kti
+│   ├── brl-bm-wheels.kti
+│   ├── brl-bn-all.ktb
+│   ├── brl-bn-input.kti
+│   ├── brl-cb-all.ktb
+│   ├── brl-ce-all.ktb
+│   ├── brl-ce-novem.ktb
+│   ├── brl-chords.kti
+│   ├── brl-ec-all.txt
+│   ├── brl-ec-spanish.txt
+│   ├── brl-eu-all.txt
+│   ├── brl-eu-braille.kti
+│   ├── brl-eu-clio.ktb
+│   ├── brl-eu-common.kti
+│   ├── brl-eu-esys_large.ktb
+│   ├── brl-eu-esys_medium.ktb
+│   ├── brl-eu-esys_small.ktb
+│   ├── brl-eu-esytime.ktb
+│   ├── brl-eu-iris.ktb
+│   ├── brl-eu-joysticks.kti
+│   ├── brl-eu-sw12.kti
+│   ├── brl-eu-sw34.kti
+│   ├── brl-eu-sw56.kti
+│   ├── brl-fs-bumpers.kti
+│   ├── brl-fs-common.kti
+│   ├── brl-fs-focus_basic.ktb
+│   ├── brl-fs-focus_basic.kti
+│   ├── brl-fs-focus_large.ktb
+│   ├── brl-fs-focus_small.ktb
+│   ├── brl-fs-pacmate.ktb
+│   ├── brl-fs-rockers.kti
+│   ├── brl-hm-dots.kti
+│   ├── brl-hm-edge.ktb
+│   ├── brl-hm-sense.ktb
+│   ├── brl-hm-sync.ktb
+│   ├── brl-ht-ab40.ktb
+│   ├── brl-ht-bkwm.ktb
+│   ├── brl-ht-bs40.ktb
+│   ├── brl-ht-bs80.ktb
+│   ├── brl-ht-bs.kti
+│   ├── brl-ht-dots.kti
+│   ├── brl-ht-easy.ktb
+│   ├── brl-ht-input.kti
+│   ├── brl-ht-keypad.kti
+│   ├── brl-ht-mdlr.ktb
+│   ├── brl-ht-me64.ktb
+│   ├── brl-ht-me88.ktb
+│   ├── brl-ht-me.kti
+│   ├── brl-ht-rockers.kti
+│   ├── brl-ht-wave.ktb
+│   ├── brl-hw-all.ktb
+│   ├── brl-ir-all.kti
+│   ├── brl-ir-brl.ktb
+│   ├── brl-ir-pc.ktb
+│   ├── brl-lb-all.txt
+│   ├── brl-lt-all.txt
+│   ├── brl-mb-all.txt
+│   ├── brl-md-all.txt
+│   ├── brl-mn-all.txt
+│   ├── brl-mt-all.ktb
+│   ├── brl-np-all.ktb
+│   ├── brl-pg-all.ktb
+│   ├── brl-pm-2d_l.ktb
+│   ├── brl-pm-2d_s.ktb
+│   ├── brl-pm-bar.kti
+│   ├── brl-pm-c_486.ktb
+│   ├── brl-pm-c.ktb
+│   ├── brl-pm-el_2d_40.ktb
+│   ├── brl-pm-el_2d_66.ktb
+│   ├── brl-pm-el_2d_80.ktb
+│   ├── brl-pm-el2d_80s.ktb
+│   ├── brl-pm-el40c.ktb
+│   ├── brl-pm-el_40_p.ktb
+│   ├── brl-pm-el40s.ktb
+│   ├── brl-pm-el60c.ktb
+│   ├── brl-pm-el66s.ktb
+│   ├── brl-pm-el70s.ktb
+│   ├── brl-pm-el80c.ktb
+│   ├── brl-pm-el80_ii.ktb
+│   ├── brl-pm-el_80.ktb
+│   ├── brl-pm-el80s.ktb
+│   ├── brl-pm-elba_20.ktb
+│   ├── brl-pm-elba_32.ktb
+│   ├── brl-pm-elba_trio_20.ktb
+│   ├── brl-pm-elba_trio_32.ktb
+│   ├── brl-pm-front13.kti
+│   ├── brl-pm-front9.kti
+│   ├── brl-pm-ib_80.ktb
+│   ├── brl-pm-keyboard.kti
+│   ├── brl-pm-keys.kti
+│   ├── brl-pm-routing.kti
+│   ├── brl-pm-status0.kti
+│   ├── brl-pm-status13.kti
+│   ├── brl-pm-status20.kti
+│   ├── brl-pm-status22.kti
+│   ├── brl-pm-status2.kti
+│   ├── brl-pm-status4.kti
+│   ├── brl-pm-switches.kti
+│   ├── brl-pm-trio.ktb
+│   ├── brl-sk-bdp.ktb
+│   ├── brl-sk-ntk.ktb
+│   ├── brl-tn-all.txt
+│   ├── brl-ts-nav20_nav40.txt
+│   ├── brl-ts-nav80.txt
+│   ├── brl-ts-pb40.txt
+│   ├── brl-ts-pb65_pb81.txt
+│   ├── brl-tt-all.txt
+│   ├── brl-vd-all.txt
+│   ├── brl-vo-all.ktb
+│   ├── brl-vo-bp.ktb
+│   ├── brl-vr-all.txt
+│   ├── brl-vs-all.txt
+│   ├── brl-xw-all.txt
+│   ├── common.tti
+│   ├── control-latin.tti
+│   ├── countries.cti
+│   ├── cs.ttb
+│   ├── cy.ttb
+│   ├── da-1252.ttb
+│   ├── da-lt.ttb
+│   ├── da.ttb
+│   ├── de-basis.ctb
+│   ├── de-chess.tti
+│   ├── de-kurzschrift.ctb
+│   ├── de.ttb
+│   ├── devanagari.tti
+│   ├── de-vollschrift.ctb
+│   ├── dra.ttb
+│   ├── el.ttb
+│   ├── en_CA.ttb
+│   ├── en-chess.tti
+│   ├── en_GB.ttb
+│   ├── en-na-ascii.tti
+│   ├── en-nabcc.ttb
+│   ├── en.ttb
+│   ├── en-ueb-g2.ctb
+│   ├── en-us-g2.ctb
+│   ├── en_US.ttb
+│   ├── eo.ttb
+│   ├── es.ctb
+│   ├── es.ttb
+│   ├── et.ttb
+│   ├── fi.ttb
+│   ├── fr-2007.ttb
+│   ├── fr-abrege.ctb
+│   ├── fr_CA.ttb
+│   ├── fr-cbifs.ttb
+│   ├── fr_FR.ttb
+│   ├── fr-integral.ctb
+│   ├── fr.ttb
+│   ├── fr-vs.ttb
+│   ├── ga.ttb
+│   ├── gd.ttb
+│   ├── gon.ttb
+│   ├── gujarati.tti
+│   ├── gurmukhi.tti
+│   ├── gu.ttb
+│   ├── ha.ctb
+│   ├── he.ttb
+│   ├── hi.ttb
+│   ├── hr.ttb
+│   ├── hu.ttb
+│   ├── hy.ttb
+│   ├── id.ctb
+│   ├── ipa.ctb
+│   ├── is.ttb
+│   ├── it.ttb
+│   ├── ja.ctb
+│   ├── kannada.tti
+│   ├── kbd-braille.kti
+│   ├── kbd-desktop.ktb
+│   ├── kbd-keypad.ktb
+│   ├── kbd-kp_say.kti
+│   ├── kbd-kp_speak.kti
+│   ├── kbd-laptop.ktb
+│   ├── kha.ttb
+│   ├── kn.ttb
+│   ├── ko.ctb
+│   ├── ko-g1.ctb
+│   ├── ko-g2.ctb
+│   ├── kok.ttb
+│   ├── kru.ttb
+│   ├── latex-access.ctb
+│   ├── letters-cyrillic.tti
+│   ├── letters-latin.cti
+│   ├── letters-latin-dot8.tti
+│   ├── letters-latin.tti
+│   ├── letters-tibetan.tti
+│   ├── lt.ttb
+│   ├── lv.ttb
+│   ├── malayalam.tti
+│   ├── mg.ctb
+│   ├── mg.ttb
+│   ├── mi.ttb
+│   ├── ml.ttb
+│   ├── mni.ttb
+│   ├── mr.ttb
+│   ├── mt.ttb
+│   ├── mun.ctb
+│   ├── mun.ttb
+│   ├── mwr.ttb
+│   ├── nabcc.cti
+│   ├── ne.ttb
+│   ├── new.ttb
+│   ├── nl_BE.ttb
+│   ├── nl.ctb
+│   ├── nl_NL.ttb
+│   ├── nl.ttb
+│   ├── no-generic.ttb
+│   ├── no-oub.ttb
+│   ├── no.ttb
+│   ├── numbers-dot6.tti
+│   ├── numbers-dot8.tti
+│   ├── numbers-french.tti
+│   ├── numbers-nemeth.tti
+│   ├── nwc.ttb
+│   ├── ny.ctb
+│   ├── oriya.tti
+│   ├── or.ttb
+│   ├── pa.ttb
+│   ├── pi.ttb
+│   ├── pl.ttb
+│   ├── pt.ctb
+│   ├── pt.ttb
+│   ├── punctuation-alternate.tti
+│   ├── punctuation-basic.tti
+│   ├── punctuation-tibetan.tti
+│   ├── ro.ttb
+│   ├── ru.ttb
+│   ├── sa.ttb
+│   ├── sat.ttb
+│   ├── sd.ttb
+│   ├── si.ctb
+│   ├── sk.ttb
+│   ├── spaces.tti
+│   ├── sv-1989.ttb
+│   ├── sv-1996.ttb
+│   ├── sv.ttb
+│   ├── sw.ctb
+│   ├── sw.ttb
+│   ├── tamil.tti
+│   ├── ta.ttb
+│   ├── telugu.tti
+│   ├── te.ttb
+│   ├── th.ctb
+│   ├── tr.ttb
+│   ├── vi.ttb
+│   ├── zh-tw.ctb
+│   ├── zh-tw-polyphone.cti
+│   ├── zh-tw-ucb.ctb
+│   └── zu.ctb
+├── brltty.conf
+├── centos-release
+├── centos-release-upstream
+├── certmonger
+│   └── certmonger.conf
+├── cgconfig.conf
+├── cgconfig.d
+├── cgrules.conf
+├── cgsnapshot_blacklist.conf
+├── chkconfig.d
+├── chrony.conf
+├── chrony.keys
+├── cifs-utils
+│   └── idmap-plugin -> /etc/alternatives/cifs-idmap-plugin
+├── containerd
+│   └── config.toml
+├── cron.d
+│   ├── 0hourly
+│   ├── raid-check
+│   └── sysstat
+├── cron.daily
+│   ├── logrotate
+│   ├── man-db.cron
+│   └── mlocate
+├── cron.deny
+├── cron.hourly
+│   └── 0anacron
+├── cron.monthly
+├── crontab
+├── cron.weekly
+├── crypttab
+├── csh.cshrc
+├── csh.login
+├── cups
+│   ├── classes.conf
+│   ├── client.conf
+│   ├── cups-browsed.conf
+│   ├── cupsd.conf
+│   ├── cupsd.conf.default
+│   ├── cups-files.conf
+│   ├── interfaces
+│   ├── lpoptions
+│   ├── paps.convs
+│   ├── ppd
+│   ├── printers.conf
+│   ├── snmp.conf
+│   ├── ssl [error opening dir]
+│   ├── subscriptions.conf
+│   └── subscriptions.conf.O
+├── cupshelpers
+│   └── preferreddrivers.xml
+├── dbus-1
+│   ├── session.conf
+│   ├── session.d
+│   ├── system.conf
+│   └── system.d
+│       ├── avahi-dbus.conf
+│       ├── bluetooth.conf
+│       ├── certmonger.conf
+│       ├── com.redhat.NewPrinterNotification.conf
+│       ├── com.redhat.PrinterDriversInstaller.conf
+│       ├── com.redhat.tuned.conf
+│       ├── cups.conf
+│       ├── dbus-abrt.conf
+│       ├── dnsmasq.conf
+│       ├── FirewallD.conf
+│       ├── gdm.conf
+│       ├── net.reactivated.Fprint.conf
+│       ├── nm-dispatcher.conf
+│       ├── nm-ifcfg-rh.conf
+│       ├── nm-libreswan-service.conf
+│       ├── oddjob.conf
+│       ├── oddjob-mkhomedir.conf
+│       ├── org.fedoraproject.Setroubleshootd.conf
+│       ├── org.fedoraproject.SetroubleshootFixit.conf
+│       ├── org.freedesktop.Accounts.conf
+│       ├── org.freedesktop.bolt.conf
+│       ├── org.freedesktop.ColorManager.conf
+│       ├── org.freedesktop.Flatpak.SystemHelper.conf
+│       ├── org.freedesktop.fwupd.conf
+│       ├── org.freedesktop.GeoClue2.Agent.conf
+│       ├── org.freedesktop.GeoClue2.conf
+│       ├── org.freedesktop.hostname1.conf
+│       ├── org.freedesktop.import1.conf
+│       ├── org.freedesktop.locale1.conf
+│       ├── org.freedesktop.login1.conf
+│       ├── org.freedesktop.machine1.conf
+│       ├── org.freedesktop.ModemManager1.conf
+│       ├── org.freedesktop.NetworkManager.conf
+│       ├── org.freedesktop.PackageKit.conf
+│       ├── org.freedesktop.PolicyKit1.conf
+│       ├── org.freedesktop.realmd.conf
+│       ├── org.freedesktop.RealtimeKit1.conf
+│       ├── org.freedesktop.systemd1.conf
+│       ├── org.freedesktop.timedate1.conf
+│       ├── org.freedesktop.UPower.conf
+│       ├── org.gnome.GConf.Defaults.conf
+│       ├── org.opensuse.CupsPkHelper.Mechanism.conf
+│       ├── org.selinux.conf
+│       ├── pulseaudio-system.conf
+│       ├── teamd.conf
+│       └── wpa_supplicant.conf
+├── dconf
+│   ├── db
+│   │   ├── distro
+│   │   ├── distro.d
+│   │   │   ├── 10-authconfig
+│   │   │   └── locks
+│   │   │       └── 10-authconfig-locks
+│   │   ├── gdm
+│   │   ├── gdm.d
+│   │   │   └── locks
+│   │   ├── ibus
+│   │   ├── ibus.d
+│   │   │   └── 00-upstream-settings
+│   │   ├── local
+│   │   ├── local.d
+│   │   │   └── locks
+│   │   ├── site
+│   │   └── site.d
+│   │       └── locks
+│   └── profile
+│       ├── ibus
+│       └── user
+├── default
+│   ├── grub
+│   ├── nss
+│   └── useradd
+├── depmod.d
+│   ├── dist.conf
+│   └── kvdo.conf
+├── dhcp [error opening dir]
+├── DIR_COLORS
+├── DIR_COLORS.256color
+├── DIR_COLORS.lightbgcolor
+├── dleyna-server-service.conf
+├── dnsmasq.conf
+├── dnsmasq.d
+├── dracut.conf
+├── dracut.conf.d
+│   └── nvdimm-security.conf
+├── e2fsck.conf
+├── egl
+│   └── egl_external_platform.d
+├── enscript.cfg
+├── environment
+├── ethertypes
+├── exports
+├── exports.d
+├── favicon.png -> /usr/share/icons/hicolor/16x16/apps/fedora-logo-icon.png
+├── fcoe
+│   └── cfg-ethx
+├── festival
+│   ├── siteinit.scm
+│   └── sitevars.scm
+├── filesystems
+├── firefox
+│   └── pref
+├── firewalld [error opening dir]
+├── flatpak
+│   └── remotes.d
+├── fonts
+│   ├── conf.d
+│   │   ├── 10-hinting-slight.conf -> /usr/share/fontconfig/conf.avail/10-hinting-slight.conf
+│   │   ├── 10-scale-bitmap-fonts.conf -> /usr/share/fontconfig/conf.avail/10-scale-bitmap-fonts.conf
+│   │   ├── 20-unhint-small-dejavu-sans.conf -> /usr/share/fontconfig/conf.avail/20-unhint-small-dejavu-sans.conf
+│   │   ├── 20-unhint-small-dejavu-sans-mono.conf -> /usr/share/fontconfig/conf.avail/20-unhint-small-dejavu-sans-mono.conf
+│   │   ├── 20-unhint-small-dejavu-serif.conf -> /usr/share/fontconfig/conf.avail/20-unhint-small-dejavu-serif.conf
+│   │   ├── 20-unhint-small-vera.conf -> /usr/share/fontconfig/conf.avail/20-unhint-small-vera.conf
+│   │   ├── 25-no-bitmap-fedora.conf
+│   │   ├── 25-unhint-nonlatin.conf -> /usr/share/fontconfig/conf.avail/25-unhint-nonlatin.conf
+│   │   ├── 30-0-google-crosextra-caladea-fontconfig.conf -> /usr/share/fontconfig/conf.avail/30-0-google-crosextra-caladea-fontconfig.conf
+│   │   ├── 30-0-google-crosextra-carlito-fontconfig.conf -> /usr/share/fontconfig/conf.avail/30-0-google-crosextra-carlito-fontconfig.conf
+│   │   ├── 30-metric-aliases.conf -> /usr/share/fontconfig/conf.avail/30-metric-aliases.conf
+│   │   ├── 30-urw-aliases.conf -> /usr/share/fontconfig/conf.avail/30-urw-aliases.conf
+│   │   ├── 31-cantarell.conf -> /usr/share/fontconfig/conf.avail/31-cantarell.conf
+│   │   ├── 40-nonlatin.conf -> /usr/share/fontconfig/conf.avail/40-nonlatin.conf
+│   │   ├── 45-generic.conf -> /usr/share/fontconfig/conf.avail/45-generic.conf
+│   │   ├── 45-latin.conf -> /usr/share/fontconfig/conf.avail/45-latin.conf
+│   │   ├── 49-sansserif.conf -> /usr/share/fontconfig/conf.avail/49-sansserif.conf
+│   │   ├── 50-user.conf -> /usr/share/fontconfig/conf.avail/50-user.conf
+│   │   ├── 51-local.conf -> /usr/share/fontconfig/conf.avail/51-local.conf
+│   │   ├── 57-dejavu-sans.conf -> /usr/share/fontconfig/conf.avail/57-dejavu-sans.conf
+│   │   ├── 57-dejavu-sans-mono.conf -> /usr/share/fontconfig/conf.avail/57-dejavu-sans-mono.conf
+│   │   ├── 57-dejavu-serif.conf -> /usr/share/fontconfig/conf.avail/57-dejavu-serif.conf
+│   │   ├── 57-paratype-pt-sans.conf -> /usr/share/fontconfig/conf.avail/57-paratype-pt-sans.conf
+│   │   ├── 59-liberation-mono.conf -> /usr/share/fontconfig/conf.avail/59-liberation-mono.conf
+│   │   ├── 59-liberation-sans.conf -> /usr/share/fontconfig/conf.avail/59-liberation-sans.conf
+│   │   ├── 59-liberation-serif.conf -> /usr/share/fontconfig/conf.avail/59-liberation-serif.conf
+│   │   ├── 60-generic.conf -> /usr/share/fontconfig/conf.avail/60-generic.conf
+│   │   ├── 60-latin.conf -> /usr/share/fontconfig/conf.avail/60-latin.conf
+│   │   ├── 60-open-sans.conf -> /usr/share/fontconfig/conf.avail/60-open-sans.conf
+│   │   ├── 60-overpass.conf -> /usr/share/fontconfig/conf.avail/60-overpass.conf
+│   │   ├── 61-stix.conf -> /usr/share/fontconfig/conf.avail/61-stix.conf
+│   │   ├── 61-urw-bookman.conf -> /usr/share/fontconfig/conf.avail/61-urw-bookman.conf
+│   │   ├── 61-urw-c059.conf -> /usr/share/fontconfig/conf.avail/61-urw-c059.conf
+│   │   ├── 61-urw-d050000l.conf -> /usr/share/fontconfig/conf.avail/61-urw-d050000l.conf
+│   │   ├── 61-urw-fallback-backwards.conf -> /usr/share/fontconfig/conf.avail/61-urw-fallback-backwards.conf
+│   │   ├── 61-urw-gothic.conf -> /usr/share/fontconfig/conf.avail/61-urw-gothic.conf
+│   │   ├── 61-urw-nimbus-mono-ps.conf -> /usr/share/fontconfig/conf.avail/61-urw-nimbus-mono-ps.conf
+│   │   ├── 61-urw-nimbus-roman.conf -> /usr/share/fontconfig/conf.avail/61-urw-nimbus-roman.conf
+│   │   ├── 61-urw-nimbus-sans.conf -> /usr/share/fontconfig/conf.avail/61-urw-nimbus-sans.conf
+│   │   ├── 61-urw-p052.conf -> /usr/share/fontconfig/conf.avail/61-urw-p052.conf
+│   │   ├── 61-urw-standard-symbols-ps.conf -> /usr/share/fontconfig/conf.avail/61-urw-standard-symbols-ps.conf
+│   │   ├── 61-urw-z003.conf -> /usr/share/fontconfig/conf.avail/61-urw-z003.conf
+│   │   ├── 62-google-crosextra-caladea-fontconfig.conf -> /usr/share/fontconfig/conf.avail/62-google-crosextra-caladea-fontconfig.conf
+│   │   ├── 62-google-crosextra-carlito-fontconfig.conf -> /usr/share/fontconfig/conf.avail/62-google-crosextra-carlito-fontconfig.conf
+│   │   ├── 65-0-jomolhari.conf -> /usr/share/fontconfig/conf.avail/65-0-jomolhari.conf
+│   │   ├── 65-0-khmeros-base.conf -> /usr/share/fontconfig/conf.avail/65-0-khmeros-base.conf
+│   │   ├── 65-0-lohit-assamese.conf -> /usr/share/fontconfig/conf.avail/65-0-lohit-assamese.conf
+│   │   ├── 65-0-lohit-bengali.conf -> /usr/share/fontconfig/conf.avail/65-0-lohit-bengali.conf
+│   │   ├── 65-0-lohit-devanagari.conf -> /usr/share/fontconfig/conf.avail/65-0-lohit-devanagari.conf
+│   │   ├── 65-0-lohit-gujarati.conf -> /usr/share/fontconfig/conf.avail/65-0-lohit-gujarati.conf
+│   │   ├── 65-0-lohit-kannada.conf -> /usr/share/fontconfig/conf.avail/65-0-lohit-kannada.conf
+│   │   ├── 65-0-lohit-marathi.conf -> /usr/share/fontconfig/conf.avail/65-0-lohit-marathi.conf
+│   │   ├── 65-0-lohit-nepali.conf -> /usr/share/fontconfig/conf.avail/65-0-lohit-nepali.conf
+│   │   ├── 65-0-lohit-oriya.conf -> /usr/share/fontconfig/conf.avail/65-0-lohit-oriya.conf
+│   │   ├── 65-0-lohit-punjabi.conf -> /usr/share/fontconfig/conf.avail/65-0-lohit-punjabi.conf
+│   │   ├── 65-0-lohit-tamil.conf -> /usr/share/fontconfig/conf.avail/65-0-lohit-tamil.conf
+│   │   ├── 65-0-lohit-telugu.conf -> /usr/share/fontconfig/conf.avail/65-0-lohit-telugu.conf
+│   │   ├── 65-0-madan.conf -> /usr/share/fontconfig/conf.avail/65-0-madan.conf
+│   │   ├── 65-0-nhn-nanum-gothic.conf -> /usr/share/fontconfig/conf.avail/65-0-nhn-nanum-gothic.conf
+│   │   ├── 65-0-paktype-naskh-basic.conf -> /usr/share/fontconfig/conf.avail/65-0-paktype-naskh-basic.conf
+│   │   ├── 65-0-smc-meera.conf -> /usr/share/fontconfig/conf.avail/65-0-smc-meera.conf
+│   │   ├── 65-0-ttf-arphic-uming.conf -> /usr/share/fontconfig/conf.avail/65-0-ttf-arphic-uming.conf
+│   │   ├── 65-0-wqy-zenhei-sharp.conf -> /usr/share/fontconfig/conf.avail/65-0-wqy-zenhei-sharp.conf
+│   │   ├── 65-1-vlgothic-gothic.conf -> /usr/share/fontconfig/conf.avail/65-1-vlgothic-gothic.conf
+│   │   ├── 65-fonts-persian.conf -> /usr/share/fontconfig/conf.avail/65-fonts-persian.conf
+│   │   ├── 65-lklug.conf -> /usr/share/fontconfig/conf.avail/65-lklug.conf
+│   │   ├── 65-nonlatin.conf -> /usr/share/fontconfig/conf.avail/65-nonlatin.conf
+│   │   ├── 65-sil-padauk.conf -> /usr/share/fontconfig/conf.avail/65-sil-padauk.conf
+│   │   ├── 65-wqy-microhei.conf -> /usr/share/fontconfig/conf.avail/65-wqy-microhei.conf
+│   │   ├── 66-sil-abyssinica.conf -> /usr/share/fontconfig/conf.avail/66-sil-abyssinica.conf
+│   │   ├── 66-sil-nuosu.conf -> /usr/share/fontconfig/conf.avail/66-sil-nuosu.conf
+│   │   ├── 66-ucs-miscfixed.conf -> /usr/share/fontconfig/conf.avail/66-ucs-miscfixed.conf
+│   │   ├── 67-lohit-malayalam.conf -> /usr/share/fontconfig/conf.avail/67-lohit-malayalam.conf
+│   │   ├── 69-gnu-free-mono.conf -> /usr/share/fontconfig/conf.avail/69-gnu-free-mono.conf
+│   │   ├── 69-gnu-free-sans.conf -> /usr/share/fontconfig/conf.avail/69-gnu-free-sans.conf
+│   │   ├── 69-gnu-free-serif.conf -> /usr/share/fontconfig/conf.avail/69-gnu-free-serif.conf
+│   │   ├── 69-unifont.conf -> /usr/share/fontconfig/conf.avail/69-unifont.conf
+│   │   ├── 80-delicious.conf -> /usr/share/fontconfig/conf.avail/80-delicious.conf
+│   │   ├── 90-synthetic.conf -> /usr/share/fontconfig/conf.avail/90-synthetic.conf
+│   │   ├── 90-ttf-arphic-uming-embolden.conf -> /usr/share/fontconfig/conf.avail/90-ttf-arphic-uming-embolden.conf
+│   │   └── README
+│   └── fonts.conf
+├── fprintd.conf
+├── fstab
+├── fuse.conf
+├── fwupd
+│   ├── daemon.conf
+│   ├── remotes.d
+│   │   ├── fwupd.conf
+│   │   ├── lvfs.conf
+│   │   ├── lvfs-testing.conf
+│   │   └── vendor.conf
+│   └── uefi.conf
+├── gconf
+│   ├── 2
+│   │   └── path
+│   ├── gconf.xml.defaults
+│   │   ├── %gconf-tree-ar.xml
+│   │   ├── %gconf-tree-ast.xml
+│   │   ├── %gconf-tree-as.xml
+│   │   ├── %gconf-tree-az.xml
+│   │   ├── %gconf-tree-bg.xml
+│   │   ├── %gconf-tree-bn_IN.xml
+│   │   ├── %gconf-tree-bn.xml
+│   │   ├── %gconf-tree-bs.xml
+│   │   ├── %gconf-tree-ca@valencia.xml
+│   │   ├── %gconf-tree-ca.xml
+│   │   ├── %gconf-tree-crh.xml
+│   │   ├── %gconf-tree-cs.xml
+│   │   ├── %gconf-tree-cy.xml
+│   │   ├── %gconf-tree-da.xml
+│   │   ├── %gconf-tree-de.xml
+│   │   ├── %gconf-tree-dz.xml
+│   │   ├── %gconf-tree-el.xml
+│   │   ├── %gconf-tree-en_CA.xml
+│   │   ├── %gconf-tree-en_GB.xml
+│   │   ├── %gconf-tree-en@shaw.xml
+│   │   ├── %gconf-tree-eo.xml
+│   │   ├── %gconf-tree-es.xml
+│   │   ├── %gconf-tree-et.xml
+│   │   ├── %gconf-tree-eu.xml
+│   │   ├── %gconf-tree-fa.xml
+│   │   ├── %gconf-tree-fi.xml
+│   │   ├── %gconf-tree-fr.xml
+│   │   ├── %gconf-tree-ga.xml
+│   │   ├── %gconf-tree-gl.xml
+│   │   ├── %gconf-tree-gu.xml
+│   │   ├── %gconf-tree-he.xml
+│   │   ├── %gconf-tree-hi.xml
+│   │   ├── %gconf-tree-hr.xml
+│   │   ├── %gconf-tree-hu.xml
+│   │   ├── %gconf-tree-id.xml
+│   │   ├── %gconf-tree-it.xml
+│   │   ├── %gconf-tree-ja.xml
+│   │   ├── %gconf-tree-ka.xml
+│   │   ├── %gconf-tree-kn.xml
+│   │   ├── %gconf-tree-ko.xml
+│   │   ├── %gconf-tree-lt.xml
+│   │   ├── %gconf-tree-lv.xml
+│   │   ├── %gconf-tree-mai.xml
+│   │   ├── %gconf-tree-mk.xml
+│   │   ├── %gconf-tree-ml.xml
+│   │   ├── %gconf-tree-mn.xml
+│   │   ├── %gconf-tree-mr.xml
+│   │   ├── %gconf-tree-ms.xml
+│   │   ├── %gconf-tree-nb.xml
+│   │   ├── %gconf-tree-ne.xml
+│   │   ├── %gconf-tree-nl.xml
+│   │   ├── %gconf-tree-nn.xml
+│   │   ├── %gconf-tree-oc.xml
+│   │   ├── %gconf-tree-or.xml
+│   │   ├── %gconf-tree-pa.xml
+│   │   ├── %gconf-tree-pl.xml
+│   │   ├── %gconf-tree-pt_BR.xml
+│   │   ├── %gconf-tree-pt.xml
+│   │   ├── %gconf-tree-ro.xml
+│   │   ├── %gconf-tree-ru.xml
+│   │   ├── %gconf-tree-sk.xml
+│   │   ├── %gconf-tree-sl.xml
+│   │   ├── %gconf-tree-sq.xml
+│   │   ├── %gconf-tree-sr@latin.xml
+│   │   ├── %gconf-tree-sr.xml
+│   │   ├── %gconf-tree-sv.xml
+│   │   ├── %gconf-tree-ta.xml
+│   │   ├── %gconf-tree-te.xml
+│   │   ├── %gconf-tree-th.xml
+│   │   ├── %gconf-tree-tr.xml
+│   │   ├── %gconf-tree-ug.xml
+│   │   ├── %gconf-tree-uk.xml
+│   │   ├── %gconf-tree-vi.xml
+│   │   ├── %gconf-tree-xh.xml
+│   │   ├── %gconf-tree-.xml
+│   │   ├── %gconf-tree.xml
+│   │   ├── %gconf-tree-zh_CN.xml
+│   │   ├── %gconf-tree-zh_HK.xml
+│   │   └── %gconf-tree-zh_TW.xml
+│   ├── gconf.xml.mandatory
+│   ├── gconf.xml.system
+│   └── schemas
+│       ├── ekiga.schemas
+│       ├── gstreamer-0.10.schemas
+│       └── ibus-chewing.schemas
+├── gcrypt
+├── gdbinit
+├── gdbinit.d
+├── gdm
+│   ├── custom.conf
+│   ├── Init
+│   │   └── Default
+│   ├── PostLogin
+│   │   └── Default.sample
+│   ├── PostSession
+│   │   └── Default
+│   ├── PreSession
+│   │   └── Default
+│   └── Xsession -> ../X11/xinit/Xsession
+├── geoclue
+│   └── geoclue.conf
+├── GeoIP.conf
+├── ghostscript
+├── glvnd
+│   └── egl_vendor.d
+├── gnupg
+├── GREP_COLORS
+├── groff
+│   ├── site-font
+│   └── site-tmac
+│       ├── man.local
+│       └── mdoc.local
+├── group
+├── group-
+├── grub2.cfg -> ../boot/grub2/grub.cfg
+├── grub.d [error opening dir]
+├── gshadow
+├── gshadow-
+├── gss
+│   └── mech.d
+│       └── gssproxy.conf
+├── gssproxy
+│   ├── 24-nfs-server.conf
+│   ├── 99-nfs-client.conf
+│   └── gssproxy.conf
+├── highlight
+│   └── filetypes.conf
+├── host.conf
+├── hostname
+├── hosts
+├── hosts.allow
+├── hosts.deny
+├── hp
+│   └── hplip.conf
+├── idmapd.conf
+├── init.d -> rc.d/init.d
+├── inittab
+├── inputrc
+├── ipa
+│   └── nssdb
+├── iproute2
+│   ├── bpf_pinning
+│   ├── ematch_map
+│   ├── group
+│   ├── nl_protos
+│   ├── rt_dsfield
+│   ├── rt_protos
+│   ├── rt_realms
+│   ├── rt_scopes
+│   └── rt_tables
+├── ipsec.conf
+├── ipsec.d [error opening dir]
+├── ipsec.secrets
+├── iscsi
+│   ├── initiatorname.iscsi
+│   └── iscsid.conf
+├── issue
+├── issue.net
+├── java
+│   ├── font.properties
+│   ├── java.conf
+│   └── security
+│       └── security.d
+├── jvm
+├── jvm-commmon
+├── kdump.conf
+├── kernel
+│   └── postinst.d
+│       └── 51-dracut-rescue-postinst.sh
+├── krb5.conf
+├── krb5.conf.d
+├── ksmtuned.conf
+├── ld.so.cache
+├── ld.so.conf
+├── ld.so.conf.d
+│   ├── bind-export-x86_64.conf
+│   ├── dyninst-x86_64.conf
+│   ├── kernel-3.10.0-1127.el7.x86_64.conf
+│   ├── kernel-3.10.0-1160.6.1.el7.x86_64.conf
+│   ├── libiscsi-x86_64.conf
+│   └── mariadb-x86_64.conf
+├── libaudit.conf
+├── libblockdev
+│   └── conf.d
+│       └── 00-default.cfg
+├── libibverbs.d
+│   ├── bnxt_re.driver
+│   ├── cxgb3.driver
+│   ├── cxgb4.driver
+│   ├── hfi1verbs.driver
+│   ├── hns.driver
+│   ├── i40iw.driver
+│   ├── ipathverbs.driver
+│   ├── mlx4.driver
+│   ├── mlx5.driver
+│   ├── mthca.driver
+│   ├── nes.driver
+│   ├── ocrdma.driver
+│   ├── qedr.driver
+│   ├── rxe.driver
+│   └── vmw_pvrdma.driver
+├── libnl
+│   ├── classid
+│   └── pktloc
+├── libpaper.d
+├── libreport
+│   ├── cert-api.access.redhat.com.pem
+│   ├── events
+│   │   ├── report_Bugzilla.conf
+│   │   ├── report_CentOSBugTracker.conf
+│   │   └── report_Uploader.conf
+│   ├── events.d
+│   │   ├── abrt_event.conf
+│   │   ├── bugzilla_anaconda_event.conf
+│   │   ├── bugzilla_event.conf
+│   │   ├── ccpp_event.conf
+│   │   ├── ccpp_retrace_event.conf
+│   │   ├── centos_report_event.conf
+│   │   ├── emergencyanalysis_event.conf
+│   │   ├── gconf_event.conf
+│   │   ├── koops_event.conf
+│   │   ├── mailx_event.conf
+│   │   ├── mdadm_event.conf
+│   │   ├── python_event.conf
+│   │   ├── rhtsupport_event.conf
+│   │   ├── smart_event.conf
+│   │   ├── uploader_event.conf
+│   │   ├── vimrc_event.conf
+│   │   ├── vmcore_event.conf
+│   │   └── xorg_event.conf
+│   ├── forbidden_words.conf
+│   ├── ignored_words.conf
+│   ├── plugins
+│   │   ├── bugzilla.conf
+│   │   ├── bugzilla_format_anaconda.conf
+│   │   ├── bugzilla_format.conf
+│   │   ├── bugzilla_formatdup_anaconda.conf
+│   │   ├── bugzilla_formatdup.conf
+│   │   ├── bugzilla_format_kernel.conf
+│   │   ├── bugzilla_format_libreport.conf
+│   │   ├── mailx.conf
+│   │   ├── mantisbt.conf
+│   │   ├── mantisbt_format_analyzer_libreport.conf
+│   │   ├── mantisbt_format.conf
+│   │   ├── mantisbt_formatdup_analyzer_libreport.conf
+│   │   ├── mantisbt_formatdup.conf
+│   │   ├── rhtsupport.conf
+│   │   ├── upload.conf
+│   │   └── ureport.conf
+│   ├── report_event.conf
+│   └── workflows.d
+│       ├── anaconda_event.conf
+│       ├── report_centos.conf
+│       ├── report_mailx.conf
+│       └── report_uploader.conf
+├── libuser.conf
+├── libvirt [error opening dir]
+├── locale.conf
+├── localtime -> ../usr/share/zoneinfo/Europe/Kiev
+├── login.defs
+├── logrotate.conf
+├── logrotate.d
+│   ├── bootlog
+│   ├── chrony
+│   ├── cups
+│   ├── firewalld
+│   ├── glusterfs
+│   ├── iscsiuiolog
+│   ├── libvirtd
+│   ├── libvirtd.qemu
+│   ├── numad
+│   ├── ppp
+│   ├── psacct
+│   ├── samba
+│   ├── sssd
+│   ├── syslog
+│   ├── wpa_supplicant
+│   └── yum
+├── lsm
+│   ├── lsmd.conf
+│   └── pluginconf.d
+│       └── sim.conf
+├── lvm
+│   ├── archive [error opening dir]
+│   ├── backup [error opening dir]
+│   ├── cache [error opening dir]
+│   ├── lvm.conf
+│   ├── lvmlocal.conf
+│   └── profile
+│       ├── cache-mq.profile
+│       ├── cache-smq.profile
+│       ├── command_profile_template.profile
+│       ├── lvmdbusd.profile
+│       ├── metadata_profile_template.profile
+│       ├── thin-generic.profile
+│       └── thin-performance.profile
+├── machine-id
+├── magic
+├── mail.rc
+├── makedumpfile.conf.sample
+├── man_db.conf
+├── maven
+├── mc
+│   ├── edit.indent.rc
+│   ├── filehighlight.ini
+│   ├── mcedit.menu
+│   ├── mc.ext
+│   ├── mc.keymap
+│   ├── mc.keymap.default
+│   ├── mc.keymap.emacs
+│   ├── mc.menu
+│   ├── mc.menu.sr
+│   └── sfs.ini
+├── mke2fs.conf
+├── modprobe.d
+│   ├── dccp-blacklist.conf
+│   ├── firewalld-sysctls.conf
+│   ├── lockd.conf
+│   ├── mlx4.conf
+│   ├── nvdimm-security.conf
+│   ├── truescale.conf
+│   └── tuned.conf
+├── modules-load.d
+├── motd
+├── mtab -> /proc/self/mounts
+├── mtools.conf
+├── multipath
+├── my.cnf
+├── my.cnf.d
+│   └── mysql-clients.cnf
+├── nanorc
+├── ndctl
+│   ├── keys
+│   │   └── keys.readme
+│   └── monitor.conf
+├── netconfig
+├── NetworkManager
+│   ├── conf.d
+│   ├── dispatcher.d
+│   │   ├── 00-netreport
+│   │   ├── 04-iscsi
+│   │   ├── 11-dhclient
+│   │   ├── 20-chrony
+│   │   ├── no-wait.d
+│   │   ├── pre-down.d
+│   │   └── pre-up.d
+│   ├── dnsmasq.d
+│   ├── dnsmasq-shared.d
+│   ├── NetworkManager.conf
+│   ├── system-connections
+│   └── VPN
+│       └── nm-libreswan-service.name
+├── networks
+├── nfs.conf
+├── nfsmount.conf
+├── nsswitch.conf
+├── nsswitch.conf.bak
+├── ntp
+│   ├── crypto [error opening dir]
+│   ├── keys
+│   └── step-tickers
+├── ntp.conf
+├── numad.conf
+├── oddjob
+├── oddjobd.conf
+├── oddjobd.conf.d
+│   ├── oddjobd-introspection.conf
+│   └── oddjobd-mkhomedir.conf
+├── openldap
+│   ├── certs
+│   │   ├── cert8.db
+│   │   ├── key3.db
+│   │   ├── password
+│   │   └── secmod.db
+│   └── ldap.conf
+├── opt
+├── os-release -> ../usr/lib/os-release
+├── PackageKit
+│   ├── CommandNotFound.conf
+│   ├── PackageKit.conf
+│   ├── Vendor.conf
+│   └── Yum.conf
+├── pam.d
+│   ├── atd
+│   ├── chfn
+│   ├── chsh
+│   ├── config-util
+│   ├── crond
+│   ├── cups
+│   ├── fingerprint-auth -> fingerprint-auth-ac
+│   ├── fingerprint-auth-ac
+│   ├── gdm-autologin
+│   ├── gdm-fingerprint
+│   ├── gdm-launch-environment
+│   ├── gdm-password
+│   ├── gdm-pin
+│   ├── gdm-smartcard
+│   ├── ksu
+│   ├── liveinst
+│   ├── login
+│   ├── other
+│   ├── passwd
+│   ├── password-auth -> password-auth-ac
+│   ├── password-auth-ac
+│   ├── pluto
+│   ├── polkit-1
+│   ├── postlogin -> postlogin-ac
+│   ├── postlogin-ac
+│   ├── ppp
+│   ├── remote
+│   ├── runuser
+│   ├── runuser-l
+│   ├── setup
+│   ├── smartcard-auth -> smartcard-auth-ac
+│   ├── smartcard-auth-ac
+│   ├── smtp -> /etc/alternatives/mta-pam
+│   ├── smtp.postfix
+│   ├── sshd
+│   ├── sssd-shadowutils
+│   ├── su
+│   ├── sudo
+│   ├── sudo-i
+│   ├── su-l
+│   ├── system-auth -> system-auth-ac
+│   ├── system-auth-ac
+│   ├── systemd-user
+│   ├── vlock
+│   ├── vmtoolsd
+│   └── xserver
+├── papersize
+├── passwd
+├── passwd-
+├── pbm2ppa.conf
+├── pinforc
+├── pkcs11
+│   └── modules
+├── pki
+│   ├── CA
+│   │   ├── certs
+│   │   ├── crl
+│   │   ├── newcerts
+│   │   └── private [error opening dir]
+│   ├── ca-trust
+│   │   ├── ca-legacy.conf
+│   │   ├── extracted
+│   │   │   ├── java
+│   │   │   │   ├── cacerts
+│   │   │   │   └── README
+│   │   │   ├── openssl
+│   │   │   │   ├── ca-bundle.trust.crt
+│   │   │   │   └── README
+│   │   │   ├── pem
+│   │   │   │   ├── email-ca-bundle.pem
+│   │   │   │   ├── objsign-ca-bundle.pem
+│   │   │   │   ├── README
+│   │   │   │   └── tls-ca-bundle.pem
+│   │   │   └── README
+│   │   ├── README
+│   │   └── source
+│   │       ├── anchors
+│   │       ├── blacklist
+│   │       ├── ca-bundle.legacy.crt -> /usr/share/pki/ca-trust-legacy/ca-bundle.legacy.default.crt
+│   │       └── README
+│   ├── fwupd
+│   │   ├── GPG-KEY-Hughski-Limited
+│   │   ├── GPG-KEY-Linux-Foundation-Firmware
+│   │   └── GPG-KEY-Linux-Vendor-Firmware-Service
+│   ├── fwupd-metadata
+│   │   ├── GPG-KEY-Linux-Foundation-Metadata
+│   │   └── GPG-KEY-Linux-Vendor-Firmware-Service
+│   ├── java
+│   │   └── cacerts -> /etc/pki/ca-trust/extracted/java/cacerts
+│   ├── nssdb
+│   │   ├── cert8.db
+│   │   ├── cert9.db
+│   │   ├── key3.db
+│   │   ├── key4.db
+│   │   ├── pkcs11.txt
+│   │   └── secmod.db
+│   ├── nss-legacy
+│   │   └── nss-rhel7.config
+│   ├── rpm-gpg
+│   │   ├── RPM-GPG-KEY-CentOS-7
+│   │   ├── RPM-GPG-KEY-CentOS-Debug-7
+│   │   └── RPM-GPG-KEY-CentOS-Testing-7
+│   ├── rsyslog [error opening dir]
+│   └── tls
+│       ├── cert.pem -> /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem
+│       ├── certs
+│       │   ├── ca-bundle.crt -> /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem
+│       │   ├── ca-bundle.trust.crt -> /etc/pki/ca-trust/extracted/openssl/ca-bundle.trust.crt
+│       │   ├── make-dummy-cert
+│       │   ├── Makefile
+│       │   └── renew-dummy-cert
+│       ├── misc
+│       │   ├── CA
+│       │   ├── c_hash
+│       │   ├── c_info
+│       │   ├── c_issuer
+│       │   └── c_name
+│       ├── openssl.cnf
+│       └── private
+├── plymouth
+│   └── plymouthd.conf
+├── pm
+│   ├── config.d
+│   ├── power.d
+│   └── sleep.d
+├── pnm2ppa.conf
+├── polkit-1
+│   ├── localauthority [error opening dir]
+│   ├── localauthority.conf.d
+│   └── rules.d [error opening dir]
+├── popt.d
+├── postfix
+│   ├── access
+│   ├── canonical
+│   ├── generic
+│   ├── header_checks
+│   ├── main.cf
+│   ├── master.cf
+│   ├── relocated
+│   ├── transport
+│   └── virtual
+├── ppp
+│   ├── chap-secrets
+│   ├── eaptls-client
+│   ├── eaptls-server
+│   ├── ip-down
+│   ├── ip-down.ipv6to4
+│   ├── ip-up
+│   ├── ip-up.ipv6to4
+│   ├── ipv6-down
+│   ├── ipv6-up
+│   ├── options
+│   ├── pap-secrets
+│   └── peers
+│       └── wvdial
+├── prelink.conf.d
+│   ├── fipscheck.conf
+│   ├── grub2.conf
+│   ├── libreswan-fips.conf
+│   └── nss-softokn-prelink.conf
+├── printcap
+├── profile
+├── profile.d
+│   ├── 256term.csh
+│   ├── 256term.sh
+│   ├── abrt-console-notification.sh
+│   ├── bash_completion.sh
+│   ├── colorgrep.csh
+│   ├── colorgrep.sh
+│   ├── colorls.csh
+│   ├── colorls.sh
+│   ├── csh.local
+│   ├── flatpak.sh
+│   ├── lang.csh
+│   ├── lang.sh
+│   ├── less.csh
+│   ├── less.sh
+│   ├── mc.csh
+│   ├── mc.sh
+│   ├── PackageKit.sh
+│   ├── sh.local
+│   ├── vim.csh
+│   ├── vim.sh
+│   ├── vte.sh
+│   ├── which2.csh
+│   └── which2.sh
+├── protocols
+├── pulse
+│   ├── client.conf
+│   ├── daemon.conf
+│   ├── default.pa
+│   └── system.pa
+├── purple
+│   └── prefs.xml
+├── python
+│   └── cert-verification.cfg
+├── qemu-ga
+│   ├── fsfreeze-hook
+│   └── fsfreeze-hook.d
+├── qemu-kvm
+│   ├── bridge.conf
+│   └── target-x86_64.conf
+├── radvd.conf
+├── rc0.d -> rc.d/rc0.d
+├── rc1.d -> rc.d/rc1.d
+├── rc2.d -> rc.d/rc2.d
+├── rc3.d -> rc.d/rc3.d
+├── rc4.d -> rc.d/rc4.d
+├── rc5.d -> rc.d/rc5.d
+├── rc6.d -> rc.d/rc6.d
+├── rc.d
+│   ├── init.d
+│   │   ├── functions
+│   │   ├── netconsole
+│   │   ├── network
+│   │   └── README
+│   ├── rc0.d
+│   │   ├── K50netconsole -> ../init.d/netconsole
+│   │   └── K90network -> ../init.d/network
+│   ├── rc1.d
+│   │   ├── K50netconsole -> ../init.d/netconsole
+│   │   └── K90network -> ../init.d/network
+│   ├── rc2.d
+│   │   ├── K50netconsole -> ../init.d/netconsole
+│   │   └── S10network -> ../init.d/network
+│   ├── rc3.d
+│   │   ├── K50netconsole -> ../init.d/netconsole
+│   │   └── S10network -> ../init.d/network
+│   ├── rc4.d
+│   │   ├── K50netconsole -> ../init.d/netconsole
+│   │   └── S10network -> ../init.d/network
+│   ├── rc5.d
+│   │   ├── K50netconsole -> ../init.d/netconsole
+│   │   └── S10network -> ../init.d/network
+│   ├── rc6.d
+│   │   ├── K50netconsole -> ../init.d/netconsole
+│   │   └── K90network -> ../init.d/network
+│   └── rc.local
+├── rc.local -> rc.d/rc.local
+├── rdma
+│   ├── ibacm_opts.cfg
+│   ├── mlx4.conf
+│   ├── modules
+│   │   ├── infiniband.conf
+│   │   ├── iwarp.conf
+│   │   ├── iwpmd.conf
+│   │   ├── opa.conf
+│   │   ├── rdma.conf
+│   │   ├── roce.conf
+│   │   └── srp_daemon.conf
+│   ├── rdma.conf
+│   └── sriov-vfs
+├── redhat-release -> centos-release
+├── request-key.conf
+├── request-key.d
+│   ├── cifs.idmap.conf
+│   ├── cifs.spnego.conf
+│   └── id_resolver.conf
+├── resolv.conf
+├── resolv.conf.save
+├── rpc
+├── rpm
+│   ├── macros.color
+│   ├── macros.dist
+│   ├── macros.dwz
+│   ├── macros.fjava
+│   ├── macros.gconf2
+│   ├── macros.ghc-srpm
+│   ├── macros.gnat-srpm
+│   ├── macros.jpackage
+│   ├── macros.mono-srpm
+│   ├── macros.nodejs-srpm
+│   ├── macros.ocaml-srpm
+│   ├── macros.perl
+│   ├── macros.perl-srpm
+│   └── macros.python-srpm
+├── rsyncd.conf
+├── rsyslog.conf
+├── rsyslog.d
+│   └── listen.conf
+├── rwtab
+├── rwtab.d
+│   ├── gssproxy
+│   ├── logrotate
+│   └── sssd
+├── samba
+│   ├── lmhosts
+│   ├── smb.conf
+│   └── smb.conf.example
+├── sane.d
+│   ├── abaton.conf
+│   ├── agfafocus.conf
+│   ├── apple.conf
+│   ├── artec.conf
+│   ├── artec_eplus48u.conf
+│   ├── avision.conf
+│   ├── bh.conf
+│   ├── canon630u.conf
+│   ├── canon.conf
+│   ├── canon_dr.conf
+│   ├── canon_pp.conf
+│   ├── cardscan.conf
+│   ├── coolscan2.conf
+│   ├── coolscan3.conf
+│   ├── coolscan.conf
+│   ├── dc210.conf
+│   ├── dc240.conf
+│   ├── dc25.conf
+│   ├── dell1600n_net.conf
+│   ├── dll.conf
+│   ├── dll.d
+│   │   └── hpaio
+│   ├── dmc.conf
+│   ├── epjitsu.conf
+│   ├── epson2.conf
+│   ├── epson.conf
+│   ├── fujitsu.conf
+│   ├── genesys.conf
+│   ├── gphoto2.conf
+│   ├── gt68xx.conf
+│   ├── hp3900.conf
+│   ├── hp4200.conf
+│   ├── hp5400.conf
+│   ├── hp.conf
+│   ├── hpsj5s.conf
+│   ├── hs2p.conf
+│   ├── ibm.conf
+│   ├── kodakaio.conf
+│   ├── kodak.conf
+│   ├── leo.conf
+│   ├── lexmark.conf
+│   ├── ma1509.conf
+│   ├── magicolor.conf
+│   ├── matsushita.conf
+│   ├── microtek2.conf
+│   ├── microtek.conf
+│   ├── mustek.conf
+│   ├── mustek_pp.conf
+│   ├── mustek_usb.conf
+│   ├── nec.conf
+│   ├── net.conf
+│   ├── p5.conf
+│   ├── pie.conf
+│   ├── pixma.conf
+│   ├── plustek.conf
+│   ├── plustek_pp.conf
+│   ├── qcam.conf
+│   ├── ricoh.conf
+│   ├── rts8891.conf
+│   ├── s9036.conf
+│   ├── saned.conf
+│   ├── sceptre.conf
+│   ├── sharp.conf
+│   ├── sm3840.conf
+│   ├── snapscan.conf
+│   ├── sp15c.conf
+│   ├── st400.conf
+│   ├── stv680.conf
+│   ├── tamarack.conf
+│   ├── teco1.conf
+│   ├── teco2.conf
+│   ├── teco3.conf
+│   ├── test.conf
+│   ├── u12.conf
+│   ├── umax1220u.conf
+│   ├── umax.conf
+│   ├── umax_pp.conf
+│   ├── v4l.conf
+│   └── xerox_mfp.conf
+├── sasl2
+│   ├── libvirt.conf
+│   ├── qemu-kvm.conf
+│   └── smtpd.conf
+├── scl
+│   ├── conf -> prefixes
+│   └── prefixes
+├── securetty
+├── security
+│   ├── access.conf
+│   ├── chroot.conf
+│   ├── console.apps
+│   │   ├── config-util
+│   │   ├── liveinst
+│   │   ├── setup
+│   │   └── xserver
+│   ├── console.handlers
+│   ├── console.perms
+│   ├── console.perms.d
+│   ├── group.conf
+│   ├── limits.conf
+│   ├── limits.d
+│   │   └── 20-nproc.conf
+│   ├── namespace.conf
+│   ├── namespace.d
+│   ├── namespace.init
+│   ├── opasswd
+│   ├── pam_env.conf
+│   ├── pwquality.conf
+│   ├── sepermit.conf
+│   └── time.conf
+├── selinux
+│   ├── config
+│   ├── final [error opening dir]
+│   ├── semanage.conf
+│   ├── targeted
+│   │   ├── active [error opening dir]
+│   │   ├── booleans.subs_dist
+│   │   ├── contexts
+│   │   │   ├── customizable_types
+│   │   │   ├── dbus_contexts
+│   │   │   ├── default_contexts
+│   │   │   ├── default_type
+│   │   │   ├── failsafe_context
+│   │   │   ├── files
+│   │   │   │   ├── file_contexts
+│   │   │   │   ├── file_contexts.bin
+│   │   │   │   ├── file_contexts.homedirs
+│   │   │   │   ├── file_contexts.homedirs.bin
+│   │   │   │   ├── file_contexts.local
+│   │   │   │   ├── file_contexts.local.bin
+│   │   │   │   ├── file_contexts.subs
+│   │   │   │   ├── file_contexts.subs_dist
+│   │   │   │   └── media
+│   │   │   ├── initrc_context
+│   │   │   ├── lxc_contexts
+│   │   │   ├── removable_context
+│   │   │   ├── securetty_types
+│   │   │   ├── sepgsql_contexts
+│   │   │   ├── snapperd_contexts
+│   │   │   ├── systemd_contexts
+│   │   │   ├── userhelper_context
+│   │   │   ├── users
+│   │   │   │   ├── guest_u
+│   │   │   │   ├── root
+│   │   │   │   ├── staff_u
+│   │   │   │   ├── sysadm_u
+│   │   │   │   ├── unconfined_u
+│   │   │   │   ├── user_u
+│   │   │   │   └── xguest_u
+│   │   │   ├── virtual_domain_context
+│   │   │   ├── virtual_image_context
+│   │   │   └── x_contexts
+│   │   ├── logins
+│   │   ├── modules
+│   │   │   └── active
+│   │   │       ├── modules
+│   │   │       └── README.migrated
+│   │   ├── policy
+│   │   │   └── policy.31
+│   │   ├── semanage.read.LOCK
+│   │   ├── semanage.trans.LOCK
+│   │   ├── setrans.conf
+│   │   └── seusers
+│   └── tmp
+├── services
+├── sestatus.conf
+├── setroubleshoot
+│   └── setroubleshoot.conf
+├── setuptool.d
+│   ├── 98netconfig
+│   ├── 98system-config-authentication
+│   ├── 98system-config-display
+│   ├── 98system-config-keyboard
+│   ├── 99authconfig
+│   ├── 99kbdconfig
+│   ├── 99mouseconfig
+│   ├── 99ntsysv
+│   ├── 99printconf-tui
+│   ├── 99sndconfig
+│   ├── 99system-config-firewall-tui
+│   ├── 99system-config-network-tui
+│   ├── 99timeconfig
+│   └── 99Xconfigurator
+├── sgml
+│   └── docbook
+│       └── xmlcatalog
+├── shadow
+├── shadow-
+├── shells
+├── skel
+├── smartmontools
+│   ├── smartd.conf
+│   ├── smartd_warning.d
+│   └── smartd_warning.sh
+├── sos.conf
+├── speech-dispatcher
+│   ├── clients
+│   │   ├── emacs.conf
+│   │   └── gnome-speech.conf
+│   ├── modules
+│   │   ├── cicero.conf
+│   │   ├── dtk-generic.conf
+│   │   ├── epos-generic.conf
+│   │   ├── espeak.conf
+│   │   ├── espeak-generic.conf
+│   │   ├── espeak-mbrola-generic.conf
+│   │   ├── festival.conf
+│   │   ├── flite.conf
+│   │   ├── ibmtts.conf
+│   │   ├── ivona.conf
+│   │   ├── llia_phon-generic.conf
+│   │   └── swift-generic.conf
+│   └── speechd.conf
+├── ssh
+│   ├── moduli
+│   ├── ssh_config
+│   ├── sshd_config
+│   ├── ssh_host_ecdsa_key
+│   ├── ssh_host_ecdsa_key.pub
+│   ├── ssh_host_ed25519_key
+│   ├── ssh_host_ed25519_key.pub
+│   ├── ssh_host_rsa_key
+│   └── ssh_host_rsa_key.pub
+├── ssl
+│   └── certs -> ../pki/tls/certs
+├── sssd [error opening dir]
+├── statetab
+├── statetab.d
+├── subgid
+├── subgid-
+├── subuid
+├── subuid-
+├── subversion
+├── sudo.conf
+├── sudoers
+├── sudoers.d [error opening dir]
+├── sudo-ldap.conf
+├── sysconfig
+│   ├── anaconda
+│   ├── atd
+│   ├── authconfig
+│   ├── autofs
+│   ├── cbq
+│   │   ├── avpkt
+│   │   └── cbq-0000.example
+│   ├── cgred
+│   ├── chronyd
+│   ├── console
+│   ├── cpupower
+│   ├── crond
+│   ├── ebtables-config
+│   ├── fcoe
+│   ├── firewalld
+│   ├── grub -> ../default/grub
+│   ├── init
+│   ├── ip6tables-config
+│   ├── iptables-config
+│   ├── irqbalance
+│   ├── kdump
+│   ├── kernel
+│   ├── ksm
+│   ├── libvirtd
+│   ├── man-db
+│   ├── modules
+│   ├── netconsole
+│   ├── network
+│   ├── network-scripts
+│   │   ├── ifcfg-ens33
+│   │   ├── ifcfg-lo
+│   │   ├── ifdown -> ../../../usr/sbin/ifdown
+│   │   ├── ifdown-bnep
+│   │   ├── ifdown-eth
+│   │   ├── ifdown-ib
+│   │   ├── ifdown-ippp
+│   │   ├── ifdown-ipv6
+│   │   ├── ifdown-isdn -> ifdown-ippp
+│   │   ├── ifdown-post
+│   │   ├── ifdown-ppp
+│   │   ├── ifdown-routes
+│   │   ├── ifdown-sit
+│   │   ├── ifdown-Team
+│   │   ├── ifdown-TeamPort
+│   │   ├── ifdown-tunnel
+│   │   ├── ifup -> ../../../usr/sbin/ifup
+│   │   ├── ifup-aliases
+│   │   ├── ifup-bnep
+│   │   ├── ifup-eth
+│   │   ├── ifup-ib
+│   │   ├── ifup-ippp
+│   │   ├── ifup-ipv6
+│   │   ├── ifup-isdn -> ifup-ippp
+│   │   ├── ifup-plip
+│   │   ├── ifup-plusb
+│   │   ├── ifup-post
+│   │   ├── ifup-ppp
+│   │   ├── ifup-routes
+│   │   ├── ifup-sit
+│   │   ├── ifup-Team
+│   │   ├── ifup-TeamPort
+│   │   ├── ifup-tunnel
+│   │   ├── ifup-wireless
+│   │   ├── init.ipv6-global
+│   │   ├── network-functions
+│   │   └── network-functions-ipv6
+│   ├── nfs
+│   ├── ntpd
+│   ├── ntpdate
+│   ├── qemu-ga
+│   ├── radvd
+│   ├── raid-check
+│   ├── rdisc
+│   ├── readonly-root
+│   ├── rpcbind
+│   ├── rpc-rquotad
+│   ├── rsyncd
+│   ├── rsyslog
+│   ├── run-parts
+│   ├── samba
+│   ├── saslauthd
+│   ├── selinux -> ../selinux/config
+│   ├── smartmontools
+│   ├── sshd
+│   ├── svnserve
+│   ├── sysstat
+│   ├── sysstat.ioconf
+│   ├── virtlockd
+│   ├── virtlogd
+│   └── wpa_supplicant
+├── sysctl.conf
+├── sysctl.d
+│   └── 99-sysctl.conf -> ../sysctl.conf
+├── systemd
+│   ├── bootchart.conf
+│   ├── coredump.conf
+│   ├── journald.conf
+│   ├── logind.conf
+│   ├── system
+│   │   ├── basic.target.wants
+│   │   │   ├── microcode.service -> /usr/lib/systemd/system/microcode.service
+│   │   │   └── rhel-dmesg.service -> /usr/lib/systemd/system/rhel-dmesg.service
+│   │   ├── bluetooth.target.wants
+│   │   │   └── bluetooth.service -> /usr/lib/systemd/system/bluetooth.service
+│   │   ├── dbus-org.bluez.service -> /usr/lib/systemd/system/bluetooth.service
+│   │   ├── dbus-org.fedoraproject.FirewallD1.service -> /usr/lib/systemd/system/firewalld.service
+│   │   ├── dbus-org.freedesktop.Avahi.service -> /usr/lib/systemd/system/avahi-daemon.service
+│   │   ├── dbus-org.freedesktop.ModemManager1.service -> /usr/lib/systemd/system/ModemManager.service
+│   │   ├── dbus-org.freedesktop.nm-dispatcher.service -> /usr/lib/systemd/system/NetworkManager-dispatcher.service
+│   │   ├── default.target -> /lib/systemd/system/graphical.target
+│   │   ├── default.target.wants
+│   │   │   ├── systemd-readahead-collect.service -> /usr/lib/systemd/system/systemd-readahead-collect.service
+│   │   │   └── systemd-readahead-replay.service -> /usr/lib/systemd/system/systemd-readahead-replay.service
+│   │   ├── dev-virtio\\x2dports-org.qemu.guest_agent.0.device.wants
+│   │   │   └── qemu-guest-agent.service -> /usr/lib/systemd/system/qemu-guest-agent.service
+│   │   ├── display-manager.service -> /usr/lib/systemd/system/gdm.service
+│   │   ├── getty.target.wants
+│   │   │   └── getty@tty1.service -> /usr/lib/systemd/system/getty@.service
+│   │   ├── graphical.target.wants
+│   │   │   ├── accounts-daemon.service -> /usr/lib/systemd/system/accounts-daemon.service
+│   │   │   ├── initial-setup-reconfiguration.service -> /usr/lib/systemd/system/initial-setup-reconfiguration.service
+│   │   │   ├── rtkit-daemon.service -> /usr/lib/systemd/system/rtkit-daemon.service
+│   │   │   └── udisks2.service -> /usr/lib/systemd/system/udisks2.service
+│   │   ├── local-fs.target.wants
+│   │   │   └── rhel-readonly.service -> /usr/lib/systemd/system/rhel-readonly.service
+│   │   ├── multi-user.target.wants
+│   │   │   ├── abrt-ccpp.service -> /usr/lib/systemd/system/abrt-ccpp.service
+│   │   │   ├── abrtd.service -> /usr/lib/systemd/system/abrtd.service
+│   │   │   ├── abrt-oops.service -> /usr/lib/systemd/system/abrt-oops.service
+│   │   │   ├── abrt-vmcore.service -> /usr/lib/systemd/system/abrt-vmcore.service
+│   │   │   ├── abrt-xorg.service -> /usr/lib/systemd/system/abrt-xorg.service
+│   │   │   ├── atd.service -> /usr/lib/systemd/system/atd.service
+│   │   │   ├── auditd.service -> /usr/lib/systemd/system/auditd.service
+│   │   │   ├── avahi-daemon.service -> /usr/lib/systemd/system/avahi-daemon.service
+│   │   │   ├── crond.service -> /usr/lib/systemd/system/crond.service
+│   │   │   ├── cups.path -> /usr/lib/systemd/system/cups.path
+│   │   │   ├── cups.service -> /usr/lib/systemd/system/cups.service
+│   │   │   ├── firewalld.service -> /usr/lib/systemd/system/firewalld.service
+│   │   │   ├── initial-setup-reconfiguration.service -> /usr/lib/systemd/system/initial-setup-reconfiguration.service
+│   │   │   ├── irqbalance.service -> /usr/lib/systemd/system/irqbalance.service
+│   │   │   ├── kdump.service -> /usr/lib/systemd/system/kdump.service
+│   │   │   ├── ksm.service -> /usr/lib/systemd/system/ksm.service
+│   │   │   ├── ksmtuned.service -> /usr/lib/systemd/system/ksmtuned.service
+│   │   │   ├── libstoragemgmt.service -> /usr/lib/systemd/system/libstoragemgmt.service
+│   │   │   ├── libvirtd.service -> /usr/lib/systemd/system/libvirtd.service
+│   │   │   ├── mdmonitor.service -> /usr/lib/systemd/system/mdmonitor.service
+│   │   │   ├── ModemManager.service -> /usr/lib/systemd/system/ModemManager.service
+│   │   │   ├── NetworkManager.service -> /usr/lib/systemd/system/NetworkManager.service
+│   │   │   ├── nfs-client.target -> /usr/lib/systemd/system/nfs-client.target
+│   │   │   ├── postfix.service -> /usr/lib/systemd/system/postfix.service
+│   │   │   ├── remote-fs.target -> /usr/lib/systemd/system/remote-fs.target
+│   │   │   ├── rhel-configure.service -> /usr/lib/systemd/system/rhel-configure.service
+│   │   │   ├── rngd.service -> /usr/lib/systemd/system/rngd.service
+│   │   │   ├── rpcbind.service -> /usr/lib/systemd/system/rpcbind.service
+│   │   │   ├── rsyslog.service -> /usr/lib/systemd/system/rsyslog.service
+│   │   │   ├── smartd.service -> /usr/lib/systemd/system/smartd.service
+│   │   │   ├── sshd.service -> /usr/lib/systemd/system/sshd.service
+│   │   │   ├── sysstat.service -> /usr/lib/systemd/system/sysstat.service
+│   │   │   ├── tuned.service -> /usr/lib/systemd/system/tuned.service
+│   │   │   ├── vdo.service -> /usr/lib/systemd/system/vdo.service
+│   │   │   └── vmtoolsd.service -> /usr/lib/systemd/system/vmtoolsd.service
+│   │   ├── network-online.target.wants
+│   │   │   └── NetworkManager-wait-online.service -> /usr/lib/systemd/system/NetworkManager-wait-online.service
+│   │   ├── printer.target.wants
+│   │   │   └── cups.service -> /usr/lib/systemd/system/cups.service
+│   │   ├── remote-fs.target.wants
+│   │   │   ├── iscsi.service -> /usr/lib/systemd/system/iscsi.service
+│   │   │   └── nfs-client.target -> /usr/lib/systemd/system/nfs-client.target
+│   │   ├── sockets.target.wants
+│   │   │   ├── avahi-daemon.socket -> /usr/lib/systemd/system/avahi-daemon.socket
+│   │   │   ├── cups.socket -> /usr/lib/systemd/system/cups.socket
+│   │   │   ├── dm-event.socket -> /usr/lib/systemd/system/dm-event.socket
+│   │   │   ├── iscsid.socket -> /usr/lib/systemd/system/iscsid.socket
+│   │   │   ├── iscsiuio.socket -> /usr/lib/systemd/system/iscsiuio.socket
+│   │   │   ├── rpcbind.socket -> /usr/lib/systemd/system/rpcbind.socket
+│   │   │   ├── virtlockd.socket -> /usr/lib/systemd/system/virtlockd.socket
+│   │   │   └── virtlogd.socket -> /usr/lib/systemd/system/virtlogd.socket
+│   │   ├── sysinit.target.wants
+│   │   │   ├── dmraid-activation.service -> /usr/lib/systemd/system/dmraid-activation.service
+│   │   │   ├── iscsi-onboot.service -> /usr/lib/systemd/system/iscsi-onboot.service
+│   │   │   ├── lvm2-lvmetad.socket -> /usr/lib/systemd/system/lvm2-lvmetad.socket
+│   │   │   ├── lvm2-lvmpolld.socket -> /usr/lib/systemd/system/lvm2-lvmpolld.socket
+│   │   │   ├── lvm2-monitor.service -> /usr/lib/systemd/system/lvm2-monitor.service
+│   │   │   ├── multipathd.service -> /usr/lib/systemd/system/multipathd.service
+│   │   │   ├── rhel-autorelabel-mark.service -> /usr/lib/systemd/system/rhel-autorelabel-mark.service
+│   │   │   ├── rhel-autorelabel.service -> /usr/lib/systemd/system/rhel-autorelabel.service
+│   │   │   ├── rhel-domainname.service -> /usr/lib/systemd/system/rhel-domainname.service
+│   │   │   ├── rhel-import-state.service -> /usr/lib/systemd/system/rhel-import-state.service
+│   │   │   └── rhel-loadmodules.service -> /usr/lib/systemd/system/rhel-loadmodules.service
+│   │   ├── system-update.target.wants
+│   │   │   └── systemd-readahead-drop.service -> /usr/lib/systemd/system/systemd-readahead-drop.service
+│   │   ├── timers.target.wants
+│   │   │   └── unbound-anchor.timer -> /usr/lib/systemd/system/unbound-anchor.timer
+│   │   └── vmtoolsd.service.requires
+│   │       └── vgauthd.service -> /usr/lib/systemd/system/vgauthd.service
+│   ├── system.conf
+│   ├── user
+│   │   └── dbus-org.bluez.obex.service -> /usr/lib/systemd/user/obex.service
+│   └── user.conf
+├── system-release -> centos-release
+├── system-release-cpe
+├── target
+│   ├── backup
+│   └── pr
+├── tcsd.conf
+├── terminfo
+├── tmpfiles.d
+├── trusted-key.key
+├── tuned
+│   ├── active_profile
+│   ├── bootcmdline
+│   ├── profile_mode
+│   ├── recommend.d
+│   └── tuned-main.conf
+├── udev
+│   ├── hwdb.bin
+│   ├── rules.d
+│   │   ├── 69-vdo-start-by-dev.rules
+│   │   └── 70-persistent-ipoib.rules
+│   └── udev.conf
+├── udisks2
+│   └── udisks2.conf
+├── unbound
+│   ├── dlv.isc.org.key
+│   ├── icannbundle.pem
+│   └── root.key
+├── updatedb.conf
+├── UPower
+│   └── UPower.conf
+├── usb_modeswitch.conf
+├── vconsole.conf
+├── vimrc
+├── virc
+├── vmware-tools
+│   ├── poweroff-vm-default
+│   ├── poweron-vm-default
+│   ├── resume-vm-default
+│   ├── scripts
+│   │   └── vmware
+│   │       └── network
+│   ├── statechange.subr
+│   ├── suspend-vm-default
+│   ├── tools.conf.example
+│   ├── vgauth
+│   │   └── schemas
+│   │       ├── catalog.xml
+│   │       ├── datatypes.dtd
+│   │       ├── saml-schema-assertion-2.0.xsd
+│   │       ├── xenc-schema.xsd
+│   │       ├── xmldsig-core-schema.xsd
+│   │       ├── XMLSchema.dtd
+│   │       ├── XMLSchema-hasFacetAndProperty.xsd
+│   │       ├── XMLSchema-instance.xsd
+│   │       ├── XMLSchema.xsd
+│   │       └── xml.xsd
+│   └── vgauth.conf
+├── wgetrc
+├── wpa_supplicant
+│   └── wpa_supplicant.conf
+├── wvdial.conf
+├── X11
+│   ├── applnk
+│   ├── fontpath.d
+│   │   ├── cjkuni-uming-fonts -> /usr/share/fonts/cjkuni-uming/
+│   │   ├── liberation-fonts -> /usr/share/fonts/liberation
+│   │   ├── xorg-x11-fonts-100dpi:unscaled:pri=30 -> /usr/share/X11/fonts/100dpi
+│   │   ├── xorg-x11-fonts-misc:unscaled:pri=10 -> /usr/share/X11/fonts/misc
+│   │   └── xorg-x11-fonts-Type1 -> /usr/share/X11/fonts/Type1
+│   ├── mwm
+│   │   └── system.mwmrc
+│   ├── xinit
+│   │   ├── Xclients
+│   │   ├── Xclients.d
+│   │   ├── xinitrc
+│   │   ├── xinitrc-common
+│   │   ├── xinitrc.d
+│   │   │   ├── 00-start-message-bus.sh
+│   │   │   ├── 10-qt5-check-opengl2.sh
+│   │   │   ├── 50-xinput.sh
+│   │   │   ├── localuser.sh
+│   │   │   ├── xmbind.sh
+│   │   │   └── zz-liveinst.sh
+│   │   ├── xinput.d
+│   │   │   ├── ibus.conf
+│   │   │   ├── none.conf
+│   │   │   ├── xcompose.conf
+│   │   │   └── xim.conf
+│   │   ├── xinputrc -> /etc/alternatives/xinputrc
+│   │   └── Xsession
+│   ├── Xmodmap
+│   ├── xorg.conf.d
+│   │   └── 00-keyboard.conf
+│   └── Xresources
+├── xdg
+│   ├── autostart
+│   │   ├── abrt-applet.desktop -> /usr/share/applications/abrt-applet.desktop
+│   │   ├── at-spi-dbus-bus.desktop
+│   │   ├── gnome-initial-setup-copy-worker.desktop
+│   │   ├── gnome-initial-setup-first-login.desktop
+│   │   ├── gnome-keyring-pkcs11.desktop
+│   │   ├── gnome-keyring-secrets.desktop
+│   │   ├── gnome-keyring-ssh.desktop
+│   │   ├── gnome-software-service.desktop
+│   │   ├── gnome-welcome-tour.desktop
+│   │   ├── gsettings-data-convert.desktop
+│   │   ├── imsettings-start.desktop
+│   │   ├── nautilus-autostart.desktop
+│   │   ├── orca-autostart.desktop
+│   │   ├── org.gnome.Evolution-alarm-notify.desktop
+│   │   ├── org.gnome.SettingsDaemon.A11ySettings.desktop
+│   │   ├── org.gnome.SettingsDaemon.Account.desktop
+│   │   ├── org.gnome.SettingsDaemon.Clipboard.desktop
+│   │   ├── org.gnome.SettingsDaemon.Color.desktop
+│   │   ├── org.gnome.SettingsDaemon.Datetime.desktop
+│   │   ├── org.gnome.SettingsDaemon.DiskUtilityNotify.desktop
+│   │   ├── org.gnome.SettingsDaemon.Housekeeping.desktop
+│   │   ├── org.gnome.SettingsDaemon.Keyboard.desktop
+│   │   ├── org.gnome.SettingsDaemon.MediaKeys.desktop
+│   │   ├── org.gnome.SettingsDaemon.Mouse.desktop
+│   │   ├── org.gnome.SettingsDaemon.Power.desktop
+│   │   ├── org.gnome.SettingsDaemon.PrintNotifications.desktop
+│   │   ├── org.gnome.SettingsDaemon.Rfkill.desktop
+│   │   ├── org.gnome.SettingsDaemon.ScreensaverProxy.desktop
+│   │   ├── org.gnome.SettingsDaemon.Sharing.desktop
+│   │   ├── org.gnome.SettingsDaemon.Smartcard.desktop
+│   │   ├── org.gnome.SettingsDaemon.Sound.desktop
+│   │   ├── org.gnome.SettingsDaemon.Wacom.desktop
+│   │   ├── org.gnome.SettingsDaemon.XSettings.desktop
+│   │   ├── print-applet.desktop
+│   │   ├── pulseaudio.desktop
+│   │   ├── sealertauto.desktop
+│   │   ├── spice-streaming.desktop
+│   │   ├── spice-vdagent.desktop
+│   │   ├── tracker-extract.desktop
+│   │   ├── tracker-miner-apps.desktop
+│   │   ├── tracker-miner-fs.desktop
+│   │   ├── tracker-miner-user-guides.desktop
+│   │   ├── tracker-store.desktop
+│   │   ├── user-dirs-update-gtk.desktop
+│   │   ├── vmware-user.desktop
+│   │   └── xdg-user-dirs.desktop
+│   ├── menus
+│   │   ├── applications.menu
+│   │   ├── applications-merged
+│   │   ├── documentation.menu
+│   │   ├── gnome-applications.menu
+│   │   ├── preferences.menu
+│   │   ├── preferences-merged
+│   │   ├── preferences-post-merged
+│   │   ├── server-settings.menu
+│   │   ├── settings.menu
+│   │   ├── settings-merged
+│   │   ├── start-here.menu
+│   │   └── system-settings.menu
+│   ├── QtProject
+│   ├── systemd
+│   │   └── user -> ../../systemd/user
+│   ├── user-dirs.conf
+│   └── user-dirs.defaults
+├── xinetd.d
+├── xml
+│   └── catalog
+├── yum
+│   ├── fssnap.d
+│   ├── pluginconf.d
+│   │   ├── fastestmirror.conf
+│   │   └── langpacks.conf
+│   ├── protected.d
+│   │   └── systemd.conf
+│   ├── vars
+│   │   ├── contentdir
+│   │   └── infra
+│   └── version-groups.conf
+├── yum.conf
+└── yum.repos.d
+    ├── CentOS-Base.repo
+    ├── CentOS-CR.repo
+    ├── CentOS-Debuginfo.repo
+    ├── CentOS-fasttrack.repo
+    ├── CentOS-Media.repo
+    ├── CentOS-Sources.repo
+    ├── CentOS-Vault.repo
+    ├── CentOS-x86_64-kernel.repo
+    └── docker-ce.repo
+
+351 directories, 1655 files

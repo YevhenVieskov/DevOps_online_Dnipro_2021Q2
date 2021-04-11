@@ -127,7 +127,8 @@ using the power button.
 Figure 4 - Topology 4
 
 16. Assign an IP address to each network component from the following
-tables:
+table:
+
 | Name| IP-address  |
 |:---:|:-----------:|
 | PC0 | 192.168.0.1 |

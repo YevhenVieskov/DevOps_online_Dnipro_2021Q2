@@ -1,0 +1,6 @@
+/root
+├── go
+│   └── pkg
+└── test
+
+3 directories

@@ -1,0 +1,247 @@
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Nobody:/:/sbin/nologin
+systemd-network:x:192:192:systemd Network Management:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+polkitd:x:999:998:User for polkitd:/:/sbin/nologin
+libstoragemgmt:x:998:995:daemon account for libstoragemgmt:/var/run/lsm:/sbin/nologin
+colord:x:997:994:User for colord:/var/lib/colord:/sbin/nologin
+rpc:x:32:32:Rpcbind Daemon:/var/lib/rpcbind:/sbin/nologin
+saned:x:996:993:SANE scanner daemon user:/usr/share/sane:/sbin/nologin
+gluster:x:995:992:GlusterFS daemons:/run/gluster:/sbin/nologin
+saslauth:x:994:76:Saslauthd user:/run/saslauthd:/sbin/nologin
+abrt:x:173:173::/etc/abrt:/sbin/nologin
+rtkit:x:172:172:RealtimeKit:/proc:/sbin/nologin
+pulse:x:171:171:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+radvd:x:75:75:radvd user:/:/sbin/nologin
+chrony:x:993:988::/var/lib/chrony:/sbin/nologin
+qemu:x:107:107:qemu user:/:/sbin/nologin
+ntp:x:38:38::/etc/ntp:/sbin/nologin
+unbound:x:992:987:Unbound DNS resolver:/etc/unbound:/sbin/nologin
+tss:x:59:59:Account used by the trousers package to sandbox the tcsd daemon:/dev/null:/sbin/nologin
+sssd:x:991:985:User for sssd:/:/sbin/nologin
+usbmuxd:x:113:113:usbmuxd user:/:/sbin/nologin
+geoclue:x:990:984:User for geoclue:/var/lib/geoclue:/sbin/nologin
+setroubleshoot:x:989:983::/var/lib/setroubleshoot:/sbin/nologin
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+gnome-initial-setup:x:988:982::/run/gnome-initial-setup/:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+avahi:x:70:70:Avahi mDNS/DNS-SD Stack:/var/run/avahi-daemon:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+bes:x:1000:1000:bes:/home/bes:/bin/bash
+user1:x:1001:1001::/home/user1:/bin/bash
+root:x:0:
+bin:x:1:
+daemon:x:2:
+sys:x:3:
+adm:x:4:
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mem:x:8:
+kmem:x:9:
+wheel:x:10:
+cdrom:x:11:
+mail:x:12:postfix
+man:x:15:
+dialout:x:18:
+floppy:x:19:
+games:x:20:
+tape:x:33:
+video:x:39:
+ftp:x:50:
+lock:x:54:
+audio:x:63:
+nobody:x:99:
+users:x:100:
+utmp:x:22:
+utempter:x:35:
+stapusr:x:156:
+stapsys:x:157:
+stapdev:x:158:
+input:x:999:
+systemd-journal:x:190:
+systemd-network:x:192:
+dbus:x:81:
+polkitd:x:998:
+printadmin:x:997:
+cgred:x:996:
+libstoragemgmt:x:995:
+colord:x:994:
+rpc:x:32:
+saned:x:993:
+dip:x:40:
+gluster:x:992:
+ssh_keys:x:991:
+saslauth:x:76:
+abrt:x:173:
+rtkit:x:172:
+pulse-access:x:990:
+pulse-rt:x:989:
+pulse:x:171:
+radvd:x:75:
+chrony:x:988:
+kvm:x:36:qemu
+qemu:x:107:
+ntp:x:38:
+unbound:x:987:
+tss:x:59:
+libvirt:x:986:
+sssd:x:985:
+usbmuxd:x:113:
+geoclue:x:984:
+setroubleshoot:x:983:
+gdm:x:42:
+rpcuser:x:29:
+nfsnobody:x:65534:
+gnome-initial-setup:x:982:
+sshd:x:74:
+slocate:x:21:
+avahi:x:70:
+postdrop:x:90:
+postfix:x:89:
+tcpdump:x:72:
+bes:x:1000:bes
+docker:x:981:
+user1:x:1001:
+## Sudoers allows particular users to run various commands as
+## the root user, without needing the root password.
+##
+## Examples are provided at the bottom of the file for collections
+## of related commands, which can then be delegated out to particular
+## users or groups.
+## 
+## This file must be edited with the 'visudo' command.
+
+## Host Aliases
+## Groups of machines. You may prefer to use hostnames (perhaps using 
+## wildcards for entire domains) or IP addresses instead.
+# Host_Alias     FILESERVERS = fs1, fs2
+# Host_Alias     MAILSERVERS = smtp, smtp2
+
+## User Aliases
+## These aren't often necessary, as you can use regular groups
+## (ie, from files, LDAP, NIS, etc) in this file - just use %groupname 
+## rather than USERALIAS
+# User_Alias ADMINS = jsmith, mikem
+
+
+## Command Aliases
+## These are groups of related commands...
+
+## Networking
+# Cmnd_Alias NETWORKING = /sbin/route, /sbin/ifconfig, /bin/ping, /sbin/dhclient, /usr/bin/net, /sbin/iptables, /usr/bin/rfcomm, /usr/bin/wvdial, /sbin/iwconfig, /sbin/mii-tool
+
+## Installation and management of software
+# Cmnd_Alias SOFTWARE = /bin/rpm, /usr/bin/up2date, /usr/bin/yum
+
+## Services
+# Cmnd_Alias SERVICES = /sbin/service, /sbin/chkconfig, /usr/bin/systemctl start, /usr/bin/systemctl stop, /usr/bin/systemctl reload, /usr/bin/systemctl restart, /usr/bin/systemctl status, /usr/bin/systemctl enable, /usr/bin/systemctl disable
+
+## Updating the locate database
+# Cmnd_Alias LOCATE = /usr/bin/updatedb
+
+## Storage
+# Cmnd_Alias STORAGE = /sbin/fdisk, /sbin/sfdisk, /sbin/parted, /sbin/partprobe, /bin/mount, /bin/umount
+
+## Delegating permissions
+# Cmnd_Alias DELEGATING = /usr/sbin/visudo, /bin/chown, /bin/chmod, /bin/chgrp 
+
+## Processes
+# Cmnd_Alias PROCESSES = /bin/nice, /bin/kill, /usr/bin/kill, /usr/bin/killall
+
+## Drivers
+# Cmnd_Alias DRIVERS = /sbin/modprobe
+
+# Defaults specification
+
+#
+# Refuse to run if unable to disable echo on the tty.
+#
+Defaults   !visiblepw
+
+#
+# Preserving HOME has security implications since many programs
+# use it when searching for configuration files. Note that HOME
+# is already set when the the env_reset option is enabled, so
+# this option is only effective for configurations where either
+# env_reset is disabled or HOME is present in the env_keep list.
+#
+Defaults    always_set_home
+Defaults    match_group_by_gid
+
+# Prior to version 1.8.15, groups listed in sudoers that were not
+# found in the system group database were passed to the group
+# plugin, if any. Starting with 1.8.15, only groups of the form
+# %:group are resolved via the group plugin by default.
+# We enable always_query_group_plugin to restore old behavior.
+# Disable this option for new behavior.
+Defaults    always_query_group_plugin
+
+Defaults    env_reset
+Defaults    env_keep =  "COLORS DISPLAY HOSTNAME HISTSIZE KDEDIR LS_COLORS"
+Defaults    env_keep += "MAIL PS1 PS2 QTDIR USERNAME LANG LC_ADDRESS LC_CTYPE"
+Defaults    env_keep += "LC_COLLATE LC_IDENTIFICATION LC_MEASUREMENT LC_MESSAGES"
+Defaults    env_keep += "LC_MONETARY LC_NAME LC_NUMERIC LC_PAPER LC_TELEPHONE"
+Defaults    env_keep += "LC_TIME LC_ALL LANGUAGE LINGUAS _XKB_CHARSET XAUTHORITY"
+
+#
+# Adding HOME to env_keep may enable a user to run unrestricted
+# commands via sudo.
+#
+# Defaults   env_keep += "HOME"
+
+Defaults    secure_path = /sbin:/bin:/usr/sbin:/usr/bin
+
+## Next comes the main part: which users can run what software on 
+## which machines (the sudoers file can be shared between multiple
+## systems).
+## Syntax:
+##
+## 	user	MACHINE=COMMANDS
+##
+## The COMMANDS section may have other options added to it.
+##
+## Allow root to run any commands anywhere 
+root	ALL=(ALL) 	ALL
+bes     ALL=(ALL)  ALL
+## Allows members of the 'sys' group to run networking, software, 
+## service management apps and more.
+# %sys ALL = NETWORKING, SOFTWARE, SERVICES, STORAGE, DELEGATING, PROCESSES, LOCATE, DRIVERS
+
+## Allows people in group wheel to run all commands
+%wheel	ALL=(ALL)	ALL
+
+## Same thing without a password
+# %wheel	ALL=(ALL)	NOPASSWD: ALL
+
+## Allows members of the users group to mount and unmount the 
+## cdrom as root
+# %users  ALL=/sbin/mount /mnt/cdrom, /sbin/umount /mnt/cdrom
+
+## Allows members of the users group to shutdown this system
+# %users  localhost=/sbin/shutdown -h now
+
+## Read drop-in files from /etc/sudoers.d (the # here does not mean a comment)
+#includedir /etc/sudoers.d
+ 23:43:42 up  5:12,  3 users,  load average: 0.15, 0.34, 0.42
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+bes      :0       :0               18:36   ?xdm?  50:34   0.82s /usr/libexec/gnome-session-binary --session gnome-classic
+bes      pts/0    :0               18:38    5:04m  0.48s  0.39s /usr/bin/mc -P /tmp/mc-bes/mc.pwd.3218
+bes      pts/2    :0               20:13    6.00s  0.65s 14.05s /usr/libexec/gnome-terminal-server
+bes      :0           2021-04-11 18:36 (:0)
+bes      pts/0        2021-04-11 18:38 (:0)
+bes      pts/2        2021-04-11 20:13 (:0)

@@ -1,0 +1,13 @@
+Login: root           			Name: root
+Directory: /root                    	Shell: /bin/bash
+Last login Sun Apr 11 23:33 (EEST) on pts/2
+New mail received Sat Nov 21 10:21 2020 (EET)
+     Unread since Sat Nov 21 10:02 2020 (EET)
+No Plan.
+Login: root           			Name: root
+Directory: /root                    	Shell: /bin/bash
+Office: 777-777-777, 222-222-222
+Last login Sun Apr 11 23:33 (EEST) on pts/2
+New mail received Sat Nov 21 10:21 2020 (EET)
+     Unread since Sat Nov 21 10:02 2020 (EET)
+No Plan.
