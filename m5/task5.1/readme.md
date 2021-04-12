@@ -117,22 +117,21 @@ How can you go back to your home directory from anywhere in the filesystem?
 `cd ../`
 `cd ./Documents`
 `cd ~/task5`
-`cd ~   #you can go back to your home directory from anywhere in the filesystem` 
+`cd ~   #you can go back to your home directory from anywhere in the filesystem`
 `cd ./task5`
 
 4) Become familiar with the various options for the ls command. Give examples
 of listing directories using different keys. Explain the information displayed on
 the terminal using the -l and -a switches.
 
-`ls -lR  #list all files and directories with their corresponding subdirectories `
-`ls -R   #list all files and directories with their corresponding subdirectories `
+`ls -lR  #list all files and directories with their corresponding subdirectories`
+`ls -R   #list all files and directories with their corresponding subdirectories`
 `ls -l #list the contents of the directory in a table format with columns including:`
 `#content permissions,  number of links to the content, owner of the content,`
 `#group owner of the content,  size of the content in bytes,  last modified date / time of the content`
 `#file or directory name`
-`ls -lR  #combination of keys -l and -R `
+`ls -lR  #combination of keys -l and -R`
 `ls -al  #combination of keys -a and -l. -a list files or directories including hidden files or directories`
-
 
 Results in the file:  [task5.2.4.txt](./task5.2.4.txt)
 
@@ -183,7 +182,6 @@ why
 `cat hard_lnk_labwork2`
 `cat symb_lnk_labwork2`
 
-
 7) Using the locate utility, find all files that contain the squid and traceroute
 sequence.
 `locate -i squid traceroute`
@@ -202,7 +200,6 @@ file.
 
 `grep  some_text /etc/.bashrc -c`
 `grep some_text /etc/.bashrc | wc -c`
-
 10) Using the find command, find all files in the /etc directory containing the
 host character sequence.
 
@@ -243,7 +240,6 @@ Results in the file:  [task5.2.13.txt](./task5.2.13.txt)
 directory.
 `mkdir -p /etc/mydir1 /etc/mydir2 /etc/mydir3 /etc/mydir4 /etc/mydir5 /etc/mydir6 /etc/mydir7 /etc/mydir8`
 `touch /etc/myfile1 /etc/myfile2 /etc/myfile3 /etc/myfile4 /etc/myfile5 /etc/myfile6 /etc/myfile7 /etc/myfile8`
-
 `find /etc -type f -mmin 30  | head -n 5 # first 5 files that were recently accessed in the /etc`
 `find /etc -type d -mmin 30  | head -n 5 # first 5 directories  that were recently accessed in the /etc`
 `ls /etc -lt | head -n 5     # first 5 directories and files that were recently accessed in the /etc
