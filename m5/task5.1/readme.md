@@ -165,14 +165,32 @@ addressing.
 - delete the file copied to the home directory.
 
 `mkdir ~/subdir`
+
+
 `touch ~/subdir/dirinfo.txt`
+
+
 `tree -av /root -o dirinfo.txt`
+
+
 `cat ~/subdir/dirinfo.txt`
+
+
 `cp ~/subdir/dirinfo.txt ~/dirinfo1.txt`
+
+
 `cd ~`
+
+
 `cp ./subdir/dirinfo.txt ../dirinfo2.txt`
+
+
 `rm -r ~/subdir`
+
+
 `rm ~/dirinfo1.txt`
+
+
 `rm ~/dirinfo2.txt`
 
 6) Perform the following sequence of operations:
@@ -189,17 +207,40 @@ why
 - then delete the labwork2. What changes have occurred and why?
 
 `mkdir -p ~/test`
+
+
 `cp ~/.bash_history ~/test/labvork2`
+
+
 `ln ~/test/labvork2 hardlink`
+
+
 `ln -s ~/test/labvork2`
+
+
 `ls -li ~/test >> task5.2.6.txt`
+
+
 `echo "Hello world!" >>~/test/softlink`
+
+
 `cat softlink`
+
+
 `mv ~/test/hardlink ~/test/hard_lnk_labwork2`
+
+
 `mv ~/test/softlink ~/test/soft_lnk_labwork2`
+
+
 `rm labwork2`
+
+
 `cat hard_lnk_labwork2`
+
+
 `cat symb_lnk_labwork2`
+
 
 7) Using the locate utility, find all files that contain the squid and traceroute
 sequence.
@@ -218,7 +259,10 @@ Results in the file:  [task5.2.8.txt](./task5.2.8.txt)
 file.
 
 `grep  some_text /etc/.bashrc -c`
+
+
 `grep some_text /etc/.bashrc | wc -c`
+
 10) Using the find command, find all files in the /etc directory containing the
 host character sequence.
 
@@ -245,22 +289,48 @@ examples.
 Results in the file:  [task5.2.13.txt](./task5.2.13.txt)
 
 14) How to determine the type of file in the system, what types of files are there?
+
 `file /bin/tar`
+
+
 `file /etc/passwd`
+
+
 `ls -l /bin/ | grep "^ - "   #normal files`
+
+
 `ls -l /bin/ | grep "^ b "   #block files`
+
+
 `ls -l /bin/ | grep "^ c "   #character files`
+
+
 `ls -l /bin/ | grep "^ l "   #symbolic link files`
+
+
 `ls -l /bin/ | grep "^ p "   #pipes`
+
+
 `ls -l /bin/ | grep "^ s "   #sockets`
+
+
 `ls -l /bin/ | grep "^ d "   #directories`
 
 15) * List the first 5 directory files that were recently accessed in the /etc
 directory.
 `mkdir -p /etc/mydir1 /etc/mydir2 /etc/mydir3 /etc/mydir4 /etc/mydir5 /etc/mydir6 /etc/mydir7 /etc/mydir8`
+
+
 `touch /etc/myfile1 /etc/myfile2 /etc/myfile3 /etc/myfile4 /etc/myfile5 /etc/myfile6 /etc/myfile7 /etc/myfile8`
+
+
 `find /etc -type f -mmin 30  | head -n 5 # first 5 files that were recently accessed in the /etc`
+
+
 `find /etc -type d -mmin 30  | head -n 5 # first 5 directories  that were recently accessed in the /etc`
+
+
 `ls /etc -lt | head -n 5     # first 5 directories and files that were recently accessed in the /etc
+
 
 Script in the file:  [task51.sh](./task51.sh)
