@@ -115,23 +115,42 @@ Result: `ASCII Text`
 How can you go back to your home directory from anywhere in the filesystem?
 
 `cd ../`
+
+
 `cd ./Documents`
+
+
 `cd ~/task5`
+
+
 `cd ~   #you can go back to your home directory from anywhere in the filesystem`
+
+
 `cd ./task5`
+
 
 4) Become familiar with the various options for the ls command. Give examples
 of listing directories using different keys. Explain the information displayed on
 the terminal using the -l and -a switches.
 
 `ls -lR  #list all files and directories with their corresponding subdirectories`
+
+
 `ls -R   #list all files and directories with their corresponding subdirectories`
+
+
 `ls -l #list the contents of the directory in a table format with columns including:`
+
 `#content permissions,  number of links to the content, owner of the content,`
+
 `#group owner of the content,  size of the content in bytes,  last modified date / time of the content`
+
 `#file or directory name`
+
 `ls -lR  #combination of keys -l and -R`
+
 `ls -al  #combination of keys -a and -l. -a list files or directories including hidden files or directories`
+
 
 Results in the file:  [task5.2.4.txt](./task5.2.4.txt)
 
