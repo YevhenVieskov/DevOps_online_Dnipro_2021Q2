@@ -4,46 +4,47 @@
 # TASK 5.1
 ## Task1.Part1
 1) Log in to the system as root.
-   `su root`
+`su root`
 2) Use the passwd command to change the password. Examine the basic
 parameters of the command. What system file does it change *?
-  `passwd root`
+`passwd root`
 3) Determine the users registered in the system, as well as what commands they
 execute. What additional information can be gleaned from the command
 execution?
-   `cat /etc/passwd `
-   `cat /etc/group `
-   `cat /etc/sudoers `
-   `w `
-   `who `
+`cat /etc/passwd`
+`cat /etc/group`
+`cat /etc/sudoers`
+`w`
+`who`
    
-   The /etc/passwd is a text file which contains a list of the system's accounts, giving for each account 
-   some useful information like user ID, group ID, home directory, shell, and more.
-   The /etc/group is a text file which defines the groups to which users belong under Linux 
-   and UNIX operating system.
-   The sudoers file is a file Linux and Unix administrators use to allocate system rights to system users.
-   `w` command in Linux is used to show who is logged on and what they are doing.
-   The `who` command displays the following information for each user currently logged in to the system 
-   if no option is provided: login name of the users, terminal line numbers, login time of the users in
-   to system, remote host name of the user.
+The /etc/passwd is a text file which contains a list of the system's accounts, giving for each account   
+some useful information like user ID, group ID, home directory, shell, and more.
+  
+The /etc/group is a text file which defines the groups to which users belong under Linux  
+and UNIX operating system.
+The sudoers file is a file Linux and Unix administrators use to allocate system rights to system users.
+`w` command in Linux is used to show who is logged on and what they are doing.
+The `who` command displays the following information for each user currently logged in to the system  
+if no option is provided: login name of the users, terminal line numbers, login time of the users in  
+to system, remote host name of the user.
    
-   Results in the file:  [task5.1.3.txt](./task5.1.3.txt)
+Results in the file:  [task5.1.3.txt](./task5.1.3.txt)
    
    
-   4) Change personal information about yourself.
-   `finger -l root `
-   `chfn`
-   `finger -l root `
-   `grep root /etc/passwd`
-   `usermod -c "root"`
+4) Change personal information about yourself.
+`finger -l root`
+`chfn`
+`finger -l root`
+`grep root /etc/passwd`
+`usermod -c "root"`
+
+Results in the file:  [task5.1.4.txt](./task5.1.4.txt)
    
-   Results in the file:  [task5.1.4.txt](./task5.1.4.txt)
-   
-5) Become familiar with the Linux help system and the man and info commands.
-Get help on the previously discussed commands, define and describe any two
-keys for these commands. Give examples.
-    `man chfn`
-    `man usermod`
+5) Become familiar with the Linux help system and the man and info commands.  
+Get help on the previously discussed commands, define and describe any two keys for these commands.  
+Give examples.
+`man chfn`
+`man usermod`
 `chfn` is used to change your finger information. This information is stored in the /etc/passwd 
 file, and is displayed by the finger program.
 
@@ -68,17 +69,17 @@ Change home directory from /home/tecmint to /var/www/:
 
 6) Explore the more and less commands using the help system. View the contents
 of files .bash* using commands.
-    `man more`
-    `man less`
-    `more -d .bashrc`
-    `less -d .bashrc`
+`man more`
+`man less`
+`more -d .bashrc`
+`less -d .bashrc`
 7) * Describe in plans that you are working on laboratory work 1. Tip: You should
 read the documentation for the finger command.
-     `finger -l root`
-	 
-	 Superuser's  ' root' password has been changed. information about the users of the 
-	 system has been obtained. Changed personal information about the user 'root'.
-	 Information about  login name, user name, idle time, login time viewed using the `finger` command. 
+`finger -l root`
+
+Superuser's  'root' password has been changed. information about the users of the 
+system has been obtained. Changed personal information about the user 'root'.
+Information about  login name, user name, idle time, login time viewed using the `finger` command. 
 	 
 	 
 	 
@@ -98,7 +99,6 @@ Script in the file:  [task51.sh](./task51.sh)
 example, display all files that contain a character c, or files that contain a
 specific sequence of characters. List subdirectories of the root directory up to
 and including the second nesting level.
-
 `man tree`
 `touch tree_results.txt tree_root_results.txt`
 `tree -P '*c*' --prune ~ -o tree_results.txt`
@@ -108,7 +108,6 @@ Results in the files:  [tree_results.txt](./tree_results.txt), [tree_root_result
 
 2) What command can be used to determine the type of file (for example, text or
 binary)? Give an example.
-
 `file tree_results.txt`
 Result: `ASCII Text`
 
@@ -126,13 +125,14 @@ of listing directories using different keys. Explain the information displayed o
 the terminal using the -l and -a switches.
 
 `ls -lR  #list all files and directories with their corresponding subdirectories `
-`ls -R   #list all files and directories with their corresponding subdirectories ` 
-```ls -l #list the contents of the directory in a table format with columns including:
-          content permissions,  number of links to the content, owner of the content,
-          group owner of the content,  size of the content in bytes,  last modified date / time of the content
-          file or directory name```
-`ls -lR  #combination of keys -l and -R `		  
-```ls -al  #combination of keys -a and -l. -a list files or directories including hidden files or directories``` 
+`ls -R   #list all files and directories with their corresponding subdirectories `
+`ls -l #list the contents of the directory in a table format with columns including:`
+`#content permissions,  number of links to the content, owner of the content,`
+`#group owner of the content,  size of the content in bytes,  last modified date / time of the content`
+`#file or directory name`
+`ls -lR  #combination of keys -l and -R `
+`ls -al  #combination of keys -a and -l. -a list files or directories including hidden files or directories`
+
 
 Results in the file:  [task5.2.4.txt](./task5.2.4.txt)
 
