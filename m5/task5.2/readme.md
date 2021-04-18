@@ -41,12 +41,12 @@ sshd – used by the secure shell server.
 
 Pseudo-users examples:
 
-bin:x:1:1:bin:/bin:/sbin/nologin
-daemon:x:2:2:daemon:/sbin:/sbin/nologin
-adm:x:3:4:adm:/var/adm:/sbin/nologin
-radvd:x:75:75:radvd user:/:/sbin/nologin
-chrony:x:993:988::/var/lib/chrony:/sbin/nologin
-qemu:x:107:107:qemu user:/:/sbin/nologin
+`bin:x:1:1:bin:/bin:/sbin/nologin`
+`daemon:x:2:2:daemon:/sbin:/sbin/nologin`
+`adm:x:3:4:adm:/var/adm:/sbin/nologin`
+`radvd:x:75:75:radvd user:/:/sbin/nologin`
+`chrony:x:993:988::/var/lib/chrony:/sbin/nologin`
+`qemu:x:107:107:qemu user:/:/sbin/nologin`
 
 
 etc/group
@@ -206,7 +206,10 @@ cat /etc/default/useradd
 
 
 Next, delete the user’s home directory and mail spool pass the -r option to userdel for a user named user_name, enter:
+
+
 `userdel -r user_name`
+
 
 ![alt task5.2.8.jpg](task5.2.8.jpg)
 
@@ -214,12 +217,17 @@ Next, delete the user’s home directory and mail spool pass the -r option to us
 
 To lock a users account use the command `usermod -L` or `passwd -l`. Both the commands
 adds an exclamation mark (“!”) in the second field of the file /etc/passwd. For example :
+
+
 `usermod -L testuser`
+
 `passwd -l testuser`
 
 To unlock a users account use the command `usermod -U` or `passwd -u`.
 
+
 `usermod -U testuser`
+
 `passwd -u testuser`
 
 ![alt task5.2.9.jpg](task5.2.9.jpg)
@@ -261,7 +269,9 @@ day to zero (0), means that the password has not been changed since the above da
 changed immediately before the user can access the system again.
 
 `chage --lastday 0 user_name`
-OR
+
+or
+
 `chage --lastday 1970-01-01 user_name`
 
 
@@ -276,12 +286,19 @@ The -l ( lowercase L) option tells ls to print files in a long listing format.
 When the long listing format is used, you can see the following file information:
 
 The file type.
+
 The file permissions.
+
 Number of hard links to the file.
+
 File owner.
+
 File group.
+
 File size.
+
 Date and Time.
+
 File name.
 
 Here is an example:
@@ -541,14 +558,19 @@ It is easy to think of the permission settings as a series of bits (which is how
 Here's how it works:
 
 `rwx rwx rwx = 111 111 111`
+
 `rw- rw- rw- = 110 110 110`
+
 `rwx --- --- = 111 000 000`
 
 and so on...
 
 `rwx = 111 in binary = 7`
+
 `rw- = 110 in binary = 6`
+
 `r-x = 101 in binary = 5`
+
 `r-- = 100 in binary = 4`
 
 
