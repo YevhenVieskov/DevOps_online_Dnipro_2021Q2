@@ -116,21 +116,201 @@ the system and the list of processes or threads which are currently managed by t
     
 `top -u bes` 
 
+or press `u` interactively to shows processes for a particular user.
+You are prompted to enter the username. Blank will show for all users.
+It displays only processes with a user id or user name matching that given,
+matches on effective user
+
 ![alt task5.3.11.jpg](task5.3.11.jpg)
 
 12. What interactive commands can be used to control the top command? Give a couple of
 examples.
 
+First of all, you can press h or ? to display the help menu for interactive commands
+or a condensed list of commands. We can see the roles of the differents key that
+we can use in top command execution.
 
+![alt task5.3.12.1.jpg](task5.3.12.1.jpg)
+
+
+
+You can switch between 4 windows with `a` and `w` keys. a moves to next and `w` to previous window.
+With `g` command, you can enter a number to select the current window.
+
+![alt task5.3.12.2.jpg](task5.3.12.2.jpg)
+
+Some important information is shown in bold characters. B command toggles use of bold.
+This command will influence the use of the bold terminfo capability and alters both
+the summary area and task area for the current window. When this toggle is 'ON' and
+top is operating in monochrome mode, the entire display will appear as normal text.
+Thus, unless the x and/or y toggles are using reverse for emphasis, there will be no
+visual confirmation that they are even on.
+
+![alt task5.3.12.3.jpg](task5.3.12.3.jpg)
+
+`d` or `s` keys change the delay between refreshes. Prompt for new delay time, which should be in seconds.
+Suppressed in secure mode. When `d` or `s` is pressed, you will be prompted to enter a value ( in seconds )
+which will be set as display interval. If you enter 1 here, top will refresh every second.
+
+![alt task5.3.12.4.jpg](task5.3.12.4.jpg)
+
+`l`, `t` and `m` keys will toggle load average, task/cpu status and mem info respectively as discussed in Uptime
+and Load Average, CPU State and Memory Usage.
+
+![alt task5.3.12.5.jpg](task5.3.12.5.jpg)
+
+`F` key used to choose what field you want to display on the output screen. To select a field to display,
+press `SPACE` or `d` key on the name. The fields marked as * are selected.
+Press q or ESC to quit when you have finished.
+
+![alt task5.3.12.6.jpg](task5.3.12.6.jpg)
+
+By default, the sorting is done in descending order. Pressing R shall reverse the sorting order
+of the currently sorted column, using this interactive command displays pProcesses consuming the
+least amount of cpu are shown first.
+
+![alt task5.3.12.7.jpg](task5.3.12.7.jpg)
+
+`c` displays the full command path along with the command line arguments in the `COMMAND` column.
+
+![alt task5.3.12.8.jpg](task5.3.12.6.8.jpg)
+
+`i` key does not show idle tasks Toggle idle tasks. It displays all tasks or just active tasks.
+When this toggle is Off, tasks that have not used any CPU since the last update will not be
+displayed. However, due to the granularity of the %CPU and TIME+  fields,  some process may
+still be displayed that appear to have used no CPU.
+
+![alt task5.3.12.9.jpg](task5.3.12.9.jpg)
+
+`V` key will display the processes in a parent-child hierarchy as below
+
+![alt task5.3.12.10.jpg](task5.3.12.10.jpg)
+
+Pressing the `Z` key takes the user to a screen where the display color can be changed for
+top command. You will be presented with a separate screen. That screen can be used to change
+the colors in just the current window or in all four windows before returning to the top display.
+When you issue the `Z` interactive command, you have 4 upper case letters to select a target
+for 8 numbers to select a color
+
+![alt task5.3.12.11.jpg](task5.3.12.11.jpg)
+
+`z` turns on or off the colored display. it switches the current window between your last
+used color scheme and the older form of black-on-white or white-on- black.
+This command will alter both the summary area and task area
+
+![alt task5.3.12.12.jpg](task5.3.12.12.jpg)
+
+n or # set the maximum number of tasks displayed. It prompts to enter the number of tasks
+to display.
+The lessor of your number and available screen rows will be used. When used in alternate-display
+mode, this is the command that gives you precise control over the size of each currently visible
+task display, except for the very last. It will not affect the last window's size, as all prior
+task displays will have already been painted.
+
+Shows Absolute Path of Processes: Press ‘c‘ option in running top command, it will display absolute
+path of running processes.
+
+![alt task5.3.12.13.jpg](task5.3.12.13.jpg)
+
+One of the most important commands of top. k is used to send signals to tasks (Usually kill tasks).
+You will be prompted for a PID and then the signal to send. Entering no PID or a negative number
+will be interpreted as the default shown in the prompt (the first task displayed).
+A PID value of zero means the top program itself. The default signal, as reflected in the prompt,
+is SIGTERM. However, you can send any signal, via number or name. If you wish to abort the kill process,
+do one of the following depending on your progress: at the
+
+*   at the pid prompt, type an invalid number
+*   at the signal prompt, type 0 (or any invalid signal)
+*   at any prompt, type <Esc>
+
+![alt task5.3.12.14.jpg](task5.3.12.14.jpg)
 
 13. Sort the contents of the processes window using various parameters (for example, the
 amount of processor time taken up, etc.)
+
+By default, we have the full screen display mode where the summary and the task data are
+displayed in a single window. So, at any time, only one field group can be displayed.
+There is also the Alternate Display Mode, where there can be a maximum of four windows,
+each displaying a field group. These windows are named Def, Job, Mem and Usr
+
+* Def: sorted by %CPU
+* Job: sorted by PID
+* Mem: sorted by %MEM
+* Usr: sorted by User field
+
+The Alternate Display Mode can be entered into using the A display mode toggle command.
+Each of the 4 field groups has a unique separately configurable summary area and its own
+configurable task area. Only one of these 4 windows will be the current window.
+The current window is displayed on the top left corner.
+
+
+
+![alt task5.3.13.jpg](task5.3.13.jpg)
+
 14. Concept of priority, what commands are used to set priority?
+
+The kernel stores a great deal of information about processes including process
+priority which is simply the scheduling priority attached to a process. Processes
+with a higher priority will be executed before those with a lower priority, while
+processes with the same priority are scheduled one after the next, repeatedly.
+
+There are a total of 140 priorities and two distinct priority ranges implemented in Linux.
+The first one is a nice value (niceness) which ranges from -20 (highest priority value) to 19
+(lowest priority value) and the default is 0, this is what we will uncover in this guide.
+The other is the real-time priority, which ranges from 1 to 99 by default, then 100 to 139 are meant for user-space.
+
+One important characteristic of Linux is dynamic priority-based scheduling, which allows the nice value
+of processes to be changed (increased or decreased) depending on your needs, as we’ll see later on.
+
+
+For example, instead of starting a program or command with the default priority,
+you can start it with a specific priority using following nice command.
+
+`sudo nice -n 5 tar -czf backup.tar.gz ./Documents/*`
+or
+`sudo nice --adjustment=5 tar -czf backup.tar.gz ./Documents/*`
+
+![alt task5.3.14.jpg](task5.3.14.jpg)
+
+As we mentioned before, Linux allows dynamic priority-based scheduling.
+Therefore, if a program is already running, you can change its priority
+with the renice command in this form:
+
+`renice -n  -12  -p 1055`
+`renice -n -2  -u apache`
+
 15. Can I change the priority of a process using the top command? If so, how?
+
+The r option is used to change the priority of the process. This operation is also called
+renice a task to change the scheduling priority. You will be prompted for a PID and then the
+value to nice it to. Entering no PID or a negative number will be interpreted as the default
+shown in the prompt (the first task displayed). A PID value of zero means the top program itself.
+A positive nice value will cause a process to lose priority. Conversely, a negative nice value
+will cause a process to be viewed more favorably by the kernel.
+
+As a general rule, ordinary users can only increase the nice value and are prevented from lowering it.
+If you wish to abort the renice process, do one of the following depending on your progress:
+
+
+*   at the pid prompt, type an invalid number
+*   at the nice prompt, type <Enter> with no input
+*   at any prompt, type <Esc>
+
+
+![alt task5.3.15.jpg](task5.3.15.jpg)
+
+
 16. Examine the kill command. How to send with the kill command
 process control signal? Give an example of commonly used signals.
+
+![alt task5.3.16.jpg](task5.3.16.jpg)
+
 17. Commands jobs, fg, bg, nohup. What are they for? Use the sleep, yes command to
 demonstrate the process control mechanism with fg, bg.
+
+![alt task5.3.16.jpg](task5.3.17.jpg)
+
+
 
 ## Part2
 1. Check the implementability of the most frequently used OPENSSH commands in the MS
