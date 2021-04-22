@@ -130,14 +130,14 @@ First of all, you can press h or ? to display the help menu for interactive comm
 or a condensed list of commands. We can see the roles of the differents key that
 we can use in top command execution.
 
-![alt task5.3.12.1.jpg](task5.3.12.1.jpg)
+![alt task5.3.12.jpg](task5.3.12.1.jpg)
 
 
 
 You can switch between 4 windows with `a` and `w` keys. a moves to next and `w` to previous window.
 With `g` command, you can enter a number to select the current window.
 
-![alt task5.3.12.2.jpg](task5.3.12.2.jpg)
+![alt task5.3.12.jpg](task5.3.12.3.jpg)
 
 Some important information is shown in bold characters. B command toggles use of bold.
 This command will influence the use of the bold terminfo capability and alters both
@@ -146,45 +146,45 @@ top is operating in monochrome mode, the entire display will appear as normal te
 Thus, unless the x and/or y toggles are using reverse for emphasis, there will be no
 visual confirmation that they are even on.
 
-![alt task5.3.12.3.jpg](task5.3.12.3.jpg)
+![alt task5.3.12.jpg](task5.3.12.4.jpg)
 
 `d` or `s` keys change the delay between refreshes. Prompt for new delay time, which should be in seconds.
 Suppressed in secure mode. When `d` or `s` is pressed, you will be prompted to enter a value ( in seconds )
 which will be set as display interval. If you enter 1 here, top will refresh every second.
 
-![alt task5.3.12.4.jpg](task5.3.12.4.jpg)
+![alt task5.3.12.jpg](task5.3.12.5.jpg)
 
 `l`, `t` and `m` keys will toggle load average, task/cpu status and mem info respectively as discussed in Uptime
 and Load Average, CPU State and Memory Usage.
 
-![alt task5.3.12.5.jpg](task5.3.12.5.jpg)
+![alt task5.3.12.jpg](task5.3.12.6.jpg)
 
 `F` key used to choose what field you want to display on the output screen. To select a field to display,
 press `SPACE` or `d` key on the name. The fields marked as * are selected.
 Press q or ESC to quit when you have finished.
 
-![alt task5.3.12.6.jpg](task5.3.12.6.jpg)
+![alt task5.3.12.jpg](task5.3.12.6.jpg)
 
 By default, the sorting is done in descending order. Pressing R shall reverse the sorting order
 of the currently sorted column, using this interactive command displays pProcesses consuming the
 least amount of cpu are shown first.
 
-![alt task5.3.12.7.jpg](task5.3.12.7.jpg)
+![alt task5.3.12.jpg](task5.3.12.6.jpg)
 
 `c` displays the full command path along with the command line arguments in the `COMMAND` column.
 
-![alt task5.3.12.8.jpg](task5.3.12.6.8.jpg)
+![alt task5.3.12.jpg](task5.3.12.6.jpg)
 
 `i` key does not show idle tasks Toggle idle tasks. It displays all tasks or just active tasks.
 When this toggle is Off, tasks that have not used any CPU since the last update will not be
 displayed. However, due to the granularity of the %CPU and TIME+  fields,  some process may
 still be displayed that appear to have used no CPU.
 
-![alt task5.3.12.9.jpg](task5.3.12.9.jpg)
+![alt task5.3.12.jpg](task5.3.12.6.jpg)
 
 `V` key will display the processes in a parent-child hierarchy as below
 
-![alt task5.3.12.10.jpg](task5.3.12.10.jpg)
+![alt task5.3.12.jpg](task5.3.12.6.jpg)
 
 Pressing the `Z` key takes the user to a screen where the display color can be changed for
 top command. You will be presented with a separate screen. That screen can be used to change
@@ -192,13 +192,13 @@ the colors in just the current window or in all four windows before returning to
 When you issue the `Z` interactive command, you have 4 upper case letters to select a target
 for 8 numbers to select a color
 
-![alt task5.3.12.11.jpg](task5.3.12.11.jpg)
+![alt task5.3.12.jpg](task5.3.12.6.jpg)
 
 `z` turns on or off the colored display. it switches the current window between your last
 used color scheme and the older form of black-on-white or white-on- black.
 This command will alter both the summary area and task area
 
-![alt task5.3.12.12.jpg](task5.3.12.12.jpg)
+![alt task5.3.12.jpg](task5.3.12.6.jpg)
 
 n or # set the maximum number of tasks displayed. It prompts to enter the number of tasks
 to display.
@@ -210,7 +210,7 @@ task displays will have already been painted.
 Shows Absolute Path of Processes: Press ‘c‘ option in running top command, it will display absolute
 path of running processes.
 
-![alt task5.3.12.13.jpg](task5.3.12.13.jpg)
+![alt task5.3.12.jpg](task5.3.12.6.jpg)
 
 One of the most important commands of top. k is used to send signals to tasks (Usually kill tasks).
 You will be prompted for a PID and then the signal to send. Entering no PID or a negative number
@@ -223,7 +223,6 @@ do one of the following depending on your progress: at the
 *   at the signal prompt, type 0 (or any invalid signal)
 *   at any prompt, type <Esc>
 
-![alt task5.3.12.14.jpg](task5.3.12.14.jpg)
 
 13. Sort the contents of the processes window using various parameters (for example, the
 amount of processor time taken up, etc.)
@@ -303,7 +302,124 @@ If you wish to abort the renice process, do one of the following depending on yo
 16. Examine the kill command. How to send with the kill command
 process control signal? Give an example of commonly used signals.
 
+we can use the kill command to terminate the process.
+
+`kill <pid>`
+
+A somewhat common (though if it happens to you a lot, than that may be sign that something is wrong)
+issue is when you run kill <pid> on a process and the process does not terminate.
+This can happen for many reasons but what can you do in those scenarios?
+Well a common response is to use the kill command with the -9 flag.
+So why does -9 work? Well when the kill command is run it is actually sending a singal to the process.
+By default the kill command will send a SIGTERM signal to the specified process.
+The SIGTERM signal tells the process that it should perform it's shutdown proceedures
+to terminate the process cleanly by closing all log files, connections, etc. 
+
+When a process is in a limbo state it is reasonable to send the process the SIGKILL
+signal, which can be invoked by running the kill command with the -9 flag.
+Unlike SIGTERM the SIGKILL signal cannot be captured by the process and thus it
+cannot be ignored. The SIGKILL signal is handled outside of the process completely,
+and is used to stop the process immediately. The problem with using SIGKILL is
+that it does not allow an application to close its open files or database connections
+cleanly and over time could cause other issues; therefor it is generally better to
+reserve the SIGKILL signal as a last resort.
+
+Each signal has a numeric Value and an Action associated to it, the numeric values can
+be used with commands such as kill to define which signal is sent to the process.
+Each signal also has an “action” or “disposition” associated with it which defines
+what type of action this signal should invoke.
+*Signal Actions*
+
+While there are several actions for the various signals on a Linux system, I want
+to highlight the below as they are the most commonly used signals from a process termination perspective.
+
+Term - This action is used to signal that the process should terminate
+
+Core - This action is used to signal that the process should core dump and then terminate
+
+*Common Signals*
+
+Below is a list of a few common signals, the numeric value of that signal, the action
+that is associated with it and how to send that signal to a process. This list,
+while not complete, should cover general usage of the kill command.
+
+SIGHUP - 1 - Term
+
+The SIGHUP signal is commonly used to tell a process to shutdown and restart,
+this signal can be caught and ignored by a process.
+
+Syntax:
+
+`kill -1 <pid>`
+`kill -HUP <pid>`
+`kill -SIGHUP <pid>`
+
+`SIGINT - 2 - Term`
+
+The SIGINT signal is commonly used when a user presses ctrl+c on the keyboard.
+
+Syntax:
+
+`kill -2 <pid>`
+`kill -INT`
+`kill -SIGINT`
+
+SIGQUIT - 3 - Core
+
+The SIGQUIT signal is useful for stopping a process and telling it to create a core dump file.
+The core file can be useful for debugging applications but keep in mind your system needs to be
+setup to allow the creation of core files.
+
+Syntax:
+
+`kill -3 <pid>`
+`kill -QUIT <pid>`
+`kill -SIGQUIT <pid>`
+
+SIGKILL - 9 - Term
+
+The SIGKILL signal cannot be ignored by a process and the termination is handled outside
+of the process itself. This signal is useful for when an application has stopped responding
+or will not terminate after being given the SIGTERM command. This signal should stop more
+processes however there are exceptions, such as zombie processes.
+
+Syntax:
+
+`kill -9 <pid>`
+`kill -KILL <pid>`
+`kill -SIGKILL <pid>`
+
+SIGSEGV - 11 - Core
+
+The SIGSEGV signal is generally sent to a process by the kernel when the process is misbehaving,
+it is used when there is an “Invalid memory reference” and you may commonly see a message such
+as segmentation fault in log files or via strace. You can also technically call this signal with
+kill as well; however it is mainly useful for creating core dump files, which can also be performed
+by using the SIGQUIT signal.
+
+Syntax:
+
+`kill -11 <pid>`
+`kill -SEGV <pid>`
+`kill -SIGSEGV <pid>`
+
+SIGTERM - 15 - Term
+
+The SIGTERM signal is the default signal sent when invoking the kill command.
+This tells the process to shutdown and is generally accepted as the signal
+to use when shutting down cleanly. Technically this signal can be ignored,
+however that is considered a bad practice and is generally avoided.
+
+Syntax:
+
+`kill <pid>`
+`kill -15 <pid>`
+`kill -TERM <pid>`
+`kill -SIGTERM <pid>`
+
+
 ![alt task5.3.16.jpg](task5.3.16.jpg)
+
 
 17. Commands jobs, fg, bg, nohup. What are they for? Use the sleep, yes command to
 demonstrate the process control mechanism with fg, bg.
