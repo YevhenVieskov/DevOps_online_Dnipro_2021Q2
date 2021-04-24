@@ -67,6 +67,8 @@ or
 follows: the owner of the process, the arguments with which the process was launched for
 execution, the group owner of this process, etc.
 
+`ps` - report a snapshot of the current processes.
+
 `ps -eF`
 
 ![alt task5.3.5.jpg](task5.3.5.jpg)
@@ -89,11 +91,49 @@ so the vsz field is 0. This also catches zombies , which can be eliminated based
 7. Print the list of processes to the terminal. Briefly describe the statuses of the processes.
 What condition are they in, or can they be arriving in?
 
+The process is:
+
+* program in progress
+
+* "object" to which CPU time is allocated
+
+* asynchronous work
+
+Several models are used to describe the states of processes.
+The simplest model is the three-state model. The model consists of:
+
+*  execution states
+	
+*  waiting states
+	
+*  ready states
+
+Execution is an active state during which a process has all the resources it needs.
+In this state, the process is directly executed by the processor.
+
+Waiting is a passive state during which the process is blocked, it cannot be executed,
+because it is waiting for some event, for example, data entry or release of the device it needs.
+
+Ready is a passive state, the process is blocked, but unlike the waiting state,
+it is blocked not for internal reasons, but for external reasons, independent of the process.
+
+From the ready state, the process can only go to the running state. 
+
+The process with PID 1 is the leader of the session and is in a waiting state. 
+
+The process with PID 58  is currently running .
+
+The process with PID 10  is in a waiting state with high priority.
+
+The process with PID 46  is in a waiting state with low priority.
+
+![alt task5.3.7.jpg](task5.3.7.jpg)
+
 8. Display only the processes of a specific user.
 
 `p -x`
 
-![alt task5.3.6.jpg](task5.3.6.jpg)
+![alt task5.3.8.jpg](task5.3.8.jpg)
 
 9. What utilities can be used to analyze existing running tasks (by analyzing the help for the ps
 command)?
@@ -105,6 +145,8 @@ awk, find, cut, grep and other utilities can be used to analyze existing running
 That is check for processes whose `/proc/<pid>/exe` is a link to a file:
 
 `ps -p "$(find -L /proc/[0-9]*/exe ! -type l | cut -d / -f3 | paste -sd , -)"`
+
+![alt task5.3.9.jpg](task5.3.9.jpg)
 
 10. What information does top command display?
 
@@ -130,14 +172,14 @@ First of all, you can press h or ? to display the help menu for interactive comm
 or a condensed list of commands. We can see the roles of the differents key that
 we can use in top command execution.
 
-![alt task5.3.12.jpg](task5.3.12.1.jpg)
+![alt task5.3.12.1.jpg](task5.3.12.1.jpg)
 
 
 
 You can switch between 4 windows with `a` and `w` keys. a moves to next and `w` to previous window.
 With `g` command, you can enter a number to select the current window.
 
-![alt task5.3.12.jpg](task5.3.12.3.jpg)
+![alt task5.3.12.2.jpg](task5.3.12.2.jpg)
 
 Some important information is shown in bold characters. B command toggles use of bold.
 This command will influence the use of the bold terminfo capability and alters both
@@ -146,45 +188,45 @@ top is operating in monochrome mode, the entire display will appear as normal te
 Thus, unless the x and/or y toggles are using reverse for emphasis, there will be no
 visual confirmation that they are even on.
 
-![alt task5.3.12.jpg](task5.3.12.4.jpg)
+![alt task5.3.12.3.jpg](task5.3.12.3.jpg)
 
 `d` or `s` keys change the delay between refreshes. Prompt for new delay time, which should be in seconds.
 Suppressed in secure mode. When `d` or `s` is pressed, you will be prompted to enter a value ( in seconds )
 which will be set as display interval. If you enter 1 here, top will refresh every second.
 
-![alt task5.3.12.jpg](task5.3.12.5.jpg)
+![alt task5.3.12.4.jpg](task5.3.12.4.jpg)
 
 `l`, `t` and `m` keys will toggle load average, task/cpu status and mem info respectively as discussed in Uptime
 and Load Average, CPU State and Memory Usage.
 
-![alt task5.3.12.jpg](task5.3.12.6.jpg)
+![alt task5.3.12.5.jpg](task5.3.12.5.jpg)
 
 `F` key used to choose what field you want to display on the output screen. To select a field to display,
 press `SPACE` or `d` key on the name. The fields marked as * are selected.
 Press q or ESC to quit when you have finished.
 
-![alt task5.3.12.jpg](task5.3.12.6.jpg)
+![alt task5.3.12.6.jpg](task5.3.12.6.jpg)
 
 By default, the sorting is done in descending order. Pressing R shall reverse the sorting order
 of the currently sorted column, using this interactive command displays pProcesses consuming the
 least amount of cpu are shown first.
 
-![alt task5.3.12.jpg](task5.3.12.6.jpg)
+![alt task5.3.12.7.jpg](task5.3.12.7.jpg)
 
 `c` displays the full command path along with the command line arguments in the `COMMAND` column.
 
-![alt task5.3.12.jpg](task5.3.12.6.jpg)
+![alt task5.3.12.8.jpg](task5.3.12.8.jpg)
 
 `i` key does not show idle tasks Toggle idle tasks. It displays all tasks or just active tasks.
 When this toggle is Off, tasks that have not used any CPU since the last update will not be
 displayed. However, due to the granularity of the %CPU and TIME+  fields,  some process may
 still be displayed that appear to have used no CPU.
 
-![alt task5.3.12.jpg](task5.3.12.6.jpg)
+![alt task5.3.12.9.jpg](task5.3.12.9.jpg)
 
 `V` key will display the processes in a parent-child hierarchy as below
 
-![alt task5.3.12.jpg](task5.3.12.6.jpg)
+![alt task5.3.12.10.jpg](task5.3.12.10.jpg)
 
 Pressing the `Z` key takes the user to a screen where the display color can be changed for
 top command. You will be presented with a separate screen. That screen can be used to change
@@ -192,13 +234,13 @@ the colors in just the current window or in all four windows before returning to
 When you issue the `Z` interactive command, you have 4 upper case letters to select a target
 for 8 numbers to select a color
 
-![alt task5.3.12.jpg](task5.3.12.6.jpg)
+![alt task5.3.12.11.jpg](task5.3.12.11.jpg)
 
 `z` turns on or off the colored display. it switches the current window between your last
 used color scheme and the older form of black-on-white or white-on- black.
 This command will alter both the summary area and task area
 
-![alt task5.3.12.jpg](task5.3.12.6.jpg)
+![alt task5.3.12.12.jpg](task5.3.12.12.jpg)
 
 n or # set the maximum number of tasks displayed. It prompts to enter the number of tasks
 to display.
@@ -210,7 +252,7 @@ task displays will have already been painted.
 Shows Absolute Path of Processes: Press ‘c‘ option in running top command, it will display absolute
 path of running processes.
 
-![alt task5.3.12.jpg](task5.3.12.6.jpg)
+![alt task5.3.12.13.jpg](task5.3.12.13.jpg)
 
 One of the most important commands of top. k is used to send signals to tasks (Usually kill tasks).
 You will be prompted for a PID and then the signal to send. Entering no PID or a negative number
@@ -223,6 +265,7 @@ do one of the following depending on your progress: at the
 *   at the signal prompt, type 0 (or any invalid signal)
 *   at any prompt, type <Esc>
 
+![alt task5.3.12.14.jpg](task5.3.12.14.jpg)
 
 13. Sort the contents of the processes window using various parameters (for example, the
 amount of processor time taken up, etc.)
@@ -265,18 +308,19 @@ of processes to be changed (increased or decreased) depending on your needs, as 
 For example, instead of starting a program or command with the default priority,
 you can start it with a specific priority using following nice command.
 
-`sudo nice -n 5 tar -czf backup.tar.gz ./Documents/*`
+`sudo nice -n 5 tar -czf backup.tar.gz ./Documents/`
 or
-`sudo nice --adjustment=5 tar -czf backup.tar.gz ./Documents/*`
+`sudo nice --adjustment=5 tar -czf backup.tar.gz ./Documents/`
 
-![alt task5.3.14.jpg](task5.3.14.jpg)
 
 As we mentioned before, Linux allows dynamic priority-based scheduling.
 Therefore, if a program is already running, you can change its priority
 with the renice command in this form:
 
-`renice -n  -12  -p 1055`
-`renice -n -2  -u apache`
+`sudo renice -n  -12  -p 6974    #renice - alter priority of running processes` 
+
+![alt task5.3.14.jpg](task5.3.14.jpg)
+
 
 15. Can I change the priority of a process using the top command? If so, how?
 
@@ -424,7 +468,55 @@ Syntax:
 17. Commands jobs, fg, bg, nohup. What are they for? Use the sleep, yes command to
 demonstrate the process control mechanism with fg, bg.
 
-![alt task5.3.16.jpg](task5.3.17.jpg)
+The jobs command displays the status of jobs started in the current terminal window.
+Jobs are numbered starting from 1 for each session. The job ID numbers are used by
+some programs instead of PIDs (for example, by fg and bg commands)
+
+`fg` command in linux used to put a background job in foreground.
+
+Syntax:
+
+`fg [job_spec ...]`
+
+
+`bg` command in linux is used to place foreground jobs in background.
+
+Syntax:
+
+`bg [job_spec ...]`
+
+job_spec may be:
+
+`%n` : Refer to job number n.
+`%str` : Refer to a job which was started by a command beginning with str.
+`%?str` : Refer to a job which was started by a command containing str.
+`%%` or `%+` : Refer to the current job. fg and bg will operate on this job if no job_spec is given.
+`%-` : Refer to the previous job.
+
+When using the command shell, prefixing a command with nohup prevents the command from being
+aborted automatically when you log out or exit the shell.
+
+The name nohup stands for "no hangup." The hangup (HUP) signal, which is normally sent
+to a process to inform it the user has logged off (or "hung up"), is intercepted by nohup,
+allowing the process to continue running.
+
+Syntax:
+
+`nohup command [command-argument ...]`
+`nohup --help | --version`
+
+
+`yes` - output a string repeatedly until killed
+
+Syntax:
+
+`yes [string]`
+
+`yes --help | --version`
+
+
+
+![alt task5.3.17.jpg](task5.3.17.jpg)
 
 
 
@@ -432,8 +524,8 @@ demonstrate the process control mechanism with fg, bg.
 1. Check the implementability of the most frequently used OPENSSH commands in the MS
 Windows operating system. (Description of the expected result of the commands +
 screenshots: command – result should be presented)
-2. Implement basic SSH settings to increase the security of the client-server connection (at least
-3. List the options for choosing keys for encryption in SSH. Implement 3 of them.
+2. Implement basic SSH settings to increase the security of the client-server connection
+(at least 3). List the options for choosing keys for encryption in SSH. Implement 3 of them.
 4. Implement port forwarding for the SSH client from the host machine to the guest Linux
 virtual machine behind NAT.
 5*. Intercept (capture) traffic (tcpdump, wireshark) while authorizing the remote client on the
