@@ -524,9 +524,88 @@ Syntax:
 1. Check the implementability of the most frequently used OPENSSH commands in the MS
 Windows operating system. (Description of the expected result of the commands +
 screenshots: command – result should be presented)
+
+OpenSSH includes tools to help support this, specifically:
+
+*   ssh-keygen for generating secure keys
+*   ssh-agent and ssh-add for securely storing private keys
+*   scp and sftp to securely copy public key files during initial use of a server
+
+There is no need to set the key size as all Ed25519 keys are 256 bits.
+In addition, they rely on a new key format that "uses a bcrypt-based key derivation
+feature that makes brute-force attacks against stolen private keys much slower."
+For this reason, compatibility with older versions of OpenSSH or other SSH clients
+and servers can be problematic. 
+
+The `ssh-agent` is a helper program that keeps track of user's identity keys and their
+passphrases. The agent can then use the keys to log into other servers without having
+the user type in a password or passphrase again. This implements a form of single sign-on (SSO).
+
+The `ssh-add` is a command for adding SSH private keys into the SSH authentication agent
+for implementing single sign-on with SSH.
+
+The `scp` is a command for copy public key on server.
+
+`ssh-keygen -t ed25519`
+
+`ssh-agent`
+
+`scp C:\Users\admin/.ssh/id_ed25519.pub vieskov@192.168.0.101`
+
+
+
+![alt task52.1.1.jpg](task52.1.1.jpg)
+
 2. Implement basic SSH settings to increase the security of the client-server connection
-(at least 3). List the options for choosing keys for encryption in SSH. Implement 3 of them.
+
+The `~ / .ssh` directory is created on the remote server if it doesn't already exist,
+and  public key is added to the authorized_keys file.
+
+The public key is removed.
+
+The authorized_keys file permissions set  read-only for users and disallow everything else.  
+
+To make it impossible for users to get their permissions back, the immutable bit on the
+authorized_keys file is set.
+
+After that, users have the possibility to rename the `~/.ssh` directory and create another
+directory named `~/.ssh`, with another authorized_keys file in it. To disable these
+actions, set the immutable bit for the `~/.ssh` directory. 
+
+`ssh vieskov@192.168.0.101`
+
+`mkdir ~/.ssh`
+
+`chmod 700 ~/.ssh`
+
+`cat ~/id_ecdsa.pub >> ~/.ssh/authorized_keys`
+
+`rm ~/id_ecdsa.pub`
+
+`chmod 400 ~/.ssh/authorized_keys`
+
+`chattr +i ~/.ssh/authorized_keys`
+
+`chattr +i ~/.ssh`
+
+![alt task52.2.1.jpg](task52.2.1.jpg)
+
+![alt task52.2.2.jpg](task52.2.2.jpg)
+
+![alt task52.2.3.jpg](task52.2.3.jpg)
+
+![alt task52.2.4.jpg](task52.2.4.jpg)
+
+![alt task52.2.2.jpg](task52.2.5.jpg)
+
+![alt task52.2.6.jpg](task52.2.6.jpg)
+
+3. List the options for choosing keys for encryption in SSH. Implement 3 of them.
+
 4. Implement port forwarding for the SSH client from the host machine to the guest Linux
 virtual machine behind NAT.
+
+![alt task52.4.1.jpg](task52.4.1.jpg)
+
 5*. Intercept (capture) traffic (tcpdump, wireshark) while authorizing the remote client on the
 server using ssh, telnet, rlogin. Analyze the result.
