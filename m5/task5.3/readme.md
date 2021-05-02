@@ -590,20 +590,59 @@ actions, set the immutable bit for the `~/.ssh` directory.
 
 ![alt task52.2.1.jpg](task52.2.1.jpg)
 
+The file `sshd_config` is edited.
+
+`nano /etc/ssh/sshd_config`
+
+Port is changed from 22 to 2451.
+Path to authorized_key is uncommented.
+
 ![alt task52.2.2.jpg](task52.2.2.jpg)
+
+The password authentication is disabled.
 
 ![alt task52.2.3.jpg](task52.2.3.jpg)
 
+The file `sshd_config` is saved. SSh service is restarted.
+
+
 ![alt task52.2.4.jpg](task52.2.4.jpg)
 
-![alt task52.2.2.jpg](task52.2.5.jpg)
+SSH connection with Windows Power Shell:
+
+![alt task52.2.5.jpg](task52.2.5.jpg)
+
+SSH connection with MobaXterm:
 
 ![alt task52.2.6.jpg](task52.2.6.jpg)
 
 3. List the options for choosing keys for encryption in SSH. Implement 3 of them.
 
+* DSA: It’s unsafe and even no longer supported since OpenSSH version 7, you need to upgrade it!
+* RSA: It depends on key size. If it has 3072 or 4096-bit length, then you’re good. Less than that,
+you probably want to upgrade it. The 1024-bit length is even considered unsafe.
+* ECDSA: It depends on how well your machine can generate a random number that will be used to
+create a signature. There’s also a trustworthiness concern on the NIST curves that being used by ECDSA.
+* Ed25519: It’s the most recommended public-key algorithm available today!
+
+`ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "evveskov@gmail.com"`
+
+
+
+*    -o : Save the private-key using the new OpenSSH format rather than the PEM format. Actually, this option is implied when you specify the key type as ed25519.
+		  
+*    -a: It’s the numbers of KDF (Key Derivation Function) rounds. Higher numbers result in slower passphrase verification, increasing the resistance to brute-force password cracking should the private-key be stolen.
+*    -t: Specifies the type of key to create, in our case the Ed25519.
+*    -f: Specify the filename of the generated key file. If you want it to be discovered automatically by the SSH agent, it must be stored in the default `.ssh` directory within your home directory.
+*    -C: An option to specify a comment. It’s purely informational and can be anything. But it’s usually filled with <login>@<hostname> who generated the key.
+
+
+
 4. Implement port forwarding for the SSH client from the host machine to the guest Linux
 virtual machine behind NAT.
+
+Port forwarding implementation for the SSH client from the host machine to the guest Linux
+virtual machine behind NAT:
 
 ![alt task52.4.1.jpg](task52.4.1.jpg)
 
