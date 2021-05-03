@@ -76,6 +76,7 @@ See next screenshot.
 
 5. Determine, which resource has an IP address 8.8.8.8.
 
+
 `host 8.8.8.8`
 
 8.8.8.8 is a domain name pointer dns.google.
@@ -83,6 +84,8 @@ See next screenshot.
 ![alt task6.1.5.jpg](task6.1.5.jpg)
 
 6. Determine, which IP address belongs to resource epam.com.
+
+
 
 `host www.epam.com`
 
@@ -100,6 +103,8 @@ See next screenshot.
 
 7. Determine the default gateway for your HOST and display routing table.
 
+`netstat -r`
+
 
 Default gateway for your HOST and display routing table:
 
@@ -107,6 +112,8 @@ Default gateway for your HOST and display routing table:
 ![alt task6.1.7.jpg](task6.1.7.jpg)
 
 8. Trace the route to google.com.
+
+`traceroute www.google.com`
 
 
 ![alt task6.1.8.jpg](task6.1.8.jpg)
