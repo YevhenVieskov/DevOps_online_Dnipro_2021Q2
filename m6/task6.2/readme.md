@@ -1,10 +1,9 @@
 # EPAM University Programs
 # DevOps external course
 # Module 6  Networking with Linux
-# TASK 6.1
+# TASK 6.2
 
-## Networking with Linux
-
+Networking with Linux
 1. Create virtual machines connection according to figure 1:
 
 ![alt task61figure1.jpg](task61figure1.jpg)
