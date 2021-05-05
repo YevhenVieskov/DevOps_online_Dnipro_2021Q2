@@ -648,3 +648,35 @@ virtual machine behind NAT:
 
 5*. Intercept (capture) traffic (tcpdump, wireshark) while authorizing the remote client on the
 server using ssh, telnet, rlogin. Analyze the result.
+
+* SSH is a recently designed, high-security protocol. It uses strong cryptography to protect
+  your connection against eavesdropping, hijacking and other attacks. Telnet and Rlogin are both
+  older protocols offering minimal security.
+
+* SSH and Rlogin both allow you to log in to the server without having to type a password.
+ (Rlogin's method of doing this is insecure, and can allow an attacker to access your account
+ on the server. SSH's method is much more secure, and typically requires the attacker to have
+ gained access to your actual client machine.)
+
+* SSH allows you to connect to the server and automatically send a command, so that the server
+ will run that command and then disconnect. So you can use it in automated processing.
+
+Rlogin use "hand shake" messages for connection. SSH don't use it.
+
+Wireshark and tcpdump results for SSH connection.
+
+![alt task52.5.1ssh.jpg](task52.5.1ssh.jpg)
+
+[ssh.pcap](./ssh.pcap)
+
+Wireshark and tcpdump results for rlogin connection.
+
+![alt task52.5.2rlogin.jpg](task52.5.2rlogin.jpg)
+
+[rlogin.pcap](./rlogin.pcap)
+
+Wireshark and tcpdump results for telnet connection.
+
+![alt task52.5.2telnet.jpg](task52.5.2telnet.jpg)
+
+[telnet.pcap](./telnet.pcap)
