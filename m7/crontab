@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+SHELL=/bin/sh
+ 
+ #MAILTO=paul@example.org
+ # добавить в PATH домашний каталог пользователя
+ PATH=/bin:/usr/bin:/home/bes/bin 
+ 
+ 0-59 * * * *  ~/task7b.sh                        # "Выполняется ежеминутно"
+ 
+
+

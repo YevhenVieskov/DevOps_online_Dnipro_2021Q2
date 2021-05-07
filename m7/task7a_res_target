@@ -1,0 +1,29 @@
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2021-05-08 15:31 EEST
+Nmap scan report for 192.168.0.1
+Host is up (0.0015s latency).
+Not shown: 997 filtered ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+1900/tcp open  upnp
+
+Nmap scan report for 192.168.0.100
+Host is up (0.0011s latency).
+Not shown: 993 filtered ports
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+912/tcp  open  apex-mesh
+2869/tcp open  icslap
+3306/tcp open  mysql
+
+Nmap scan report for 192.168.0.255
+Host is up (0.015s latency).
+Not shown: 999 closed ports
+PORT    STATE    SERVICE
+514/tcp filtered shell
+
+Nmap done: 256 IP addresses (3 hosts up) scanned in 76.31 seconds
