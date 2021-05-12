@@ -2,9 +2,9 @@
 
 # DevOps external course
 
-# Module 8  Python Introduction
+# Module 9  Introduction to Python
 
-# TASK 8.1
+# TASK 9.1
 
 Some simple program and unit tests is created.
 
