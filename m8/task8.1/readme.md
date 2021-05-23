@@ -34,7 +34,7 @@ only, so I used the Gunicorn web server to provide our REST API.
 
 GitHub repository with mashine learning microservice is created.
 
-![alt microservice_created.jpg](microservice_created.jpg.jpg)
+![alt microservice_created.jpg](microservice_created.jpg)
 
 SSH key for Jenkins connection yo GitHub is created:
 
@@ -42,11 +42,11 @@ SSH key for Jenkins connection yo GitHub is created:
 
 SSH key for nonstandard name is added to `~/.ssh/config` 
 
-![alt ssh_key_with_nonstandard_name_added.jpg](ssh_key_with_nonstandard_name_added.jpg.)
+![alt ssh_key_with_nonstandard_name_added.jpg](ssh_key_with_nonstandard_name_added.jpg)
 
 Jenkins SSH public key is added to GitHub
 
-![alt jenkins_public_key_on_github.jpg](jenkins_public_key_on_github.jpg.jpg)
+![alt jenkins_public_key_on_github.jpg](jenkins_public_key_on_github.jpg)
 
 Jenkins credentials is created.
 
