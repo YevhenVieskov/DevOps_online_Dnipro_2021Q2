@@ -1,0 +1,44 @@
+Started by user Vieskov Yevhen
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/MLMicroserviceFS
+The recommended git tool is: NONE
+using credential github-ssh-key-micro
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/MLMicroserviceFS/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@github.com:YevhenVieskov/ML_microservice.git # timeout=10
+Fetching upstream changes from git@github.com:YevhenVieskov/ML_microservice.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.7.4'
+using GIT_SSH to set credentials github-ssh-key-micro
+ > git fetch --tags --progress git@github.com:YevhenVieskov/ML_microservice.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision c6d927c08111aae3228094f9d0f717a0429f8dc0 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f c6d927c08111aae3228094f9d0f717a0429f8dc0 # timeout=10
+Commit message: "fix model memory download"
+ > git rev-list --no-walk c6d927c08111aae3228094f9d0f717a0429f8dc0 # timeout=10
+[MLMicroserviceFS] $ /bin/sh -xe /tmp/jenkins6250580530478227252.sh
++ cd mnist-microservice
++ docker build -t mnist_microservice_test .
+Sending build context to Docker daemon  4.829MB
+
+Step 1/8 : FROM python:3.7
+ ---> 4890a41b5e72
+Step 2/8 : RUN python -m pip install flask flask-cors gunicorn numpy tensorflow pillow
+ ---> Running in e9c8021de981
+Collecting flask
+  Downloading Flask-2.0.1-py3-none-any.whl (94 kB)
+Collecting flask-cors
+  Downloading Flask_Cors-3.0.10-py2.py3-none-any.whl (14 kB)
+Collecting gunicorn
+  Downloading gunicorn-20.1.0-py3-none-any.whl (79 kB)
+Collecting numpy
+  Downloading numpy-1.20.3-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (15.3 MB)
+Collecting tensorflow
+  Downloading tensorflow-2.5.0-cp37-cp37m-manylinux2010_x86_64.whl (454.3 MB)
+[91mERROR: Could not install packages due to an OSError: [Errno 28] No space left on device
+
+[0mThe command '/bin/sh -c python -m pip install flask flask-cors gunicorn numpy tensorflow pillow' returned a non-zero code: 1
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
+

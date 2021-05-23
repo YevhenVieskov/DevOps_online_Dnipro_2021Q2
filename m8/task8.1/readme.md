@@ -10,14 +10,31 @@ programming language (java, js, python, etc), and type of delivery/deployment me
 
 Mashine Learning Flask Microservice with NGINX Load Balancer is deployed with Jenkins.
 
+As you know, setting up and training machine learning models is only one part of the development cycle,
+an equally important part is deploying the model for its further use.
+In this article, I will talk about how a machine learning model can be deployed as a Docker microservice,
+as well as how you can parallelize the work of a microservice using load balancing across multiple threads
+via Load balancer. Recently, Docker has gained a lot of popularity, however, only one of the types of model
+deployment strategies will be described here, and in each case, the choice of the best option remains with the developer. 
 
-![alt typical_production_setup_for_flask_App.jpg](typical_production_setup_for_flask_App.jpg)
 
-![alt nginx_as_load_balancer.jpg](nginx_as_load_balancer.jpg)
+![alt ML model workflow](ml_model.jpg)
 
-GitHub repository with mashine learning microservice is created
+For this example, I used the popular MNIST dataset. The final ML model will be deployed in a Docker container, access
+to which will be organized via the HTTP protocol using a POST request (REST API architectural style). The resulting
+microservice will be parallelized through an Nginx-based load balancer.
 
-![alt microservice_crieated.jpg](microservice_crieated.jpg.jpg)
+The Flask web framework already contains a web server, however, it is used strictly for dev purpose only, i.e. for development
+only, so I used the Gunicorn web server to provide our REST API. 
+
+
+
+![alt deployment_sheme.jpg](ml_deployment_scheme.jpg)
+
+
+GitHub repository with mashine learning microservice is created.
+
+![alt microservice_created.jpg](microservice_created.jpg.jpg)
 
 SSH key for Jenkins connection yo GitHub is created:
 
@@ -25,7 +42,7 @@ SSH key for Jenkins connection yo GitHub is created:
 
 SSH key for nonstandard name is added to `~/.ssh/config` 
 
-![alt ssh_key_with_nonstandard_name_added.jpg](ssh_key_with_nonstandard_name_added.jpg.jpg)
+![alt ssh_key_with_nonstandard_name_added.jpg](ssh_key_with_nonstandard_name_added.jpg.)
 
 Jenkins SSH public key is added to GitHub
 
@@ -37,9 +54,51 @@ Jenkins credentials is created.
 
 ![alt jenkins_credentials.jpg](jenkins_credentials.jpg)
 
-Jenkins Pipeline Project is created
+General settings for Jenkins free-style project.
 
-![alt create_jenkins_pipeline.jpg](create_jenkins_pipeline.jpg)
+![alt jenkins-fs_general.jpg](jenkins-fs_general.jpg)
+
+
+Jenkins Source Code Management set up.
+
+![alt jenkins-fs_source_code_management.jpg](jenkins-fs_source_code_management.jpg)
+
+
+Jenkins Build Triggers.
+
+![alt jenkins-fs_source_code_management.jpg](jenkins-fs_source_code_management.jpg)
+
+Jenkins build execute shell.
+
+![alt jenkins-fs_build_execute_shell.jpg](jenkins-fs_build_execute_shell.jpg)
+
+
+Jenkins configuration for deployment on Virtual Mashine with nginx and docker.
+
+Success.
+
+![alt jenkins-fs_configuration_success.jpg](jenkins-fs_configuration_success.jpg)
+
+Failed.
+
+![alt jenkins-fs_configuration_error.jpg](jenkins-fs_configuration_error.jpg)
+
+
+
+`sudo usermod -aG docker jenkins`
+
+Now we restart, and try to build. It should show the image building process.
+
+
+![alt jenkins-fs_build_project_error.jpg](jenkins-fs_build_project_error.jpg)
+
+Jenkins Project build Log: [jenkins-fs_project_build_error.log](./jenkins-fs_project_build_error.log).
+
+
+
+
+
+Jenkins Pipeline Project is created.
 
 Jenkins Pipeline Groovy Script [mnist-micro.groovy](./mnist-micro.groovy).
 
@@ -55,6 +114,11 @@ https://docs.python-guide.org/dev/virtualenvs/
 
 
 https://plugins.jenkins.io/github/
+
+https://angellom.medium.com/build-a-docker-image-out-of-a-flask-project-6b22122ff0f0
+https://angellom.medium.com/automatically-building-a-flask-docker-image-on-git-push-with-jenkins-5a30c9fc9beb
+https://medium.com/@anirbanroydas/testing-microservice-written-in-python-flask-with-continuous-integration-delivery-and-deployment-1999fef560a8
+https://semaphoreci.com/community/tutorials/continuous-deployment-of-a-python-flask-application-with-docker-and-semaphore
 
 https://stackoverflow.com/questions/48032756/building-a-python-web-application-in-jenkins
 https://www.stratoscale.com/blog/devops/deploy-jenkins-best-practices-part-1/

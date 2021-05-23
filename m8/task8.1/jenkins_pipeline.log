@@ -1,0 +1,60 @@
+Started by user Vieskov Yevhen
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/MLMicroservice
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Example SSH Username with private key)
+[Pipeline] withCredentials
+Masking supported pattern matches of $SSH_CREDS or $SSH_CREDS_PSW or $SSH_CREDS_USR
+[Pipeline] {
+[Pipeline] sh
++ echo SSH private key is located at ****
+SSH private key is located at ****
+[Pipeline] sh
++ echo SSH user is ****
+SSH user is ****
+[Pipeline] sh
++ echo SSH passphrase is 
+SSH passphrase is 
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Get Source)
+[Pipeline] git
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/MLMicroservice/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/YevhenVieskov/ML_microservice.git # timeout=10
+Fetching upstream changes from https://github.com/YevhenVieskov/ML_microservice.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.7.4'
+ > git fetch --tags --progress https://github.com/YevhenVieskov/ML_microservice.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse origin/master^{commit} # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build Docker)
+Stage "Build Docker" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run Docker Container)
+Stage "Run Docker Container" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Parallel Docker Run)
+Stage "Parallel Docker Run" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+ERROR: Couldn't find any revision to build. Verify the repository and branch configuration for this job.
+Finished: FAILURE

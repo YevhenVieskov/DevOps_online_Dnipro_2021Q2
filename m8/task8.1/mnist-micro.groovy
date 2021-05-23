@@ -19,27 +19,35 @@ pipeline {
         stage('Get Source') {
             //copy source code from local file system and test
             //for a Dockerfile to build the Docker image
-            git ('https://github.com/YevhenVieskov/ML_microservice.git')
-            if(!fileExists("./mnist-microservice/Dockerfile")){
-               error''('Dockerfile missing') 
+            steps{
+                git ('https://github.com/YevhenVieskov/ML_microservice.git')
+                //if(!fileExists("./mnist-microservice/Dockerfile")){
+                //    error''('Dockerfile missing') 
+                //}
             }
         }
         
         stage('Build Docker') {
            //build the docker image from the source code
-           sh "cd mnist-microservice"
-           sh "docker build -t mnist_microservice_test ."
+           steps{
+               sh "cd mnist-microservice"
+               sh "docker build -t mnist_microservice_test ."
+           }
         }
         
         stage("Run Docker Container") {
-            sh   "docker run -d -p 5000:5000 mnist_microservice_test"
+            steps{
+                sh   "docker run -d -p 5000:5000 mnist_microservice_test"
+            }
                
         }
         
         
         stage('Parallel Docker Run') {
-            sh cd "../"
-            sh "docker-compose up --build"
+            steps{
+                sh "cd ../"
+                sh "docker-compose up --build"
+            }
         }
         
     }
