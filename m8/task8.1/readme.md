@@ -79,9 +79,6 @@ Success.
 
 ![alt jenkins-fs_configuration_success.jpg](jenkins-fs_configuration_success.jpg)
 
-Failed.
-
-![alt jenkins-fs_configuration_error.jpg](jenkins-fs_configuration_error.jpg)
 
 
 
