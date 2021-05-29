@@ -18,9 +18,16 @@ Playbooks:
 
 [playbook3c.yml](./playbook3c.yml)
 
+[playbook4.yml](./playbook4.yml)
+
 [playbook5.yml](./playbook5.yml)
 
 [playbook5a.yml](./playbook5a.yml)
+
+Ansible cfg
+
+[ansible.cfg](./ansible.cfg)
+
 
 
 Ansible ping failed:
