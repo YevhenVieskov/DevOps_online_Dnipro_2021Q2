@@ -24,21 +24,90 @@ Playbooks:
 
 [playbook5a.yml](./playbook5a.yml)
 
-Ansible cfg
+
+Ansible configuration.
 
 [ansible.cfg](./ansible.cfg)
 
-
-
-Ansible ping failed:
 
 ![alt task10.1.1.jpg](task10.1.1.jpg)
 
-Ansible cfg
+![alt task10.1.1.jpg](task10.1.2.jpg)
 
-[ansible.cfg](./ansible.cfg)
+![alt task10.1.1.jpg](task10.1.3.jpg)
 
-Ansible log:
+![alt task10.1.1.jpg](task10.1.4.jpg)
 
-[ansible.log](./ansible.log)
+![alt task10.1.1.jpg](task10.1.5.jpg)
+
+![alt task10.1.1.jpg](task10.1.6.jpg)
+
+![alt task10.1.1.jpg](task10.1.7.jpg)
+
+![alt task10.1.1.jpg](task10.1.8.jpg)
+
+![alt task10.1.1.jpg](task10.1.9.jpg)
+
+![alt task10.1.1.jpg](task10.1.10.jpg)
+
+![alt task10.1.1.jpg](task10.1.11.jpg)
+
+![alt task10.1.1.jpg](task10.1.12.jpg)
+
+![alt task10.1.1.jpg](task10.1.13.jpg)
+
+![alt task10.1.1.jpg](task10.1.14.jpg)
+
+![alt task10.1.1.jpg](task10.1.15.jpg)
+
+![alt task10.1.1.jpg](task10.1.16.jpg)
+
+![alt task10.1.1.jpg](task10.1.17.jpg)
+
+![alt task10.1.1.jpg](task10.2.1.jpg)
+
+![alt task10.1.1.jpg](task10.2.2.jpg)
+
+![alt task10.1.1.jpg](task10.2.3.jpg)
+
+![alt task10.1.1.jpg](task10.2.4.jpg)
+
+![alt task10.1.1.jpg](task10.2.5.jpg)
+
+![alt task10.1.1.jpg](task10.2.6.jpg)
+
+![alt task10.1.1.jpg](task10.2.7.jpg)
+
+![alt task10.1.1.jpg](task10.2.8.jpg)
+
+![alt task10.1.1.jpg](task10.2.9.jpg)
+
+![alt task10.1.1.jpg](task10.2.10.jpg)
+
+![alt task10.1.1.jpg](task10.2.11.jpg)
+
+![alt task10.1.1.jpg](task10.2.12.jpg)
+
+![alt task10.1.1.jpg](task10.2.13.jpg)
+
+![alt task10.1.1.jpg](task10.2.14.jpg)
+
+![alt task10.1.1.jpg](task10.2.15.jpg)
+
+![alt task10.1.1.jpg](task10.3.1.jpg)
+
+![alt task10.1.1.jpg](task10.3.2.jpg)
+
+![alt task10.1.1.jpg](task10.3.3.jpg)
+
+![alt task10.1.1.jpg](task10.3.4.jpg)
+
+
+
+
+
+
+
+
+
 
