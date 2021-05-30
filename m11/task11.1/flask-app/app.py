@@ -5,18 +5,19 @@ app = Flask(__name__)
 
 # list of cat images
 images = [
-    "http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/9/anigif_enhanced-buzz-26388-1381844103-11.gif",
-    "http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr01/15/9/anigif_enhanced-buzz-31540-1381844535-8.gif",
-    "http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/9/anigif_enhanced-buzz-26390-1381844163-18.gif",
-    "http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr06/15/10/anigif_enhanced-buzz-1376-1381846217-0.gif",
-    "http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr03/15/9/anigif_enhanced-buzz-3391-1381844336-26.gif",
-    "http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr06/15/10/anigif_enhanced-buzz-29111-1381845968-0.gif",
-    "http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr03/15/9/anigif_enhanced-buzz-3409-1381844582-13.gif",
-    "http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr02/15/9/anigif_enhanced-buzz-19667-1381844937-10.gif",
-    "http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/9/anigif_enhanced-buzz-26358-1381845043-13.gif",
-    "http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr06/15/9/anigif_enhanced-buzz-18774-1381844645-6.gif",
-    "http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr06/15/9/anigif_enhanced-buzz-25158-1381844793-0.gif",
-    "http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr03/15/10/anigif_enhanced-buzz-11980-1381846269-1.gif"
+"https://img.buzzfeed.com/buzzfeed-static/static/2017-08/9/17/asset/buzzfeed-prod-web-13/anigif_sub-buzz-11282-1502314385-1.gif",
+"https://img.buzzfeed.com/buzzfeed-static/static/2017-08/9/17/asset/buzzfeed-prod-web-10/anigif_sub-buzz-8427-1502313524-1.gif",
+"https://img.buzzfeed.com/buzzfeed-static/static/2017-08/9/17/asset/buzzfeed-prod-web-02/anigif_sub-buzz-22626-1502313674-1.gif",
+"https://img.buzzfeed.com/buzzfeed-static/static/2017-08/9/17/asset/buzzfeed-prod-web-02/anigif_sub-buzz-22707-1502313740-1.gif",
+"https://img.buzzfeed.com/buzzfeed-static/static/2017-08/9/17/asset/buzzfeed-prod-web-06/anigif_sub-buzz-8222-1502313939-1.gif",
+"https://img.buzzfeed.com/buzzfeed-static/static/2017-08/9/17/asset/buzzfeed-prod-web-14/anigif_sub-buzz-24014-1502314003-8.gif",
+"https://img.buzzfeed.com/buzzfeed-static/static/2017-08/9/17/asset/buzzfeed-prod-web-01/anigif_sub-buzz-20568-1502314071-7.gif",
+"https://img.buzzfeed.com/buzzfeed-static/static/2017-08/9/17/asset/buzzfeed-prod-web-05/anigif_sub-buzz-30975-1502314180-1.gif",
+"https://img.buzzfeed.com/buzzfeed-static/static/2017-08/9/17/asset/buzzfeed-prod-web-01/anigif_sub-buzz-20634-1502314251-8.gif",
+"https://img.buzzfeed.com/buzzfeed-static/static/2017-08/9/19/asset/buzzfeed-prod-web-08/anigif_sub-buzz-21012-1502319766-12.gif",
+"https://img.buzzfeed.com/buzzfeed-static/static/2017-08/9/19/asset/buzzfeed-prod-web-08/anigif_sub-buzz-21438-1502320104-2.gif",
+"https://img.buzzfeed.com/buzzfeed-static/static/2017-08/9/19/asset/buzzfeed-prod-web-04/anigif_sub-buzz-3679-1502320218-1.gif"
+    
 ]
 
 @app.route('/')
@@ -26,3 +27,7 @@ def index():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
+
+
+
+
