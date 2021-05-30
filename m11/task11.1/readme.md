@@ -26,5 +26,5 @@ Application results.
 
 Video demonstrate how applikation works.
 
-![alt randomcat.mp4](randomcat.mp4)
+[randomcat.mp4](./randomcat.mp4)
 
