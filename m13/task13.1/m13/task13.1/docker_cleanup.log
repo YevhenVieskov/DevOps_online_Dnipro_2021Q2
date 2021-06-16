@@ -1,0 +1,191 @@
+vieskov@192.168.0.103's password:
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │                 ∙ MobaXterm Personal Edition v21.1 ∙                 │
+    │               (SSH client, X server and network tools)               │
+    │                                                                      │
+    │ ➤ SSH session to vieskov@192.168.0.103                               │
+    │   ∙ Direct SSH      :  ✔                                             │
+    │   ∙ SSH compression :  ✔                                             │
+    │   ∙ SSH-browser     :  ✔                                             │
+    │   ∙ X11-forwarding  :  ✔  (remote display is forwarded through SSH)  │
+    │                                                                      │
+    │ ➤ For more info, ctrl+click on help or visit our website.            │
+    └──────────────────────────────────────────────────────────────────────┘
+
+Welcome to Ubuntu 16.04.7 LTS (GNU/Linux 4.4.0-186-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Super-optimized for small spaces - read how we shrank the memory
+   footprint of MicroK8s to make it the smallest full K8s around.
+
+   https://ubuntu.com/blog/microk8s-memory-optimisation
+
+107 packages can be updated.
+76 updates are security updates.
+
+Last login: Mon May 31 00:11:29 2021
+vieskov@ubuntu:~$ docker images -a
+REPOSITORY                TAG       IMAGE ID       CREATED      SIZE
+<none>                    <none>    ac97d6266d56   5 days ago   2.65GB
+<none>                    <none>    b1047cba4cf0   5 days ago   2.65GB
+mnist_microservice_test   latest    24d702b4ab83   5 days ago   2.65GB
+<none>                    <none>    36d996d4db16   5 days ago   2.65GB
+<none>                    <none>    89bb9ed00743   5 days ago   2.65GB
+<none>                    <none>    91cac44d0c85   5 days ago   2.65GB
+<none>                    <none>    877a842a05d5   5 days ago   2.65GB
+python                    3.7       9b5e75b69a4f   6 days ago   877MB
+vieskov@ubuntu:~$ docker images purge
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+vieskov@ubuntu:~$ docker system prune -a
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all images without at least one container associated to them
+  - all build cache
+
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+2c15d6c7804571fae9ab44e9b5815d30cf46572e8bd5966f1b2a58f92416059a
+c8163da3e060243b9a3c4fada39253ace5fadb7292031fa4fb405d8171ba0de8
+b0266f74a51fd16121f3701b4e15ecf342478bd6f360b2aeda2a3eae273d2f45
+
+Deleted Images:
+untagged: python:3.7
+untagged: python@sha256:ce5d9c0393bbb50b1a89d2129b3d9f056708ecbd5f43f86727cb02df0d11fd5d
+untagged: mnist_microservice_test:latest
+deleted: sha256:24d702b4ab83f733402825f6dd34c852ab47dcbb8e2d8a28df503a5f739e5081
+deleted: sha256:b1047cba4cf00551bdf4322980cc8c17edf10020cd512211edc219eb744db660
+deleted: sha256:ac97d6266d56b256df74a441da10450e701c24b8ce447739af34304d51b3ed09
+deleted: sha256:c6a741ef601a94fb62d8ebb022b24bbc1d8e22bf21fd67227dd670b30903538f
+deleted: sha256:36d996d4db16679dcec3589849d7301b45a1b6cf42a4c4ca29ced98cee585f3a
+deleted: sha256:ae9f3b2ae39b0e108cb9606ec0220556adbbcb3e618d43c970085ef2df1f57f4
+deleted: sha256:91cac44d0c850eb01b7b7af170fb40ce87e3a490a519c7d52511800c120e3043
+deleted: sha256:5ff83686cb2c2576da09a4b38c99667f1ddbc5d757476b30a41ca95ac2639403
+deleted: sha256:89bb9ed00743a4ef63668ae9a6a5282e9ae8b0d97b7159ad855f8140692799cb
+deleted: sha256:c988446da668f48ee99c6c3138e0c03b1390b9119ba017739adaa1af91022ccc
+deleted: sha256:877a842a05d5950a7a520377f089571c5b6cd3cb2ea1254f4c7a2d9c42093880
+deleted: sha256:2584b928d9fce687c0c1b9065eab3c2d4f7ed0857395d2d2887ae386d8316d0c
+deleted: sha256:9b5e75b69a4fd4c3fc674a62857b855396f3e9d71b5bb5a2a3fbab70b4409132
+deleted: sha256:44e0ea1e4721a8287e9bf744663f8de4073b8d900d817ff711bf247586bb92ac
+deleted: sha256:8fd795378d35b4582e04caec6c05fb5f363dc7fed19f85564f48de6f2673a01e
+deleted: sha256:549704cecb1c4048558a1b81befc8f4963611f6f02b7677a3b969c99910dbbf1
+deleted: sha256:69c5278a0bbf6ad3828c016010254064142dd0559a7da1b86523ac39a44e4986
+deleted: sha256:8245467a6af5775eb6375049e95546f5795a2bd9f167cd29e1abc8c860ef777f
+deleted: sha256:1405602eb1a912ad0bef3b35fc79f4a1eb332cd3ff05b36b560dad11e8d8ca7f
+deleted: sha256:1a126caa7f2df8ccb95a4a08242b527fe3268eebf55cdd72b5b6a7aafd908519
+deleted: sha256:b639806ab48953fe53941bccbaaecc99d82e693585e7b818ff9a6413ef519f25
+deleted: sha256:688e187d6c79c46e8261890f0010fd5d178b8faa178959b0b46b2635aa1eeff3
+
+Total reclaimed space: 2.654GB
+vieskov@ubuntu:~$ docker images -a
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+vieskov@ubuntu:~$ docker rmi $(docker images -a -q)
+"docker rmi" requires at least 1 argument.
+See 'docker rmi --help'.
+
+Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Remove one or more images
+vieskov@ubuntu:~$ docker stop $(docker ps -a -q)
+"docker stop" requires at least 1 argument.
+See 'docker stop --help'.
+
+Usage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]
+
+Stop one or more running containers
+vieskov@ubuntu:~$ docker rm $(docker ps -a -q)
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+vieskov@ubuntu:~$ docker images -a
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+vieskov@ubuntu:~$ docker volume rm $(docker volume ls -qf dangling=true)
+"docker volume rm" requires at least 1 argument.
+See 'docker volume rm --help'.
+
+Usage:  docker volume rm [OPTIONS] VOLUME [VOLUME...]
+
+Remove one or more volumes
+vieskov@ubuntu:~$ docker volume ls -qf dangling=true | xargs -r docker volume rm
+vieskov@ubuntu:~$ docker network ls
+NETWORK ID     NAME      DRIVER    SCOPE
+fcde2bd6b643   bridge    bridge    local
+5ff26bde2cc5   host      host      local
+896d51a1d15c   none      null      local
+vieskov@ubuntu:~$ docker network ls | grep "bridge"
+fcde2bd6b643   bridge    bridge    local
+vieskov@ubuntu:~$ docker network rm $(docker network ls | grep "bridge" | awk '/ / { print $1 }')
+Error response from daemon: bridge is a pre-defined network and cannot be removed
+vieskov@ubuntu:~$ docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+"docker rmi" requires at least 1 argument.
+See 'docker rmi --help'.
+
+Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Remove one or more images
+vieskov@ubuntu:~$ docker images | grep "none"
+vieskov@ubuntu:~$ docker rmi $(docker images | grep "none" | awk '/ / { print $3 }')
+"docker rmi" requires at least 1 argument.
+See 'docker rmi --help'.
+
+Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Remove one or more images
+vieskov@ubuntu:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+vieskov@ubuntu:~$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+vieskov@ubuntu:~$ docker rm $(docker ps -qa --no-trunc --filter "status=exited")
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+vieskov@ubuntu:~$ docker network prune
+WARNING! This will remove all custom networks not used by at least one container.
+Are you sure you want to continue? [y/N] y
+vieskov@ubuntu:~$ docker system prune
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all dangling images
+  - all dangling build cache
+
+Are you sure you want to continue? [y/N] y
+Total reclaimed space: 0B
+vieskov@ubuntu:~$ docker system prune -a
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all images without at least one container associated to them
+  - all build cache
+
+Are you sure you want to continue? [y/N] y
+Total reclaimed space: 0B
+vieskov@ubuntu:~$ docker kill $(docker ps -q) ; docker rm $(docker ps -a -q) ; docker rmi $(docker images -q -a)
+"docker kill" requires at least 1 argument.
+See 'docker kill --help'.
+
+Usage:  docker kill [OPTIONS] CONTAINER [CONTAINER...]
+
+Kill one or more running containers
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+"docker rmi" requires at least 1 argument.
+See 'docker rmi --help'.
+
+Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Remove one or more images
+vieskov@ubuntu:~$

@@ -1,0 +1,44 @@
+vieskov@ubuntu:~$ mkdir ansible
+vieskov@ubuntu:~$ cd ansible
+vieskov@ubuntu:~/ansible$ ansible-galaxy collection install nginxinc.nginx_core
+Process install dependency map
+Starting collection install process
+Installing 'nginxinc.nginx_core:0.3.0' to '/home/vieskov/.ansible/collections/ansible_collections/nginxinc/nginx_core'
+ERROR! Unexpected Exception, this is probably a bug: <urlopen error timed out>
+to see the full traceback, use -vvv
+vieskov@ubuntu:~/ansible$ ansible-galaxy collection install nginxinc.nginx_core -vvv
+ansible-galaxy 2.9.22
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vieskov/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible-galaxy
+  python version = 2.7.12 (default, Mar  1 2021, 11:38:31) [GCC 5.4.0 20160609]
+Using /etc/ansible/ansible.cfg as config file
+Process install dependency map
+Opened /home/vieskov/.ansible/galaxy_token
+Processing requirement collection 'nginxinc.nginx_core'
+Collection 'nginxinc.nginx_core' obtained from server default https://galaxy.ansible.com/api/
+Starting collection install process
+Installing 'nginxinc.nginx_core:0.3.0' to '/home/vieskov/.ansible/collections/ansible_collections/nginxinc/nginx_core'
+Downloading https://galaxy.ansible.com/download/nginxinc-nginx_core-0.3.0.tar.gz to /home/vieskov/.ansible/tmp/ansible-local-19123hkjJot/tmpxErqhP
+vieskov@ubuntu:~/ansible$ ansible-galaxy collection install community.docker -vvv
+ansible-galaxy 2.9.22
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vieskov/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible-galaxy
+  python version = 2.7.12 (default, Mar  1 2021, 11:38:31) [GCC 5.4.0 20160609]
+Using /etc/ansible/ansible.cfg as config file
+Found installed collection nginxinc.nginx_core:0.3.0 at '/home/vieskov/.ansible/collections/ansible_collections/nginxinc/nginx_core'
+Process install dependency map
+Opened /home/vieskov/.ansible/galaxy_token
+Processing requirement collection 'community.docker'
+Collection 'community.docker' obtained from server default https://galaxy.ansible.com/api/
+Starting collection install process
+Installing 'community.docker:1.6.1' to '/home/vieskov/.ansible/collections/ansible_collections/community/docker'
+Downloading https://galaxy.ansible.com/download/community-docker-1.6.1.tar.gz to /home/vieskov/.ansible/tmp/ansible-local-19129crJQZO/tmpfX65Lg
+vieskov@ubuntu:~/ansible$ ansible-galaxy collection install community.general
+Process install dependency map
+Starting collection install process
+Installing 'community.general:3.1.0' to '/home/vieskov/.ansible/collections/ansible_collections/community/general'
+vieskov@ubuntu:~/ansible$
