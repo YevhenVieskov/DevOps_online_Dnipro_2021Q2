@@ -32,7 +32,7 @@ variable "ec2_instance_type" {
 variable "ssh_key_pair" {
   description = "The SSH access key"
   type = string
-  default = "ansible_server.pem"
+  default = "vieskovtf.pem"
 }
 
 
@@ -191,13 +191,13 @@ resource "aws_instance" "Jenkins Server" {
   }
   
   key_name = var.ssh_key_pair
-  security_groups = ["${aws_security_group.allow_ssh_http.name}"]
+  security_groups = ["${aws_security_group.vieskovtf.name}"]
 }
 
 resource "aws_instance" "Production Server" {
   ami           = "${data.aws_ami_production.ubuntu.id}"
   instance_type = var.ec2_instance_type
-  vpc_security_group_ids = [aws_security_group.allow_ssh_http.id]  
+  vpc_security_group_ids = [aws_security_group.vieskovtf.id]  
   associate_public_ip_address = true
   
   tags = {
@@ -205,10 +205,10 @@ resource "aws_instance" "Production Server" {
   }
   
   key_name = var.ssh_key_pair
-  security_groups = ["${aws_security_group.allow_ssh_http.name}"]
+  security_groups = ["${aws_security_group.vieskovtf.name}"]
 }
 
-resource "aws_security_group" "allow_ssh_http" {
+resource "aws_security_group" "vieskovtf" {
   name = "terraform-vieskov-sec-group"
   description ="Allow ssh inbound traffic"
   vpc_id = ""
@@ -247,37 +247,3 @@ resource "aws_security_group" "allow_ssh_http" {
 
 
 
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-module "vpc" {
-  source = "../modules/vpc"
-}
-
-module "public_subnet" {
-  source = "../modules/public-subnet"
-
-  vpc_id = module.vpc.vpc_id
-}
-
-module "internet_gateway" {
-  source = "../modules/internet-gateway"
-
-  vpc_id = module.vpc.vpc_id
-}
-
-module "route_table" {
-  source = "../modules/route-table"
-
-  vpc_id              = module.vpc.vpc_id
-  internet_gateway_id = module.internet_gateway.internet_gateway_id
-  public_subnet_id    = module.public_subnet.public_subnet_id
-}
-
-module "ec2" {
-  source = "../modules/ec2"
-
-  vpc_id                  = module.vpc.vpc_id
-  public_subnet_id        = module.public_subnet.public_subnet_id
-
-  ec2_ssh_key_name        = var.ec2_ssh_key_name
-  ec2_ssh_public_key_path = var.ec2_ssh_public_key_path
-}
